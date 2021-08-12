@@ -47,15 +47,17 @@ Other solution :
 
 ### Get your IP address
 
-curl ifconfig.co
-curl ifconfig.co/city
-curl ifconfig.co/country
++ curl ifconfig.co
++ curl ifconfig.co/city
++ curl ifconfig.co/country
 
 ### News
-curl getnews.tech
+
++ curl getnews.tech
 
 ### Weather
-curl wttr.in
+
++ curl wttr.in
 
 ## TIPS, TRICKS & HELPFUL PROGRAMS
 
@@ -68,17 +70,19 @@ curl wttr.in
 4. Unmount with : fusermount -u Android/
 
 Other solution:
+
 + Use bluetooth
 
-## Installing Android in Vbox
+### Installing Android in Vbox
 
 + Change motherboard to PS/2 Mouse in System tab
 + Change Processors to 2+
 + Change Display to 3d and VboxSVGA
 
 ### Video / Audio Editing Software
-+ kdenlive / Olive
-+ ffmpeg
+
++ Kdenlive / Olive
++ Ffmpeg
 + OBS
 + Audacity / Sox
 
@@ -110,11 +114,11 @@ I have never fully experienced it but some people have recommended it to me:
 + youtube-view to watch yt videos directly in terminal
 (you need an API to use youtube-view)
 
-### Concatenating pdfs on Arch Linux
+### Concatenating Pdfs On Arch Linux
 
 + yay -S pdf-append
 
-### Regular expressions basics
+### Regular Expressions Basics
 
 + . - any one character
 + \* - Match any number of previous (includin 0)
@@ -131,6 +135,7 @@ I have never fully experienced it but some people have recommended it to me:
 + \ escape something
 
 + Examples :
+
 	- grep "something" file
 	- grep "^s" file -> any line starting wit lowercase s in given file
 
@@ -140,7 +145,7 @@ I have never fully experienced it but some people have recommended it to me:
 + image viewer = sxiv
 + pdf viewer = zathura
 (don't forget to download sth to read pdfs along with zathura)
-+ neomutt
++ neomutt: cli-based email client
 + ffmpeg
 + vlc / cvlc / nvlc (vlc with ncurses interface)
 + vlc can play the radio directly from terminal too)
@@ -150,7 +155,7 @@ I have never fully experienced it but some people have recommended it to me:
 ### Networking
 
 1. nmtui (this is the one you want)
-on archlinux, run : pacman -S networkmanager
+	+ on archlinux, run : pacman -S networkmanager
 2. nmcli dev wifi
 3. nmcli dev wifi connect APname password
 4. nmap +ip a+ nmap -sn 10.1.0.85/24
@@ -256,7 +261,7 @@ sudo mkfs.ext4 /dev/sdc1
 
 + https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository
 
-### Great ls commands
+### Great LS commands
 
 + lsusb: list usb devices
 + lscpu: display information about cpu architecture
@@ -332,9 +337,9 @@ highlight Executable      cterm=none ctermfg=green ctermbg=default
 
 ### Fuzzy Finders
 
-Find can be a slow command
++ Find can be a slow command
  + Use broot instead
- + There's also fzf which is quite popular and can be used together with bfs.
+ + Fzf also is very popular and can be used together with bfs.
 
 ### Modifying images
 
@@ -461,15 +466,15 @@ last : shows a listing of last logged in users
 
 ### Pacman
 
-pacman -S : install a program
-pacman -Ss : search for a program
-pacman -Syu : update + upgrade the system
-pacman -Syyuu 
-pacman -Q
-pacman -Qte
-pacman -R OR pacman -Rns : This removes a program and all its dependencies / config files
-pacman -Rdd $ program : This removes only the program without its dependencies
-pacman -Rc $program : This removes all the packages which depend on a program
++ pacman -S : install a program
++ pacman -Ss : search for a program
++ pacman -Syu : update + upgrade the system
++ pacman -Syyuu 
++ pacman -Q
++ pacman -Qte
++ pacman -R OR pacman -Rns : This removes a program and all its dependencies / config files
++ pacman -Rdd $ program : This removes only the program without its dependencies
++ pacman -Rc $program : This removes all the packages which depend on a program
 
 ### Software To Make You Own Music
 
