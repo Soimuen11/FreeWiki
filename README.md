@@ -8,6 +8,8 @@ masses, I shall strive to be as clear as possible.
 
 ## MAIN CATEGORIES
 
+Find me here: https://soimuen11.github.io/The-Wiki/
+
 1. Annoying errors
 2. Tips, tricks & helpful programs
 3. Curl tricks
