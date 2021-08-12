@@ -18,7 +18,7 @@ Find me here: https://soimuen11.github.io/FreeWiki/
 3. [Curl tricks](#curl-tricks)
 4. [Gaming on Linux](#gaming-on-linux)
 5. [Ffmpeg](#ffmpeg)
-6. [Other](#other)
+6. [Resources](#resources)
 
 ## ANNOYING ERRORS
 
@@ -635,28 +635,28 @@ ffmpeg -i arch-install.mp4  -i archinstall-soundtrack.mp4 -c copy -map 0:v:0 -ma
 
 ### Concatenating Files
 
-create a list of files in a FILE
-ex : filename
+1. Create a list of files in a FILE
+example: filename
 	file "file1_path"
 	file2 "file1_path"
 	file3 "file1_path"
-run : ffmpeg -f concat -safe 0 -i /home/soimuen/Downloads/FILENAME -c copy output.webm
+2. Run: ffmpeg -f concat -safe 0 -i /home/soimuen/Downloads/FILENAME -c copy output.webm
 
 ### Cutting Videos
 ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 
 ### Burning Subs To Video
 
-NOTE: This solution "burns the subtitles" into the video, so that every viewer of the video will be forced to see them.
+**NOTE: This solution "burns the subtitles" into the video, so that every viewer of the video will be forced to see them.**
 
 Use the libass library (make sure your ffmpeg install has the library in the configuration --enable-libass).
 
 First convert the subtitles to .ass format:
 
-ffmpeg -i subtitles.srt subtitles.ass
++ ffmpeg -i subtitles.srt subtitles.ass
 Then add them using a video filter:
 
-ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
++ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 
 ### Sources
 
@@ -666,10 +666,45 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 + [Ffmpeg commands for beginners](https://ostechnix.com/20-ffmpeg-commands-beginners/)
 + [As usual, the archwiki](https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam)
 
-## OTHER
+## RESOURCES
 
-### Windows (OS) list of commands
-+ [An article from lifewire.com](https://www.lifewire.com/list-of-command-prompt-commands-4092302)
+### Microsoft Windows
+
++ [List of CMD Commands](https://www.lifewire.com/list-of-command-prompt-commands-4092302)
++ [Top 20 Windows Tools To Know As Sysadmin](https://www.poweradmin.com/blog/top-20-windows-tools-every-sysadmin-should-know/)
++ [Administration Commands](https://geekflare.com/windows-administration-commands/)
++ [VLAN definition & advantages](https://www.guru99.com/vlan-definition-types-advantages.html)
 
 ### Learning AWS
+
 + [A tutorial from tutorials point](https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm)
+
+### Linux Permissions
+
++ [Managing Permissions](https://docs.rackspace.com/support/how-to/basic-linux-directory-permissions-and-how-to-check-them)
+
+### Free VS Open-Source Software
+
++ [A gnu.org Article](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
+
+### Cron Jobs
+
++ [Cron Guru](https://crontab.guru/)
+
+### Other
+
++ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
++ [w3schools](w3schools.com)
++ [javascript.info](javascript.info)
++ [Stack Overflow](https://stackoverflow.com/)
++ [openclassrooms](openclarooms.com)
++ [Udemy](https://www.udemy.com/)
++ [The Arch Wiki](archlinux.org)
++ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
++ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
++ [Hackthebox](https://hackthebox.eu)
++ [Tryhackme](https://tryhackme.com/)
++ [Italian HTML guide](https://www.html.it/guide/guida-html/)
++ [10 Tips to improve next coding project](https://www.freecodecamp.org/news/10-css-tricks-for-your-next-coding-project/)
++ [A game to learn flexbox](https://flexboxfroggy.com/)
++ [Nodeschool](https://nodeschool.io/)
