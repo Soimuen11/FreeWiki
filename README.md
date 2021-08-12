@@ -29,18 +29,19 @@ terminal :
 
 + systemctl --user stop xdg-document-portal.service
 
-Since the latter only is a temporary fix, I encourage to also type this :
+Since the latter only is a **temporary fix**, I encourage to also type this :
 
 + systemctl --user disable xdg-document-portal.service
 
 ### Trackpad stops working
 
-You only need 2 commands :
+You only need 2 commands:
 
 1. sudo modprobe -r psmouse (kill mouse kernel module)
 2. sudo modprobe psmouse (restart mouse kernel module)
 
-Other solution :
+Other solution:
+
 + Use my script called "mouse" which does exactly that.
 + If you frequently use my script, I recommend you create a CRON job to call it
   every now and then (perhaps once every 5 minutes). This way you never have
@@ -48,7 +49,7 @@ Other solution :
 
 ## CURL TRICKS
 
-### Get your IP address
+### Get Your IP Address
 
 + curl ifconfig.co
 + curl ifconfig.co/city
@@ -64,7 +65,7 @@ Other solution :
 
 ## TIPS, TRICKS AND HELPFUL PROGRAMS
 
-### Mounting Android phones in Linux
+### Mounting Android Phones In Linux
 
 1. Install simple-mtpfs (from the AUR if you are running Arch Linux)
 2. Create Android/ directory in your home/
@@ -72,9 +73,11 @@ Other solution :
 (1 being the device ID)
 4. Unmount with : fusermount -u Android/
 
-Other solution:
+Other solutions to transfer files:
 
-+ Use bluetooth
++ Use bluetooth.
++ For file transfer, you may also install termux, an android terminal app which
+  you may find in the app store. From there you can set up ssh on your phone.
 
 ### Installing Android in Vbox
 
@@ -84,25 +87,26 @@ Other solution:
 
 ### Video / Audio Editing Software
 
-+ Kdenlive / Olive
-+ Ffmpeg
-+ OBS
-+ Audacity / Sox
++ [Kdenlive](kdenlive.org)
++ [Olive](https://www.olivevideoeditor.org/)
++ [Ffmpeg](ffmpeg.org)
++ [OBS](https://obsproject.com/)
++ [Audacity](https://www.audacityteam.org/)
++ [Sox](http://sox.sourceforge.net/)
 
 ### Displaying keystrokes during screencast
 
 Install this program (with sudo privileges):
 
-+ screenkey
++ [screenkey](https://gitlab.com/screenkey/screenkey)
 + For Arch users: pacman -S screenkey OR yay -S screenkey
 + For Ubuntu users: apt install screenkey
 
-
 ### Easily Styling Termite Terminal
 
-Termite is a terminal emulator which I would most definitely recommend. To
-configure colors and fonts quickly and nicely, I recommend this program which
-you can find on github:
+[Termite](https://github.com/thestinger/termite/) is a terminal emulator which
+I would most definitely recommend. To configure colors and fonts quickly and
+nicely, I recommend this program which you can find on github:
 
 + [termite-style](https://github.com/adi1090x/termite-style)
 
@@ -112,10 +116,9 @@ I wrote this section...)
 ### Downloading Videos From YouTube
 
 One program to rule them all:
-+ youtube-dl
++ [youtube-dl](https://github.com/ytdl-org/youtube-dl)
 I have never fully experienced it but some people have recommended it to me:
-+ youtube-view to watch yt videos directly in terminal
-(you need an API to use youtube-view)
++ [mps-youtube](https://github.com/mps-youtube/mps-youtube)
 
 ### Concatenating Pdfs On Arch Linux
 
@@ -137,28 +140,29 @@ I have never fully experienced it but some people have recommended it to me:
 + [0-9] - any number
 + \ escape something
 
-+ Examples :
++ Examples:
 
 	- grep "something" file
-	- grep "^s" file -> any line starting wit lowercase s in given file
+	- grep "^s" file -> any line starting with lowercase "s" in given file
 
 ### A Chaotic List Of Useful Programs
 
-+ neofetch
-+ image viewer = sxiv
-+ pdf viewer = zathura
++ Neofetch
++ Image viewer = sxiv
++ Pdf viewer = zathura
 (don't forget to download sth to read pdfs along with zathura)
-+ neomutt: cli-based email client
-+ ffmpeg
-+ vlc / cvlc / nvlc (vlc with ncurses interface)
-+ vlc can play the radio directly from terminal too)
-+ cli-visualizer : visualize music
-+ ntfs-3g
++ Neomutt: cli-based email client
++ Ffmpeg
++ Vlc / cvlc / nvlc (vlc with ncurses interface)
++ Vlc can play the radio directly from terminal too)
++ Cli-visualizer : visualize music
++ Ntfs-3g
 
 ### Networking
 
-1. nmtui (this is the one you want)
-	+ on archlinux, run : pacman -S networkmanager
+1. nmtui
+	+ On archlinux: pacman -S networkmanager
+	+ On ubuntu: apt install network-manager
 2. nmcli dev wifi
 3. nmcli dev wifi connect APname password
 4. nmap +ip a+ nmap -sn 10.1.0.85/24
@@ -175,18 +179,22 @@ I have never fully experienced it but some people have recommended it to me:
 + Mediawiki (create a wikipedia-like wiki)
 + Wordpress
 + Code from scratch in html/css/js
-+ With github: create a new repository, initialize it with a file named
++ With GitHub: create a new repository, initialize it with a file named
   README.md, go to github pages, pick a theme and publish it.
 
 ### Monitor Your System
 
 + cron / anacron
-+ dstat / htop / Perf / aide
++ dstat / Perf / aide
 + sendmail / mailx / msmtp (after a cron job)
++ top / htop / bashtop
++ journalctl
 
-### Partition Disk From A Bash Script
+### Partition Disk
 
-+ sfdisk
++ sfdisk: from a bash script
++ fdisk
++ cfdisk
 
 ### Edit Subtitles
 
@@ -218,7 +226,7 @@ I have never fully experienced it but some people have recommended it to me:
 3. Sniffing
 
 + Wireshark
-+ Tcpdump / windump (for windows)
++ Tcpdump / windump (for Windows)
 + Steel Central Packet Analyzer
 + Capsa Network Analyzer
 + Omnipeek Network Analyzer
@@ -277,7 +285,7 @@ sudo mkfs.ext4 /dev/sdc1
 
 ### Learning AWK
 
-[Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
++ [Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
 
 ### VPS [Virtual Private Server]
 
