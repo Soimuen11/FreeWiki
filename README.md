@@ -1,23 +1,26 @@
 # The Free Wiki
 
+## About
+
 Starting June 4th 2020, this wiki will be a collection of all the issues I,
 Phil Wayne, have faced and will face on my Linux machine. It remains
 incomplete, since I have encountered many an issue, yet it shall grow over
 time, from this day forth. Since this file is destined to be read by the
-masses, I shall strive to be as clear as possible.
+masses, I shall strive to be as clear as possible. If you have any suggestions,
+do not hesitate to contact me or make your own fork.
 
-## MAIN CATEGORIES
+## Table Of Contents
 
 Find me here: https://soimuen11.github.io/FreeWiki/
 
-1. Annoying errors
-2. Tips, tricks & helpful programs
-3. Curl tricks
-4. Gaming on Linux
-5. Ffmpeg
-6. Other
+1. [Annoying errors](#annoying-errors)
+2. [Tips, tricks & helpful programs](#tips-tricks-&-helpful-programs)
+3. [Curl tricks](#curl-tricks)
+4. [Gaming on Linux](#gaming-on-linux)
+5. [Ffmpeg](#ffmpeg)
+6. [Other](#other)
 
-## ANNOYING ERRORS:
+## ANNOYING ERRORS
 
 ### df:/run/user/1000 permission denied
 
