@@ -14,7 +14,7 @@ do not hesitate to contact me or make your own fork.
 Find me here: https://soimuen11.github.io/FreeWiki/
 
 1. [Annoying errors](#annoying-errors)
-2. [Tips, tricks & helpful programs](#tips-tricks-&-helpful-programs)
+2. [Tips, tricks & helpful programs](#tips-tricks-and-helpful-programs)
 3. [Curl tricks](#curl-tricks)
 4. [Gaming on Linux](#gaming-on-linux)
 5. [Ffmpeg](#ffmpeg)
@@ -62,7 +62,7 @@ Other solution :
 
 + curl wttr.in
 
-## TIPS, TRICKS & HELPFUL PROGRAMS
+## TIPS, TRICKS AND HELPFUL PROGRAMS
 
 ### Mounting Android phones in Linux
 
@@ -104,10 +104,10 @@ Termite is a terminal emulator which I would most definitely recommend. To
 configure colors and fonts quickly and nicely, I recommend this program which
 you can find on github:
 
-+ termite-style (see on github)
-+ https://github.com/adi1090x/termite-style
++ [termite-style](https://github.com/adi1090x/termite-style)
 
-For arch users, I believe it is also directly available in the AUR.
+For arch users, I believe it is also directly available in the AUR (it was when
+I wrote this section...)
 
 ### Downloading Videos From YouTube
 
@@ -197,18 +197,18 @@ I have never fully experienced it but some people have recommended it to me:
 
 1. For Analyzing 
 
-+ sherlock
++ [sherlock](https://github.com/sherlock-project/sherlock)
 + whois
 + netcat
-+ whatweb
-+ dmitry
++ [whatweb](https://tools.kali.org/web-applications/whatweb)
++ [dmitry](https://tools.kali.org/information-gathering/dmitry)
 + theHarvester
 + hping3
-+ shodan.io
-+ https://www.exploit-db.com/ | Google Hacking Database
-+ linkedin.com -> social engineering
++ [shodan.io](shodan.io)
++ [Google Hacking Database](https://www.exploit-db.com)
++ [Linkedin for social engineering](linkedin.com)
 + job boards (such as indeed.com)
-+ https://lookup.icann.org/
++ [Icann Lookup](https://lookup.icann.org/)
 
 2. Password Attacks
 
@@ -262,7 +262,7 @@ sudo mkfs.ext4 /dev/sdc1
 
 ### Removing Sensitive Data From Git Repo
 
-+ https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository
++ [Removing Data From GitHub](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository)
 
 ### Great LS commands
 
@@ -273,40 +273,41 @@ sudo mkfs.ext4 /dev/sdc1
 
 ### Customizing Bash
 
-https://wiki.archlinux.org/index.php/Bash/Prompt_customization
++ [Archwiki link](https://wiki.archlinux.org/index.php/Bash/Prompt_customization)
 
 ### Learning AWK
 
-https://www.tutorialspoint.com/awk/awk_basic_examples.htm
+[Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
 
 ### VPS [Virtual Private Server]
 
-+ Linode : OpenSource & cheapest option I have found
-+ AWS
-+ Google
-+ Digital Ocean
-+ Vultr
++ [Linode: OpenSource & cheapest option I have found](linode.com)
++ [AWS](amazon.aws.com)
++ [Google](cloud.google.com)
++ [Digital Ocean](https://www.digitalocean.com/)
++ [Vultr](vultr.com)
 
 ### Buying Domain Name
 
-+ Epik (cheapest option I have found)
-+ Wordpress (I wouldn't recommend it)
++ [Epik:cheapest option I have found](epik.com)
++ [Wordpress.org](wordpress.org)
++ [Wordpress.com](wordpress.com)
 
 ### Copying text from vim to an external program
 
 "+y
 
-### vim r!
+### Vim r!
 
 :r! ls -> write the result of the command ls in a file directly from vim
 
-### vim powerline
+### Vim powerline
 
 + See archwiki "powerline"
 + https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
 + https://powerline.readthedocs.io/en/master/usage/wm-widgets.html
 
-### VIFM matrix color scheme
+### VIFM Matrix Color Scheme
 
 .config/vifm/colors/Default.vifm
 
@@ -341,8 +342,8 @@ highlight Executable      cterm=none ctermfg=green ctermbg=default
 ### Fuzzy Finders
 
 + Find can be a slow command
- + Use broot instead
- + Fzf also is very popular and can be used together with bfs.
++ Use broot instead
++ Fzf also is very popular and can be used together with bfs.
 
 ### Modifying images
 
@@ -351,24 +352,16 @@ highlight Executable      cterm=none ctermfg=green ctermbg=default
 + Gimp: Free software, equivalent to photoshop. The problem is: it is very complex.
 + Inkscape
 
-### Customizing dwm
-
-Look in :
-/usr/share/doc/dwm/
-You'll find a Readme and a license file.
-Then create a config.h and config.mk in /usr/local
-
-### Patching
+### Patching (Suckless Software)
 
 1. clone the repository of the program you want to patch (eg: dmenu)
 in .local/repos/
-( 2. make)
-3. cd into the repo && run : sudo make install
-4. download the patches
-5. run : patch -p1 < name-of-patch.diff
-6. if something goes wrong, look into the patch file and modify your source files manually (config.h for dmenu and dwm)
+2. cd into the repo && run : sudo make install
+3. download the patches
+4. run : patch -p1 < name-of-patch.diff
+5. if something goes wrong, look into the patch file and modify your source files manually (config.h for dmenu and dwm)
 
-NB : YOU NEED TO RECOMPILE (SUDO MAKE INSTALL) EVERY TIME YOU MAKE AN EDIT !
+**NB : YOU NEED TO RECOMPILE (SUDO MAKE INSTALL) EVERY TIME YOU MAKE AN EDIT !**
 
 ### Configuring Neomutt
 
@@ -378,7 +371,7 @@ NB : YOU NEED TO RECOMPILE (SUDO MAKE INSTALL) EVERY TIME YOU MAKE AN EDIT !
 
 hdparm is a command line utility to set and view hardware parameters of hard
 disk drives. It can also be used as a simple benchmarking tool:
-+ https://wiki.archlinux.org/index.php/Hdparm#Putting_a_drive_to_sleep_directly_after_boot
++ [Click here for more info](https://wiki.archlinux.org/index.php/Hdparm#Putting_a_drive_to_sleep_directly_after_boot)
 
 ### Streaming With CVLC Command Line Mode
 
@@ -445,7 +438,7 @@ Make rules permanent:
 
 Fast setup:
 I recommend Chris Titus' configuration, which you can find clicking on the link below.
-+ clone this repository : https://github.com/ChrisTitusTech/firewallsetup.git
++ [Click here & clone this repository](https://github.com/ChrisTitusTech/firewallsetup.git)
 
 ### Ranger (File Manager Program)
 
@@ -465,24 +458,25 @@ Analyze how much time it takes for each service to load (how long to completely 
 + systemd-analyze blame
 
 ### Managing logs
-last : shows a listing of last logged in users
+
+last: shows a listing of last logged in users
 
 ### Pacman
 
-+ pacman -S : install a program
-+ pacman -Ss : search for a program
-+ pacman -Syu : update + upgrade the system
++ pacman -S: install a program
++ pacman -Ss: search for a program
++ pacman -Syu: update + upgrade the system
 + pacman -Syyuu 
 + pacman -Q
 + pacman -Qte
-+ pacman -R OR pacman -Rns : This removes a program and all its dependencies / config files
-+ pacman -Rdd $ program : This removes only the program without its dependencies
-+ pacman -Rc $program : This removes all the packages which depend on a program
++ pacman -R OR pacman -Rns: This removes a program and all its dependencies / config files
++ pacman -Rdd $ program: This removes only the program without its dependencies
++ pacman -Rc $program: This removes all the packages which depend on a program
 
 ### Software To Make You Own Music
 
-+ Rosegarden
-+ Audacity
++ [Rosegarden](https://rosegardenmusic.com/)
++ [Audacity](https://www.audacityteam.org/)
 + LMMS : Linux Multimedia Studio
 
 ### Nice Ncurses Programs
@@ -502,19 +496,25 @@ last : shows a listing of last logged in users
 
 ### Spreadsheet Program With Vim Bindings
 
-+ SC-IM: https://github.com/andmarti1424/sc-im
-Install it on Arch Linux: yay -Ss sc-im
++ [SC-IM](https://github.com/andmarti1424/sc-im)
++ Install it with the AUR on Arch Linux: yay -Ss sc-im
 
-### Restarting Display Manager
+### Display Manager Setup
 
-+ sudo systemctl restart [dislay-manager-name]
+1. **Permanently** change DM:
+	+ sudo systemctl disable [$CURRENT-DISPLAY-MANAGER]
+	+ sudo systemctl enable [$NEW-DISPLAY-MANAGER]
+2. **Temporarily** change DM:
+	+ sudo systemctl stop [$CURRENT-DISPLAY-MANAGER]
+	+ sudo systemctl start [$NEW-DISPLAY-MANAGER]
+3. Restart DM: sudo systemctl restart [$DISLAY-MANAGER-NAME]
 
 ### Set Keyboard Without Ibus
 
 Forever:
 
-1. create a file : /etc/X11/xorg.conf.d/10-keyboard.conf
-2. add lines I added in my current 10-keyboard.conf
+1. Create a file : /etc/X11/xorg.conf.d/10-keyboard.conf
+2. Add lines I added in my current 10-keyboard.conf
 
 Temporarily:
 
@@ -527,14 +527,15 @@ Bc is a built-in POSIX CLI calculator (for bash).
 
 ### Autojump
 
-A shell program to cd faster, a bit like broot or fzf (though not a fuzzy finder).
++ A shell program to cd faster, a bit like broot or fzf (though not a fuzzy finder).
++ Install it on Ubuntu: sudo apt install autojump
 
 ### Browser Recommendations
 
-1. Iridium (best one regarding privacy)
-2. Brave (for its relative security builtin js/ad-blocker & its speed) with the vimium plugin 
-3. Qutebrowser (if you love vim, you will love it)
-4. Firefox (with the pentadactyl plugin)
+1. [Iridium is the best one regarding privacy](https://iridiumbrowser.de/)
+2. [Brave & vimium plugin: for its relative security builtin js/ad-blocker & its speed](brave.com)
+3. [Qutebrowser: if you love vim, you will love it](https://qutebrowser.org/)
+4. [Firefox with the pentadactyl plugin](https://www.mozilla.org/it/firefox/new/?redirect_source=firefox-com)
 
 ### Getting RSS Links
 
@@ -546,7 +547,7 @@ FROM YOUTUBE CHANNEL:
 + Then copy-paste this url: https://www.youtube.com/feeds/videos.xml?channel_id=YOURCHANNELIDHERE
 + Add the channelId where it belongs
 
-INSTALL NEWSBOAT:
+[INSTALL NEWSBOAT:](https://github.com/newsboat/newsboat)
 + sudo apt install newsboat (debian-based distros)
 + sudo pacman -S newsboat (arch-based distros)
 
@@ -556,9 +557,9 @@ Nothing is less true than "you cannot play on Linux". Try out these one of
 these 3 programs and you will not be disappointed. I highly recommend Steam. It
 has entertained me for many an hour.
 
-+ Wine
-+ PlayOnLinux
-+ Steam
++ [Wine](https://www.winehq.org/)
++ [PlayOnLinux](https://www.playonlinux.com/en/)
++ [Steam](https://store.steampowered.com/)
 
 All these programs are well documented in the Arch Wiki. Be careful and install
 the proper fonts/dependencies for Steam! All three programs are directly
@@ -659,16 +660,16 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 
 ### Sources
 
-https://www.howtogeek.com/446706/how-to-create-a-screencast-on-linux/
-ffmpeg.org
-stackexchange
-https://ostechnix.com/20-ffmpeg-commands-beginners/
-https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam
++ [An article from howtogeek.com](https://www.howtogeek.com/446706/how-to-create-a-screencast-on-linux/)
++ [Ffmpeg.org](ffmpeg.org)
++ [Stackexchange](stackexchange.com)
++ [Ffmpeg commands for beginners](https://ostechnix.com/20-ffmpeg-commands-beginners/)
++ [As usual, the archwiki](https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam)
 
 ## OTHER
 
 ### Windows (OS) list of commands
-https://www.lifewire.com/list-of-command-prompt-commands-4092302
++ [An article from lifewire.com](https://www.lifewire.com/list-of-command-prompt-commands-4092302)
 
 ### Learning AWS
-https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm
++ [A tutorial from tutorials point](https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm)
