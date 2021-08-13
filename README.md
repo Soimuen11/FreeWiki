@@ -647,6 +647,8 @@ FROM YOUTUBE CHANNEL:
 
 ## GAMING ON LINUX
 
+### False Stereotypes
+
 Nothing is less true than "you cannot play on Linux". Try out these one of
 these 3 programs and you will not be disappointed. I highly recommend Steam. It
 has entertained me for many an hour.
@@ -659,19 +661,20 @@ All these programs are well documented in the Arch Wiki. Be careful and install
 the proper fonts/dependencies for Steam! All three programs are directly
 available with pacman or in the AUR.
 
-+ Emulating console games
+### Emulating console games
 
 Many emulators exist. Here are the ones I use and consider as "the best":
 
-1. Nintendo DS (nds): desmume
-2. GameBoy Advanced (gba): vbam
-3. PlayStation Portable (psp): ppsspp
-4. Wii-U: decaf OR cemu+wine
-5. PC: wine + playonlinux
-6. Wii + Gamecube: dolphin
-7. Nintendo 64: Mupen64plus
+1. Nintendo DS (nds): **desmume**
+2. GameBoy Advanced (gba): **vbam**
+3. PlayStation Portable (psp): **ppsspp**
+4. Wii-U: **decaf** OR **Cemu & Wine**
+5. PC: **Wine** + **Playonlinux**
+6. Wii + Gamecube: **Dolphin**
+7. Nintendo 64: **Mupen64plus**
 
 Downloading the roms: 
+
 + [emulatorgames.net](https://emulatorgames.net)
 + [Romsmania](https://consolegames.down10.software/roms/)
 
@@ -710,7 +713,7 @@ ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 1
 # f x11grab: Force the video format to a specific type. Here we’re setting the input format to the output of your X server.
 # i :0.0: This specifies the video input will come from the main screen.
 # f pulse: Sets the expected format to be PulseAudio.
-ac 2: Set two audio channels
+# ac 2: Set two audio channels
 # i 1: Take audio input from PulseAudio source #1. This is the value we used pactl to discover.
 # output.mkv: The name of the file we wish to create.
 # async 1: Set the audio sync method. This is a deprecated parameter, but we’re using it here to avoid error messages that can be ignored.
@@ -734,11 +737,16 @@ ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 output.mkv -vsync 1
 
 ### Converting files
 
+```bash
 ffmpeg -i output.mkv output.mp4
+```
 general formula : ffmpeg -i output.oldformat output.wantedformat
 
 ### Add background music
+
+```bash
 ffmpeg -i arch-install.mp4  -i archinstall-soundtrack.mp4 -c copy -map 0:v:0 -map 1:a:0 output2.mp4
+```
 
 ### Concatenating Files
 
@@ -818,10 +826,10 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 ### Other
 
 + [Tutorials Point](https://www.tutorialspoint.com/index.htm)
-+ [w3schools](https://w3schools.com)
-+ [javascript.info](https://javascript.info/)
++ [W3schools](https://w3schools.com)
++ [Javascript.info](https://javascript.info/)
 + [Stack Overflow](https://stackoverflow.com/)
-+ [openclassrooms](https://openclarooms.com)
++ [OpenClassrooms](https://openclarooms.com)
 + [Udemy](https://www.udemy.com/)
 + [The Arch Wiki](https://archlinux.org)
 + [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
@@ -832,3 +840,9 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 + [10 Tips to improve next coding project](https://www.freecodecamp.org/news/10-css-tricks-for-your-next-coding-project/)
 + [A game to learn flexbox](https://flexboxfroggy.com/)
 + [Nodeschool](https://nodeschool.io/)
++ [FreeCodeCamp](https://www.freecodecamp.org/)
++ [FranceIOI](http://www.france-ioi.org/)
++ [Coding Interview Questions](https://www.byte-by-byte.com/coding-interview-questions/)
++ [JS Questions](https://github.com/lydiahallie/javascript-questions)
++ [JS For Cats](http://jsforcats.com/)
++ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
