@@ -9,9 +9,12 @@ time, from this day forth. Since this file is destined to be read by the
 masses, I shall strive to be as clear as possible. If you have any suggestions,
 do not hesitate to contact me or make your own fork.
 
-## Table Of Contents
+You may also find me here:
++ [My blog](https://madlibrarian.xyz)
++ [My YouTube channel](https://www.youtube.com/channel/UCsem4aDdFN9x719N9EPZkww)
++ [Go to this wiki from github](https://soimuen11.github.io/FreeWiki)
 
-Find me here: https://soimuen11.github.io/FreeWiki/
+## Table Of Contents
 
 1. [Annoying errors](#annoying-errors)
 2. [Tips, tricks & helpful programs](#tips-tricks-and-helpful-programs)
@@ -795,7 +798,7 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 
 ### Quickly Access Documentation
 
-+ Zeal
++ [Zeal](https://github.com/zealdocs/zeal)
 + Man Pages
 + Info Pages
 + The --help flag shipping with (almost) every program
@@ -825,24 +828,28 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 
 ### Other
 
-+ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
-+ [W3schools](https://w3schools.com)
-+ [Javascript.info](https://javascript.info/)
-+ [Stack Overflow](https://stackoverflow.com/)
-+ [OpenClassrooms](https://openclarooms.com)
-+ [Udemy](https://www.udemy.com/)
-+ [The Arch Wiki](https://archlinux.org)
-+ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
-+ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
-+ [Hackthebox](https://hackthebox.eu)
-+ [Tryhackme](https://tryhackme.com/)
-+ [Italian HTML guide](https://www.html.it/guide/guida-html/)
-+ [10 Tips to improve next coding project](https://www.freecodecamp.org/news/10-css-tricks-for-your-next-coding-project/)
-+ [A game to learn flexbox](https://flexboxfroggy.com/)
-+ [Nodeschool](https://nodeschool.io/)
-+ [FreeCodeCamp](https://www.freecodecamp.org/)
-+ [FranceIOI](http://www.france-ioi.org/)
-+ [Coding Interview Questions](https://www.byte-by-byte.com/coding-interview-questions/)
-+ [JS Questions](https://github.com/lydiahallie/javascript-questions)
-+ [JS For Cats](http://jsforcats.com/)
-+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
+1. English:
+	+ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
+	+ [W3schools](https://w3schools.com)
+	+ [Javascript.info](https://javascript.info/)
+	+ [Stack Overflow](https://stackoverflow.com/)
+	+ [OpenClassrooms](https://openclarooms.com)
+	+ [Udemy](https://www.udemy.com/)
+	+ [The Arch Wiki](https://archlinux.org)
+	+ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
+	+ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
+	+ [Hackthebox](https://hackthebox.eu)
+	+ [Tryhackme](https://tryhackme.com/)
+	+ [10 Tips to improve next coding project](https://www.freecodecamp.org/news/10-css-tricks-for-your-next-coding-project/)
+	+ [A game to learn flexbox](https://flexboxfroggy.com/)
+	+ [Nodeschool](https://nodeschool.io/)
+	+ [FreeCodeCamp](https://www.freecodecamp.org/)
+	+ [Coding Interview Questions](https://www.byte-by-byte.com/coding-interview-questions/)
+	+ [JS Questions](https://github.com/lydiahallie/javascript-questions)
+	+ [JS For Cats](http://jsforcats.com/)
+	+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
+2. French:
+	+ [Développez.com](https://developpez.com)
+	+ [FranceIOI](http://www.france-ioi.org/)
+3. Italian:
+	+ [Italian HTML guide](https://www.html.it/guide/guida-html/)
