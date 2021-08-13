@@ -29,11 +29,14 @@ df for more info). You should at least know the -h flag, which prints a
 human-readable result.  If you ever encounter this issue, you need to type this
 command in your terminal:
 
-+ systemctl --user stop xdg-document-portal.service
-
+```bash
+systemctl --user stop xdg-document-portal.service
+```
 Since the latter only is a **temporary fix**, I encourage to also type this:
 
-+ systemctl --user disable xdg-document-portal.service
+```bash
+systemctl --user disable xdg-document-portal.service
+```
 
 If you want to know more about systemd, click on [this
 link](https://wiki.archlinux.org/title/Systemd)
@@ -44,8 +47,10 @@ Since it frequently happened after sleep mode with Arch Linux and it has been
 happening again with Ubuntu (strangely it never happened with Gentoo), here is
 the fix I have been using. You only need **2 commands**:
 
-1. sudo modprobe -r psmouse (kill mouse kernel module)
-2. sudo modprobe psmouse (restart mouse kernel module)
+```bash
+sudo modprobe -r psmouse #kill mouse kernel module
+sudo modprobe psmouse #restart mouse kernel module
+```
 
 Other solution:
 
@@ -59,17 +64,23 @@ Other solution:
 
 ### Get Your IP Address
 
-+ curl ifconfig.co
-+ curl ifconfig.co/city
-+ curl ifconfig.co/country
+```bash
+curl ifconfig.co
+curl ifconfig.co/city
+curl ifconfig.co/country
+```
 
 ### News
 
-+ curl getnews.tech
+```bash
+curl getnews.tech
+```
 
 ### Weather
 
+```bash
 + curl wttr.in
+```
 
 ## TIPS, TRICKS AND HELPFUL PROGRAMS
 
@@ -108,8 +119,14 @@ Other solutions to transfer files:
 Install this program (with sudo privileges):
 
 + [screenkey](https://gitlab.com/screenkey/screenkey)
-+ For Arch users: pacman -S screenkey OR yay -S screenkey
-+ For Ubuntu users: apt install screenkey
++ For Arch users: 
+```bash
+sudo pacman -S screenkey OR yay -S screenkey
+```
++ For Ubuntu users: 
+```bash
+sudo apt install screenkey
+```
 
 ### Easily Styling Termite Terminal
 
@@ -133,7 +150,9 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### Concatenating Pdfs
 
-+ yay -S pdf-append (for Arch users)
+```bash
+yay -S pdf-append #for Arch users
+```
 
 ### Regular Expressions Basics
 
@@ -204,14 +223,14 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### Partition Disk
 
-+ sfdisk: from a bash script
 + fdisk
++ sfdisk: from a bash script
 + cfdisk: more readable output than fdisk
 
 ### Edit Subtitles
 
-+ Aegisub: Allows you to edit existing ones but also to create your own
-  subtitles
++ [Aegisub](https://aegisub.it.uptodown.com/): Allows you to edit existing ones
+  but also to create your own subtitles
 
 ### Pentesting programs & websites
 
@@ -269,16 +288,24 @@ I have never fully experienced it but some people have recommended it to me:
 ### Formatting A Flashdrive
 
 + Check filesystem
+```bash
 fsck -N /dev/sd?
+```
 
 + Format with vFat File System
+```bash
 sudo mkfs.vfat /dev/sdc1
+```
 
 + Format with NTFS File System
+```bash
 sudo mkfs.ntfs /dev/sdc1
+```
 
 + Format with EXT4 File System
+```bash
 sudo mkfs.ext4 /dev/sdc1
+```
 
 ### Removing Sensitive Data From Git Repo
 
@@ -286,10 +313,12 @@ sudo mkfs.ext4 /dev/sdc1
 
 ### Great LS commands
 
-+ lsusb: list usb devices
-+ lscpu: display information about cpu architecture
-+ lspci: list all pci devices
-+ lsblk: list block devices
+```bash
+lsusb #list usb devices
+lscpu #display information about cpu architecture
+lspci #list all pci devices
+lsblk #list block devices
+```
 
 ### Customizing Bash
 
@@ -315,27 +344,33 @@ sudo mkfs.ext4 /dev/sdc1
 
 ### Copying text from vim to an external program
 
+```vim
 "+y
+```
 
 ### Vim r!
 
-:r! ls -> write the result of the command ls in a file directly from vim
+Write the result of the command ls in a file directly from vim
+```vim
+:r! ls 
+```
 
 ### Vim powerline
 
-+ See archwiki "powerline"
-+ https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
-+ https://powerline.readthedocs.io/en/master/usage/wm-widgets.html
++ [Archwiki Page For *powerline*](https://wiki.archlinux.org/title/Powerline)
++ [GitHub Repo For Powerline](https://github.com/powerline/powerline)
++ [A Tecmint Tutorial](https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/)
++ [Powerline As A Widget](https://powerline.readthedocs.io/en/master/usage/wm-widgets.html)
 
 ### VIFM Matrix Color Scheme
 
 .config/vifm/colors/Default.vifm
 
+```vim
 " Matrix
 " by Michael jubalh Vetter
 " https://github.com/jubalh/vifm-colors
 
-```vim
 highlight clear
 
 highlight Win             cterm=none ctermfg=green    ctermbg=black
@@ -363,15 +398,18 @@ highlight Executable      cterm=none ctermfg=green ctermbg=default
 
 ### Fuzzy Finders
 
-+ Find can be a slow command
-+ Use broot instead
-+ Fzf also is very popular and can be used together with bfs.
++ **Find** can be a slow command
++ Use **broot** instead
++ **Fzf** also is very popular and can be used together with **bfs**.
 
 ### Modifying images
 
-+ ImageMagick (cli tool). imagemagick.org is its official site. They also have a github page.
-+ Canva.com: very quick and effective for youtube thumbnails. The problem is: it is web-based.
-+ Gimp: Free software, equivalent to photoshop. The problem is: it is very complex.
++ **ImageMagick** (cli tool). [imagemagick.org](imagemagick.org) is its
+  official site. They also have a github page.
++ [Canva.com](canva.com): very quick and effective for youtube thumbnails. The
+  problem is: it is web-based.
++ Gimp: Free software, equivalent to photoshop. The problem is: it is very
+  complex.
 + Inkscape
 
 ### Patching (Suckless Software)
@@ -387,28 +425,35 @@ in .local/repos/
 
 ### Configuring Neomutt
 
-+ git clone luke smith's mutt wizard OR download it from the AUR
++ Clone [luke smith's mutt-wizard GitHub repository](https://muttwizard.com/) 
++ OR download it from the AUR with:
+```bash
+yay -S mutt-wizard
+```
 
-### hdparm
+### Hdparm
 
-hdparm is a command line utility to set and view hardware parameters of hard
+**hdparm** is a command line utility to set and view hardware parameters of hard
 disk drives. It can also be used as a simple benchmarking tool:
 + [Click here for more info](https://wiki.archlinux.org/index.php/Hdparm#Putting_a_drive_to_sleep_directly_after_boot)
 
 ### Streaming With CVLC Command Line Mode
 
-In your terminal, run:
-+ vlc v4l2:// :v4l-vdev="/dev/video0" OR mpv /dev/video0
+Open your terminal & run:
+```bash
+vlc v4l2:// :v4l-vdev="/dev/video0" OR mpv /dev/video0
+```
 
 Then start the video with :
-+ ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 1 output.mkv -async 1 -vsync 1
+```bash
+ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 1 output.mkv -async 1 -vsync 1
+```
 
 ### Audio Management
 
-+ PulseAudio / Pavucontrol / Pulsemixer
-+ Alsa / Alsamixer
-
-+ Audacity: To record audio.
++ PulseAudio / Pavucontrol / Pulsemixer: For sound control of your system.
++ Alsa / Alsamixer: For sound control of your system.
++ Audacity: To record audio (and so much more).
 + Sox (for terminal): Same as audacity but is terminal-based.
 
 ### Distros One Should Be Curious About?
@@ -438,7 +483,7 @@ do not directly install binaries
 A firewall is essentially a way to filter traffic.  What traffic do you want to
 allow / block ?
 
-There are 3 different ways that data can be sent :
+There are 3 different ways that data can be sent:
 + Input = whenever you are receiving data (eg from the internet)
 + Output = Whenever you are sending data out
 + Forward = You see that a lot on routers. When data passes through from one
@@ -448,18 +493,25 @@ In between brackets, you have the POLICY, which ACCEPTs everything by default.
 
 Some useful Commands:
 
-+ iptables -L (or --list) : List  current firewall rules
-+ iptables -P POLICY DROP/ACCEPT : Change a (-P) policy from drop to accept, or vice versa.
-example : iptables -P FORWARD DROP
-If your computer is not set up as a router, you don't need FORWARD to accept everything, so you can set its policty to DROP.
-+ iptables -A : Add or Append a rule to the bottom of the chain
-+ iptables -I : Add or Append a rule to the top of the chain
+```bash
+iptables -L #(or --list) List  current firewall rules
+iptables -P POLICY DROP/ACCEPT #Change a (-P) policy from drop to accept, or vice versa.
 
-Make rules permanent:
-+ sudo iptables-save > /etc/iptables/iptables.rules
+# example: 
+iptables -P FORWARD DROP
 
-Fast setup:
-I recommend Chris Titus' configuration, which you can find clicking on the link below.
+# If your computer is not set up as a router, you don't need FORWARD to accept
+# everything, so you can set its policty to DROP.
+
+iptables -A #Add or Append a rule to the bottom of the chain
+iptables -I #Add or Append a rule to the top of the chain
+
+#Make rules permanent:
+sudo iptables-save > /etc/iptables/iptables.rules
+```
+
+If you wish to quickly and easily set up your firewall, you may use Chris
+Titus' configuration, which you can find clicking on the link below:
 + [Click here & clone this repository](https://github.com/ChrisTitusTech/firewallsetup.git)
 
 ### Ranger (File Manager Program)
@@ -475,16 +527,22 @@ Program to control or examine the kernel ring buffer.
 ### systemd-analyze
 
 Analyze how much time it takes for each service to load (how long to completely boot your pc)
-+ systemd-analyze
-+ systemd-analyze critical-chain graphical.target
-+ systemd-analyze blame
+
+```bash
+systemd-analyze
+systemd-analyze critical-chain graphical.target
+systemd-analyze blame
+```
 
 ### Managing logs
 
-last: shows a listing of last logged in users
+```bash
+last #shows a listing of last logged in users
+```
 
 ### Pacman
 
+```bash
 + pacman -S: install a program
 + pacman -Ss: search for a program
 + pacman -Syu: update + upgrade the system
@@ -494,6 +552,7 @@ last: shows a listing of last logged in users
 + pacman -R OR pacman -Rns: This removes a program and all its dependencies / config files
 + pacman -Rdd $ program: This removes only the program without its dependencies
 + pacman -Rc $program: This removes all the packages which depend on a program
+```
 
 ### Software To Make You Own Music
 
@@ -524,16 +583,23 @@ last: shows a listing of last logged in users
 ### Display Manager Setup
 
 1. **Permanently** change DM:
-	+ sudo systemctl disable [$CURRENT-DISPLAY-MANAGER]
-	+ sudo systemctl enable [$NEW-DISPLAY-MANAGER]
+```bash
+	sudo systemctl disable [$CURRENT-DISPLAY-MANAGER]
+	sudo systemctl enable [$NEW-DISPLAY-MANAGER]
+```
 2. **Temporarily** change DM:
-	+ sudo systemctl stop [$CURRENT-DISPLAY-MANAGER]
-	+ sudo systemctl start [$NEW-DISPLAY-MANAGER]
-3. Restart DM: sudo systemctl restart [$DISLAY-MANAGER-NAME]
+```bash
+	sudo systemctl stop [$CURRENT-DISPLAY-MANAGER]
+	sudo systemctl start [$NEW-DISPLAY-MANAGER]
+```
+3. Restart DM: 
+```bash
+sudo systemctl restart [$DISLAY-MANAGER-NAME]
+```
 
 ### Set Keyboard Without Ibus
 
-Forever:
+Forever Option 1:
 
 1. Create a file : /etc/X11/xorg.conf.d/10-keyboard.conf
 2. Add lines I added in my current 10-keyboard.conf
@@ -542,6 +608,12 @@ Temporarily:
 
 + setxkbmap us
 + setxkbmap us -variant intl
+
+If you wish to remap your capslock and make it behave like the control key, you
+may also add this line to your .xprofile:
+```bash
+setxkbmap -option ctrl:nocaps
+```
 
 ### Bc
 
@@ -723,12 +795,12 @@ Then add them using a video filter:
 ### Other
 
 + [Tutorials Point](https://www.tutorialspoint.com/index.htm)
-+ [w3schools](w3schools.com)
-+ [javascript.info](javascript.info)
++ [w3schools](https://w3schools.com)
++ [javascript.info](https://javascript.info/)
 + [Stack Overflow](https://stackoverflow.com/)
-+ [openclassrooms](openclarooms.com)
++ [openclassrooms](https://openclarooms.com)
 + [Udemy](https://www.udemy.com/)
-+ [The Arch Wiki](archlinux.org)
++ [The Arch Wiki](https://archlinux.org)
 + [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
 + [The Ubuntu Wiki](https://wiki.ubuntu.com/)
 + [Hackthebox](https://hackthebox.eu)
