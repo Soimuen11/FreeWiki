@@ -196,10 +196,10 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### Monitor Your System
 
-+ cron | anacron
-+ dstat | perf | aide
-+ sendmail | mailx | msmtp
-+ top | htop | bashtop
++ cron / anacron
++ dstat / perf / aide
++ sendmail / mailx / msmtp
++ top / htop / bashtop
 + journalctl
 
 ### Partition Disk
@@ -215,7 +215,7 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### Pentesting programs & websites
 
-1. For Analyzing 
+#### Analyzing 
 
 + [Sherlock](https://github.com/sherlock-project/sherlock)
 + [Whois](https://www.whois.com/whois)
@@ -230,22 +230,22 @@ I have never fully experienced it but some people have recommended it to me:
 + TheHarvester
 + Hping3
 
-2. Password Attacks
+#### Password Attacks
 
 + Medusa
 + John
 
-3. Sniffing
+#### Sniffing
 
 + Wireshark
-+ Tcpdump | Windump (for Windows)
++ Tcpdump / Windump (for Windows)
 + Steel Central Packet Analyzer
 + Capsa Network Analyzer
 + Omnipeek Network Analyzer
 + Observer Network Analyzer
 + Sniff-O-Matic
 
-4. Other
+#### Other
 
 + Xtightvncviewer
 + Dig
