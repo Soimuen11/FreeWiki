@@ -24,28 +24,36 @@ Find me here: https://soimuen11.github.io/FreeWiki/
 
 ### df:/run/user/1000 permission denied
 
-If you ever encounter this issue, you need to type this command in your
-terminal :
+Df is a very handy command which reports file system disk space usage (see man
+df for more info). You should at least know the -h flag, which prints a
+human-readable result.  If you ever encounter this issue, you need to type this
+command in your terminal:
 
 + systemctl --user stop xdg-document-portal.service
 
-Since the latter only is a **temporary fix**, I encourage to also type this :
+Since the latter only is a **temporary fix**, I encourage to also type this:
 
 + systemctl --user disable xdg-document-portal.service
 
+If you want to know more about systemd, click on [this
+link](https://wiki.archlinux.org/title/Systemd)
+
 ### Trackpad stops working
 
-You only need 2 commands:
+Since it frequently happened after sleep mode with Arch Linux and it has been
+happening again with Ubuntu (strangely it never happened with Gentoo), here is
+the fix I have been using. You only need **2 commands**:
 
 1. sudo modprobe -r psmouse (kill mouse kernel module)
 2. sudo modprobe psmouse (restart mouse kernel module)
 
 Other solution:
 
-+ Use my script called "mouse" which does exactly that.
-+ If you frequently use my script, I recommend you create a CRON job to call it
-  every now and then (perhaps once every 5 minutes). This way you never have
-  to worry about that anymore.
++ Use my *script* called **mouse** which does exactly that.
++ If you frequently use my script, I recommend you create a CRON job (with root
+  privileges) to call it every now and then (perhaps once every 5 minutes).
+  This way you never have to worry about that anymore. To set up said cron job,
+  do not hesitate to use the [Cron Guru web app](https://www.creativebloq.com/features/10-best-static-site-generators).
 
 ## CURL TRICKS
 
@@ -75,12 +83,13 @@ Other solution:
 
 Other solutions to transfer files:
 
-+ Use bluetooth.
-+ For file transfer, you may also install termux, an android terminal app which
-  you may find in the app store. From there you can set up ssh on your phone.
++ Use bluetooth (particularly easy with **Gnome Control Center**)
++ For file transfer, you may also install **Termux**, an android terminal app which
+  you may find in the **Play Store**. From there you can set up ssh on your phone.
 
 ### Installing Android in Vbox
 
++ [Download the ISO](https://www.android-x86.org)
 + Change motherboard to PS/2 Mouse in System tab
 + Change Processors to 2+
 + Change Display to 3d and VboxSVGA
@@ -110,8 +119,10 @@ nicely, I recommend this program which you can find on github:
 
 + [termite-style](https://github.com/adi1090x/termite-style)
 
-For arch users, I believe it is also directly available in the AUR (it was when
-I wrote this section...)
+For Arch users, I believe it is also directly available in the AUR (it was when
+I wrote this section). When I last edited this section (on Aug 13, 2021), I
+read that termite is now obsolete. Hence it might be wiser to make the switch
+to alacritty, as the maintainer of the git repo indicated.
 
 ### Downloading Videos From YouTube
 
@@ -120,9 +131,9 @@ One program to rule them all:
 I have never fully experienced it but some people have recommended it to me:
 + [mps-youtube](https://github.com/mps-youtube/mps-youtube)
 
-### Concatenating Pdfs On Arch Linux
+### Concatenating Pdfs
 
-+ yay -S pdf-append
++ yay -S pdf-append (for Arch users)
 
 ### Regular Expressions Basics
 
@@ -147,11 +158,11 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### A Chaotic List Of Useful Programs
 
-+ Neofetch
-+ Image viewer = sxiv
-+ Pdf viewer = zathura
++ [Neofetch](https://github.com/dylanaraps/neofetch)
++ [Sxiv](https://github.com/ont/sxiv): A suckless image viewer for X vith vim keybindings
++ [Zathura](https://github.com/pwmt/zathura): A document viewer
 (don't forget to download sth to read pdfs along with zathura)
-+ Neomutt: cli-based email client
++ [Neomutt](https://neomutt.org/dev/documentation): cli-based email client
 + Ffmpeg
 + Vlc / cvlc / nvlc (vlc with ncurses interface)
 + Vlc can play the radio directly from terminal too)
@@ -165,7 +176,7 @@ I have never fully experienced it but some people have recommended it to me:
 	+ On ubuntu: apt install network-manager
 2. nmcli dev wifi
 3. nmcli dev wifi connect APname password
-4. nmap +ip a+ nmap -sn 10.1.0.85/24
+4. nmap -A -T4 hostname
 5. wireshark
 6. nslookup
 7. wifite2
@@ -176,25 +187,26 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### Create Your Own Wiki
 
-+ Mediawiki (create a wikipedia-like wiki)
++ [Mediawiki](https://www.mediawiki.org/wiki/MediaWiki)
 + Wordpress
-+ Code from scratch in html/css/js
++ Code from scratch with HTML, CSS & JS and then self-host it.
 + With GitHub: create a new repository, initialize it with a file named
   README.md, go to github pages, pick a theme and publish it.
++ [Other amazing tools to build a website from markdown](https://www.creativebloq.com/features/10-best-static-site-generators)
 
 ### Monitor Your System
 
-+ cron / anacron
-+ dstat / Perf / aide
-+ sendmail / mailx / msmtp (after a cron job)
-+ top / htop / bashtop
++ cron | anacron
++ dstat | perf | aide
++ sendmail | mailx | msmtp
++ top | htop | bashtop
 + journalctl
 
 ### Partition Disk
 
 + sfdisk: from a bash script
 + fdisk
-+ cfdisk
++ cfdisk: more readable output than fdisk
 
 ### Edit Subtitles
 
@@ -205,18 +217,18 @@ I have never fully experienced it but some people have recommended it to me:
 
 1. For Analyzing 
 
-+ [sherlock](https://github.com/sherlock-project/sherlock)
-+ whois
-+ netcat
-+ [whatweb](https://tools.kali.org/web-applications/whatweb)
-+ [dmitry](https://tools.kali.org/information-gathering/dmitry)
-+ theHarvester
-+ hping3
-+ [shodan.io](shodan.io)
++ [Sherlock](https://github.com/sherlock-project/sherlock)
++ [Whois](https://www.whois.com/whois)
++ [Whatweb](https://tools.kali.org/web-applications/whatweb)
++ [Dmitry](https://tools.kali.org/information-gathering/dmitry)
++ [Shodan.io](shodan.io)
 + [Google Hacking Database](https://www.exploit-db.com)
 + [Linkedin for social engineering](linkedin.com)
-+ job boards (such as indeed.com)
 + [Icann Lookup](https://lookup.icann.org/)
++ Job boards (such as indeed.com)
++ Netcat
++ TheHarvester
++ Hping3
 
 2. Password Attacks
 
@@ -226,7 +238,7 @@ I have never fully experienced it but some people have recommended it to me:
 3. Sniffing
 
 + Wireshark
-+ Tcpdump / windump (for Windows)
++ Tcpdump | Windump (for Windows)
 + Steel Central Packet Analyzer
 + Capsa Network Analyzer
 + Omnipeek Network Analyzer
@@ -235,13 +247,13 @@ I have never fully experienced it but some people have recommended it to me:
 
 4. Other
 
-+ xtightvncviewer
-+ dig
-+ nslookup
-+ peach fuzzer = fuzzing technique
-+ wafw00f : check if there's a firewall on target domain
-+ rlogin
-+ burpsuite
++ Xtightvncviewer
++ Dig
++ Nslookup
++ Peach fuzzer = fuzzing technique
++ Wafw00f : check if there's a firewall on target domain
++ Rlogin
++ Burpsuite
 
 ### Xorg Programs
 
@@ -256,7 +268,7 @@ I have never fully experienced it but some people have recommended it to me:
 
 ### Formatting A Flashdrive
 
-+ check filesystem
++ Check filesystem
 fsck -N /dev/sd?
 
 + Format with vFat File System
@@ -676,6 +688,13 @@ Then add them using a video filter:
 
 ## RESOURCES
 
+### Quickly Access Documentation
+
++ Zeal
++ Man Pages
++ Info Pages
++ The --help flag shipping with (almost) every program
+
 ### Microsoft Windows
 
 + [List of CMD Commands](https://www.lifewire.com/list-of-command-prompt-commands-4092302)
@@ -693,7 +712,7 @@ Then add them using a video filter:
 
 ### Free VS Open-Source Software
 
-+ [A gnu.org Article](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
++ [A GNU.ORG Article](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
 
 ### Cron Jobs
 
