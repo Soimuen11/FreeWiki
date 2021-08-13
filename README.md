@@ -301,15 +301,15 @@ sudo mkfs.ext4 /dev/sdc1
 
 ### VPS [Virtual Private Server]
 
-+ [Linode: OpenSource & cheapest option I have found](linode.com)
-+ [AWS](amazon.aws.com)
++ [Linode](linode.com): Open-Source & cheapest option
++ [AWS](amazon.aws.com): Most popular option
 + [Google](cloud.google.com)
 + [Digital Ocean](https://www.digitalocean.com/)
 + [Vultr](vultr.com)
 
 ### Buying Domain Name
 
-+ [Epik:cheapest option I have found](epik.com)
++ [Epik](epik.com)
 + [Wordpress.org](wordpress.org)
 + [Wordpress.com](wordpress.com)
 
@@ -335,6 +335,7 @@ sudo mkfs.ext4 /dev/sdc1
 " by Michael jubalh Vetter
 " https://github.com/jubalh/vifm-colors
 
+```
 highlight clear
 
 highlight Win             cterm=none ctermfg=green    ctermbg=black
@@ -358,6 +359,7 @@ highlight Socket          cterm=none ctermfg=yellow ctermbg=default
 highlight Device          cterm=none ctermfg=yellow ctermbg=default
 highlight Fifo            cterm=none ctermfg=yellow ctermbg=default
 highlight Executable      cterm=none ctermfg=green ctermbg=default
+```
 
 ### Fuzzy Finders
 
