@@ -350,7 +350,7 @@ lsblk #list block devices
 
 ### Vim r!
 
-Write the result of the command ls in a file directly from vim
+Write the result of the **ls** command in a file directly from vim
 ```vim
 :r! ls 
 ```
@@ -597,7 +597,7 @@ last #shows a listing of last logged in users
 sudo systemctl restart [$DISLAY-MANAGER-NAME]
 ```
 
-### Set Keyboard Without Ibus
+### Set Keyboard With Setxkbmap
 
 Forever Option 1:
 
@@ -663,61 +663,74 @@ available with pacman or in the AUR.
 
 Many emulators exist. Here are the ones I use and consider as "the best":
 
-1. Nintendo DS (nds) -> desmume
-2. GameBoy Advanced (gba) -> vbam
-3. PlayStation Portable (psp) -> ppsspp
-4. Wii-U -> decaf OR cemu+wine
-5. PC -> wine + playonlinux
-6. Wii + Gamecube -> dolphin
-7. Nintendo 64 -> Mupen64plus
+1. Nintendo DS (nds): desmume
+2. GameBoy Advanced (gba): vbam
+3. PlayStation Portable (psp): ppsspp
+4. Wii-U: decaf OR cemu+wine
+5. PC: wine + playonlinux
+6. Wii + Gamecube: dolphin
+7. Nintendo 64: Mupen64plus
 
-Downloading the roms: emulatorgames.net -> download roms
+Downloading the roms: 
++ [emulatorgames.net](https://emulatorgames.net)
++ [Romsmania](https://consolegames.down10.software/roms/)
 
 ## FFMPEG
 
 ### Webcamming
 
+```bash
 ffmpeg -y -i /dev/video0 out.mkv
+```
 
 ### Determining Available Resolutions
 
-+ xrandr
+```bash
+xrandr
+```
 
 ### Find Size And Offset Of Particular Window To Capture
 
-+ xwininfo
+```bash
+xwininfo
+```
 
 ### Find Out Which Pulseaudio Sound Sources Exist 
 
-+ pactl list sources
-to record, find the input source (not output)
+```bash
+pactl list sources #to record, find the input source (not output)
+```
 
 ### The entire ffmpeg command.
 
+```bash
 ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 1 output.mkv -async 1 -vsync 1
+# video_size 1920×1080: Sets the size of the video capture. This is the value we used xrandr to find.
+# framerate 25: Sets the frames per second value.
+# f x11grab: Force the video format to a specific type. Here we’re setting the input format to the output of your X server.
+# i :0.0: This specifies the video input will come from the main screen.
+# f pulse: Sets the expected format to be PulseAudio.
+ac 2: Set two audio channels
+# i 1: Take audio input from PulseAudio source #1. This is the value we used pactl to discover.
+# output.mkv: The name of the file we wish to create.
+# async 1: Set the audio sync method. This is a deprecated parameter, but we’re using it here to avoid error messages that can be ignored.
+# vsync 1: set the video sync method. This is a deprecated parameter, but we’re using it here to avoid error messages that can be ignored.
+```
 
-+ video_size 1920×1080: Sets the size of the video capture. This is the value we used xrandr to find.
-+ framerate 25: Sets the frames per second value.
-+ f x11grab: Force the video format to a specific type. Here we’re setting the input format to the output of your X server.
-+ i :0.0: This specifies the video input will come from the main screen.
-+ f pulse: Sets the expected format to be PulseAudio.
-+ ac 2: Set two audio channels
-+ i 1: Take audio input from PulseAudio source #1. This is the value we used pactl to discover.
-+ output.mkv: The name of the file we wish to create.
-+ async 1: Set the audio sync method. This is a deprecated parameter, but we’re using it here to avoid error messages that can be ignored.
-+ vsync 1: set the video sync method. This is a deprecated parameter, but we’re using it here to avoid error messages that can be ignored.
+NB: If you don't specify a directory to save the video, it will be saved in the
+directory ffmpeg was launched from.
 
 ### Extract Audio From Video
 
+```bash
 ffmpeg -i sample.avi -q:a 0 -map a sample.mp3
+```
 
 ### Capture only video, no audio
+
+```bash
 ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 output.mkv -vsync 1
-
-### Directory
-
-If you don't specify a directory to save the video, it will be saved in the
-directory ffmpeg was launched from.
+```
 
 ### Converting files
 
@@ -734,10 +747,15 @@ example: filename
 	file "file1_path"
 	file2 "file1_path"
 	file3 "file1_path"
-2. Run: ffmpeg -f concat -safe 0 -i /home/soimuen/Downloads/FILENAME -c copy output.webm
+2. Run: 
+```bash
+ffmpeg -f concat -safe 0 -i /home/soimuen/Downloads/FILENAME -c copy output.webm
+```
 
 ### Cutting Videos
+```bash
 ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
+```
 
 ### Burning Subs To Video
 
@@ -747,10 +765,15 @@ Use the libass library (make sure your ffmpeg install has the library in the con
 
 First convert the subtitles to .ass format:
 
-+ ffmpeg -i subtitles.srt subtitles.ass
+```bash
+ffmpeg -i subtitles.srt subtitles.ass
+```
+
 Then add them using a video filter:
 
-+ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
+```bash
+ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
+```
 
 ### Sources
 
