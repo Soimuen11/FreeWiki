@@ -335,7 +335,7 @@ sudo mkfs.ext4 /dev/sdc1
 " by Michael jubalh Vetter
 " https://github.com/jubalh/vifm-colors
 
-```
+```vim
 highlight clear
 
 highlight Win             cterm=none ctermfg=green    ctermbg=black
