@@ -63,6 +63,11 @@ Other solution:
   This way you never have to worry about that anymore. To set up said cron job,
   do not hesitate to use the [Cron Guru web app](https://www.creativebloq.com/features/10-best-static-site-generators).
 
+### Removing SSH passphrase
+
++ [Stackoverflow Response](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke#112409)
++ [Set up passwordless login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
+
 ## CURL TRICKS
 
 ### Get Your IP Address
@@ -148,6 +153,7 @@ to alacritty, as the maintainer of the git repo indicated.
 
 One program to rule them all:
 + [youtube-dl](https://github.com/ytdl-org/youtube-dl)
+
 I have never fully experienced it but some people have recommended it to me:
 + [mps-youtube](https://github.com/mps-youtube/mps-youtube)
 
@@ -193,19 +199,19 @@ yay -S pdf-append #for Arch users
 
 ### Networking
 
-1. nmtui
-	+ On archlinux: pacman -S networkmanager
-	+ On ubuntu: apt install network-manager
-2. nmcli dev wifi
-3. nmcli dev wifi connect APname password
-4. nmap -A -T4 hostname
-5. wireshark
-6. nslookup
-7. wifite2
-8. ifconfig
-9. ip a
-10. lscpi
-11. net-setup to set up connection from the Gentoo livecd.
+```bash
+nmtui # Configure & connect to a network with ncurses interface
+nmcli # Cli equivalent to nmtui
+sudo pacman -S networkmanager # To install it on Arch Linux
+sudo apt install network-manager # To install it on Ubuntu
+nmap -A -T4 hostname # See which devices are connected to your network
+wireshark # monitor a network
+nslookup
+wifite2
+ifconfig
+ip a
+net-setup #to set up connection from the Gentoo livecd.
+```
 
 ### Create Your Own Wiki
 
@@ -218,17 +224,29 @@ yay -S pdf-append #for Arch users
 
 ### Monitor Your System
 
-+ cron / anacron
-+ dstat / perf / aide
++ **cron** &/or **anacron**: Automate repetitive tasks. To edit your cron file,
+  open a terminal emulator and run:
+```bash
+crontab -e
+```
++ dstat: Versatile resource statistics tool 
++ perf
++ aide: Advanced intrusion detection environment
 + sendmail / mailx / msmtp
-+ top / htop / bashtop
-+ journalctl
++ top / htop / bashtop: I personally do not use **top** since **htop** does a
+  much better job and has a much more readable interface. For those of you who
+  enjoy bling, **bashtop** also is a viable option.
++ journalctl: If your OS ships with **systemd** (this is the case for most
+  arch-based or debian-based distributions), you can acces the logs with
+  journalctl. Otherwise, you can still have a look in /var/logs.
 
 ### Partition Disk
 
-+ fdisk
-+ sfdisk: from a bash script
-+ cfdisk: more readable output than fdisk
+```bash
+fdisk
+sfdisk # From a bash script (to automate disk partitioning)
+cfdisk # More readable output than fdisk
+```
 
 ### Edit Subtitles
 
@@ -785,23 +803,25 @@ Then add them using a video filter:
 ```bash
 ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 ```
-
-### Sources
-
-+ [An article from howtogeek.com](https://www.howtogeek.com/446706/how-to-create-a-screencast-on-linux/)
-+ [Ffmpeg.org](ffmpeg.org)
-+ [Stackexchange](stackexchange.com)
-+ [Ffmpeg commands for beginners](https://ostechnix.com/20-ffmpeg-commands-beginners/)
-+ [As usual, the archwiki](https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam)
-
 ## RESOURCES
 
-### Quickly Access Documentation
+### Quickly Access Documentation Offline
 
 + [Zeal](https://github.com/zealdocs/zeal)
 + Man Pages
+```bash
+man [$PROGRAM_NAME]
+```
 + Info Pages
 + The --help flag shipping with (almost) every program
+
+### Raspberry Pi Docs
+
++ [Installing Nextcloud](https://raspberrytips.com/install-nextcloud-raspberry-pi)
++ [Configuring Apache Web Server](https://vitux.com/how-to-install-and-configure-apache-web-server-on-ubuntu)
++ [Remote Access](https://www.raspberrypi.org/documentation/computers/remote-access.html)
++ [Configuring HTTPS](https://wiki.debian.org/Self-Signed_Certificate)
++ [Certbot](https://certbot.eff.org/lets-encrypt/arch-apache)
 
 ### Microsoft Windows
 
@@ -809,22 +829,6 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 + [Top 20 Windows Tools To Know As Sysadmin](https://www.poweradmin.com/blog/top-20-windows-tools-every-sysadmin-should-know/)
 + [Administration Commands](https://geekflare.com/windows-administration-commands/)
 + [VLAN definition & advantages](https://www.guru99.com/vlan-definition-types-advantages.html)
-
-### Learning AWS
-
-+ [A tutorial from tutorials point](https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm)
-
-### Linux Permissions
-
-+ [Managing Permissions](https://docs.rackspace.com/support/how-to/basic-linux-directory-permissions-and-how-to-check-them)
-
-### Free VS Open-Source Software
-
-+ [A GNU.ORG Article](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
-
-### Cron Jobs
-
-+ [Cron Guru](https://crontab.guru/)
 
 ### Other
 
@@ -834,10 +838,19 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 	+ [Javascript.info](https://javascript.info/)
 	+ [Stack Overflow](https://stackoverflow.com/)
 	+ [OpenClassrooms](https://openclarooms.com)
+	+ [Free VS OpenSource Software](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
 	+ [Udemy](https://www.udemy.com/)
 	+ [The Arch Wiki](https://archlinux.org)
 	+ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
 	+ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
+	+ [DistroWatch](https://distrowatch.com/)
+	+ [Cron Guru](https://crontab.guru/)
+	+ [Managing Linux User Permissions](https://docs.rackspace.com/support/how-to/basic-linux-directory-permissions-and-how-to-check-them)
+	+ [Learn AWS with tutorialspoint](https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm)
+	+ [Screencasting on Linux](https://www.howtogeek.com/446706/how-to-create-a-screencast-on-linux/)
+	+ [Ffmpeg.org](ffmpeg.org)
+	+ [Ffmpeg commands for beginners](https://ostechnix.com/20-ffmpeg-commands-beginners/)
+	+ [Ffmpeg recording webcam](https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam)
 	+ [Hackthebox](https://hackthebox.eu)
 	+ [Tryhackme](https://tryhackme.com/)
 	+ [10 Tips to improve next coding project](https://www.freecodecamp.org/news/10-css-tricks-for-your-next-coding-project/)
@@ -848,6 +861,7 @@ ffmpeg -i mymovie.mp4 -vf ass=subtitles.ass mysubtitledmovie.mp4
 	+ [JS Questions](https://github.com/lydiahallie/javascript-questions)
 	+ [JS For Cats](http://jsforcats.com/)
 	+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
+	+ [HTML Color groups](https://www.w3schools.com/colors/colors_groups.asp)
 2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
