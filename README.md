@@ -820,8 +820,12 @@ man [$PROGRAM_NAME]
 + [Installing Nextcloud](https://raspberrytips.com/install-nextcloud-raspberry-pi)
 + [Configuring Apache Web Server](https://vitux.com/how-to-install-and-configure-apache-web-server-on-ubuntu)
 + [Remote Access](https://www.raspberrypi.org/documentation/computers/remote-access.html)
++ [Create SSH-key passphrase](https://www.linuxshelltips.com/create-ssh-key-passphrase/)
 + [Configuring HTTPS](https://wiki.debian.org/Self-Signed_Certificate)
 + [Certbot](https://certbot.eff.org/lets-encrypt/arch-apache)
++ [Project ideas for raspberry pi](https://itsfoss.com/raspberry-pi-projects/)
++ [Running Your Own Git Server](https://www.linux.com/training-tutorials/how-run-your-own-git-server)
++ [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress)
 
 ### Microsoft Windows
 
@@ -840,12 +844,14 @@ man [$PROGRAM_NAME]
 	+ [OpenClassrooms](https://openclarooms.com)
 	+ [Free VS OpenSource Software](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
 	+ [Udemy](https://www.udemy.com/)
+	+ [Geeks For Geeks](https://www.geeksforgeeks.org/difference-between-router-and-switch/)
 	+ [The Arch Wiki](https://archlinux.org)
 	+ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
 	+ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
 	+ [DistroWatch](https://distrowatch.com/)
 	+ [Cron Guru](https://crontab.guru/)
 	+ [Managing Linux User Permissions](https://docs.rackspace.com/support/how-to/basic-linux-directory-permissions-and-how-to-check-them)
+	+ [Iptables cheatsheet](https://www.andreafortuna.org/2019/05/08/iptables-a-simple-cheatsheet/)
 	+ [Learn AWS with tutorialspoint](https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm)
 	+ [Screencasting on Linux](https://www.howtogeek.com/446706/how-to-create-a-screencast-on-linux/)
 	+ [Ffmpeg.org](ffmpeg.org)
