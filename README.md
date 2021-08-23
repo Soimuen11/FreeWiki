@@ -27,6 +27,8 @@ You may also find me here:
 
 ### SSH: could not open a connection to your authentication agent
 
+Option 1:
+
 This means that the ssh-agent is not running. Type this in your terminal:
 ```bash
 eval "$(ssh-agent -s)"
@@ -37,6 +39,24 @@ ssh-add
 ```
 NB: This fix will only work for the current session. If you close your
 terminal, you will have to re-enter your passphrase.
+
+Option 2:
+Run
+```bash
+ssh-agent
+# Output:
+SSH_AUTH_SOCK=/tmp/ssh-hZQhwQlxahPX/agent.1833; export SSH_AUTH_SOCK; 
+SSH_AGENT_PID=1834; export SSH_AGENT_PID; 
+echo Agent pid 496; 
+
+# Copy and past the first 2 lines of output
+SSH_AUTH_SOCK=/tmp/ssh-hZQhwQlxahPX/agent.1833; export SSH_AUTH_SOCK; 
+SSH_AGENT_PID=1834; export SSH_AGENT_PID; 
+
+# Finally, run:
+ssh-add
+```
+
 
 ### df:/run/user/1000 permission denied
 
