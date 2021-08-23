@@ -25,6 +25,19 @@ You may also find me here:
 
 ## ANNOYING ERRORS
 
+### SSH: could not open a connection to your authentication agent
+
+This means that the ssh-agent is not running. Type this in your terminal:
+```bash
+eval "$(ssh-agent -s)"
+```
+Then you only need retype ssh-add:
+```bash
+ssh-add
+```
+NB: This fix will only work for the current session. If you close your
+terminal, you will have to re-enter your passphrase.
+
 ### df:/run/user/1000 permission denied
 
 Df is a very handy command which reports file system disk space usage (see man
