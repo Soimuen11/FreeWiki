@@ -55,6 +55,9 @@ SSH_AGENT_PID=1834; export SSH_AGENT_PID;
 
 # Finally, run:
 ssh-add
+
+# List your keys with
+ssh-add -l
 ```
 
 
