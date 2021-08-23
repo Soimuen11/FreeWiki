@@ -12,7 +12,7 @@ do not hesitate to contact me or make your own fork.
 You may also find me here:
 + [My blog](https://madlibrarian.xyz)
 + [My YouTube channel](https://www.youtube.com/channel/UCsem4aDdFN9x719N9EPZkww)
-+ [Go to this wiki from github](https://soimuen11.github.io/FreeWiki)
++ [The FreeWiki From GitHub](https://soimuen11.github.io/FreeWiki)
 
 ## Table Of Contents
 
