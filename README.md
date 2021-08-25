@@ -22,8 +22,14 @@ You may also find me here:
 4. [Gaming on Linux](#gaming-on-linux)
 5. [Ffmpeg](#ffmpeg)
 6. [Resources](#resources)
+	+ [Quickly Access Documentation Offline](#quickly-access-documentation-offline)
+	+ [Raspberry Pi Docs](#raspberry-pi-docs)
+	+ [Microsoft Windows](#microsoft-windows)
+	+ [Other](#other)
 7. [My Scripts](#my-scripts)
 	+ [Game launcher](#game_launcher.sh)
+	+ [Mystery Number Quest](#mystery.sh)
+	+ [Battery Info](#batteryinfo)
 
 ## ANNOYING ERRORS
 
@@ -61,7 +67,6 @@ ssh-add
 # List your keys with
 ssh-add -l
 ```
-
 
 ### df:/run/user/1000 permission denied
 
@@ -106,9 +111,9 @@ Other solution:
 + [Stackoverflow Response](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke#112409)
 + [Set up passwordless login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
 
-## CURL TRICKS
+### CURL TRICKS
 
-### Get Your IP Address
+1. Get Your IP Address
 
 ```bash
 curl ifconfig.co
@@ -116,13 +121,13 @@ curl ifconfig.co/city
 curl ifconfig.co/country
 ```
 
-### News
+2. News
 
 ```bash
 curl getnews.tech
 ```
 
-### Weather
+3. Weather
 
 ```bash
 + curl wttr.in
@@ -229,6 +234,8 @@ yay -S pdf-append #for Arch users
 + [Zathura](https://github.com/pwmt/zathura): A document viewer
 (don't forget to download sth to read pdfs along with zathura)
 + [Neomutt](https://neomutt.org/dev/documentation): cli-based email client
++ [Sup](https://github.com/sup-heliotrope/sup/wiki): an equivalent to neomutt written in ruby
++ [Noisetorch](https://github.com/lawl/NoiseTorch)
 + Ffmpeg
 + Vlc / cvlc / nvlc (vlc with ncurses interface)
 + Vlc can play the radio directly from terminal too)
@@ -807,6 +814,10 @@ general formula : ffmpeg -i output.oldformat output.wantedformat
 ffmpeg -i arch-install.mp4  -i archinstall-soundtrack.mp4 -c copy -map 0:v:0 -map 1:a:0 output2.mp4
 ```
 
+### Add a new audio track to an existing file
+
++ [Superuser.com has the answer](https://superuser.com/questions/1140452/ffmpeg-add-a-new-audio-track-to-existing-file)
+
 ### Concatenating Files
 
 1. Create a list of files in a FILE
@@ -1024,5 +1035,3 @@ else
 	:
 fi
 ```
-### quote_generator
-### device-manager.sh
