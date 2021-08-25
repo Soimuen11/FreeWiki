@@ -112,7 +112,7 @@ Other solution:
 
 ### CURL TRICKS
 
-1. Get Your IP Address
+Get Your IP Address
 
 ```bash
 curl ifconfig.co
@@ -120,13 +120,13 @@ curl ifconfig.co/city
 curl ifconfig.co/country
 ```
 
-2. News
+News
 
 ```bash
 curl getnews.tech
 ```
 
-3. Weather
+Weather
 
 ```bash
 + curl wttr.in
@@ -164,6 +164,13 @@ Other solutions to transfer files:
 + [Audacity](https://www.audacityteam.org/)
 + [Sox](http://sox.sourceforge.net/)
 
+### Converting markdown to pdf
+
+```bash
+npm install -g markdown-pdf
+markdown-pdf <markdown-file-path>
+```
+
 ### Displaying keystrokes during screencast
 
 Install this program (with sudo privileges):
@@ -189,7 +196,7 @@ nicely, I recommend this program which you can find on github:
 For Arch users, I believe it is also directly available in the AUR (it was when
 I wrote this section). When I last edited this section (on Aug 13, 2021), I
 read that termite is now obsolete. Hence it might be wiser to make the switch
-to alacritty, as the maintainer of the git repo indicated.
+to **alacritty**, as the maintainer of the git repo indicated.
 
 ### Downloading Videos From YouTube
 
