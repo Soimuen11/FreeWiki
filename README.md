@@ -10,8 +10,9 @@ masses, I shall strive to be as clear as possible. If you have any suggestions,
 do not hesitate to contact me or make your own fork.
 
 You may also find me here:
-+ [My blog](https://madlibrarian.xyz)
-+ [My YouTube channel](https://www.youtube.com/channel/UCsem4aDdFN9x719N9EPZkww)
++ [Blog](https://madlibrarian.xyz)
++ [YouTube Channel](https://www.youtube.com/channel/UCsem4aDdFN9x719N9EPZkww)
++ [Portfolio](soimuen11.github.io/philippe-iannetta/)
 + [The FreeWiki From GitHub](https://soimuen11.github.io/FreeWiki)
 
 ## Table Of Contents
@@ -24,6 +25,10 @@ You may also find me here:
 	+ [Quickly Access Documentation Offline](#quickly-access-documentation-offline)
 	+ [Raspberry Pi Docs](#raspberry-pi-docs)
 	+ [Microsoft Windows](#microsoft-windows)
+	+ [Customizing Bash](#customizing-bash)
+	+ [Learning Awk](#learning-awk)
+	+ [Virtual Private Servers](#virtual-private-servers)
+	+ [Buying A Domain Name](#buying-domain-name)
 	+ [Other](#other)
 6. [My Scripts](#my-scripts)
 	+ [Game launcher](#game_launcher.sh)
@@ -391,28 +396,6 @@ lscpu #display information about cpu architecture
 lspci #list all pci devices
 lsblk #list block devices
 ```
-
-### Customizing Bash
-
-+ [Archwiki link](https://wiki.archlinux.org/index.php/Bash/Prompt_customization)
-
-### Learning AWK
-
-+ [Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
-
-### VPS [Virtual Private Server]
-
-+ [Linode](linode.com): Open-Source & cheapest option
-+ [AWS](amazon.aws.com): Most popular option
-+ [Google](cloud.google.com)
-+ [Digital Ocean](https://www.digitalocean.com/)
-+ [Vultr](vultr.com)
-
-### Buying Domain Name
-
-+ [Epik](epik.com)
-+ [Wordpress.org](wordpress.org)
-+ [Wordpress.com](wordpress.com)
 
 ### Copying text from vim to an external program
 
@@ -888,6 +871,30 @@ man [$PROGRAM_NAME]
 + [Top 20 Windows Tools To Know As Sysadmin](https://www.poweradmin.com/blog/top-20-windows-tools-every-sysadmin-should-know/)
 + [Administration Commands](https://geekflare.com/windows-administration-commands/)
 + [VLAN definition & advantages](https://www.guru99.com/vlan-definition-types-advantages.html)
+
+### Customizing Bash
+
++ [Archwiki link](https://wiki.archlinux.org/index.php/Bash/Prompt_customization)
+
+### Learning AWK
+
++ [Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
+
+### Virtual Private Servers
+
+Here is a list of the most popular Virtual Private Servers (VPS):
+
++ [Linode](linode.com): Open-Source & cheapest option
++ [AWS](amazon.aws.com): Most popular option
++ [Google](cloud.google.com)
++ [Digital Ocean](https://www.digitalocean.com/)
++ [Vultr](vultr.com)
+
+### Buying Domain Name
+
++ [Epik](epik.com)
++ [Wordpress.org](wordpress.org)
++ [Wordpress.com](wordpress.com)
 
 ### Other
 
