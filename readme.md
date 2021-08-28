@@ -8,6 +8,7 @@
 
 1. write mini tuto how to get jekyll + gh-pages up and running
 2. separate content into pages instead of sections
+3. document how set up emails with offline imap and msmtp
 
 ## tuto
 
