@@ -42,9 +42,9 @@ Other solutions to transfer files:
 + Change Processors to 2+
 + Change Display to 3d and VboxSVGA
 
-## CURL TRICKS
+## Curl
 
-Get Your IP Address
+### Get Your IP Address
 
 ```bash
 curl ifconfig.co
@@ -52,16 +52,16 @@ curl ifconfig.co/city
 curl ifconfig.co/country
 ```
 
-News
+### News
 
 ```bash
 curl getnews.tech
 ```
 
-Weather
+### Weather
 
 ```bash
-+ curl wttr.in
+curl wttr.in
 ```
 
 ## Video / Audio Editing Software
@@ -75,6 +75,9 @@ Weather
 
 ## Converting markdown to pdf
 
+You may install **pandoc**, but since I do not need all its power, I have
+chosen to install a much smaller npm package:
+
 ```bash
 npm install -g markdown-pdf
 markdown-pdf <markdown-file-path>
@@ -82,9 +85,9 @@ markdown-pdf <markdown-file-path>
 
 ## Displaying keystrokes during screencast
 
-Install this program (with sudo privileges):
+Install [Screenkey](https://gitlab.com/screenkey/screenkey), obviously with
+root priviledges.
 
-+ [screenkey](https://gitlab.com/screenkey/screenkey)
 + For Arch users: 
 ```bash
 sudo pacman -S screenkey OR yay -S screenkey
@@ -138,9 +141,10 @@ yay -S pdf-append #for Arch users
 + \ escape something
 
 + Examples:
-
 	- grep "something" file
 	- grep "^s" file -> any line starting with lowercase "s" in given file
++ Learning [Awk](https://www.tutorialspoint.com/awk/index.htm) may also come in
+  handy.
 
 ## A Chaotic List Of Useful Programs
 
@@ -148,14 +152,15 @@ yay -S pdf-append #for Arch users
 + [Sxiv](https://github.com/ont/sxiv): A suckless image viewer for X vith vim keybindings
 + [Zathura](https://github.com/pwmt/zathura): A document viewer
 (don't forget to download sth to read pdfs along with zathura)
-+ [Neomutt](https://neomutt.org/dev/documentation): cli-based email client
-+ [Sup](https://github.com/sup-heliotrope/sup/wiki): an equivalent to neomutt written in ruby
-+ [Noisetorch](https://github.com/lawl/NoiseTorch)
-+ Ffmpeg
-+ Vlc / cvlc / nvlc (vlc with ncurses interface)
-+ Vlc can play the radio directly from terminal too)
-+ Cli-visualizer : visualize music
-+ Ntfs-3g
++ [Neomutt](https://neomutt.org/dev/documentation): Cli-based email client
++ [Sup](https://github.com/sup-heliotrope/sup/wiki): An equivalent to neomutt written in ruby
++ [Noisetorch](https://github.com/lawl/NoiseTorch): Creates a virtual microphone that suppresses noise.
++ [Ffmpeg](https://ffmpeg.org)
++ [Vlc / cvlc / nvlc](https://www.videolan.org/vlc)
+	- Nvlc is vlc with an ncurses interface
+	- Vlc can play the radio directly from terminal
++ [Cli-visualizer](https://github.com/dpayne/cli-visualizer): A command-line sound visualizer
++ [Ntfs-3g](https://github.com/vitalif/ntfs-3g)
 
 ## Networking
 
@@ -176,7 +181,7 @@ net-setup #to set up connection from the Gentoo livecd.
 ## Create Your Own Wiki
 
 + [Mediawiki](https://www.mediawiki.org/wiki/MediaWiki)
-+ Wordpress
++ [Wordpress](https://wordpress.org)
 + Code from scratch with HTML, CSS & JS and then self-host it.
 + With GitHub: create a new repository, initialize it with a file named
   README.md, go to github pages, pick a theme and publish it.
@@ -192,7 +197,11 @@ crontab -e
 + dstat: Versatile resource statistics tool 
 + perf
 + aide: Advanced intrusion detection environment
-+ sendmail / mailx / msmtp
++ sendmail / mailx / msmtp / offlineimap: get emails notifying you when an
+  important automated task has been completed. Combine these programs with cron
+  jobs.
++ notify-send: interact with your system receiving notifications for certain
+  events. Add this to your scripts / cron jobs.
 + top / htop / bashtop: I personally do not use **top** since **htop** does a
   much better job and has a much more readable interface. For those of you who
   enjoy bling, **bashtop** also is a viable option.
@@ -225,15 +234,15 @@ cfdisk # More readable output than fdisk
 + [Google Hacking Database](https://www.exploit-db.com)
 + [Linkedin for social engineering](linkedin.com)
 + [Icann Lookup](https://lookup.icann.org/)
-+ Job boards (such as indeed.com)
-+ Netcat
-+ TheHarvester
-+ Hping3
++ Job boards: Indeed.com, LinkedIn.com, etc.
++ [Netcat](https://wikipedia.org/wiki/Netcat)
++ [TheHarvester](https://github.com/laramies/theHarvester)
++ [Hping3](https://github.com/NullHypothesis/hping3)
 
 ### Password Attacks
 
-+ Medusa
-+ John
++ [Medusa](https://github.com/jmk-foofus/medusa)
++ [John](https://github.com/phu0ngng/JohntheRipper)
 
 ### Sniffing
 
@@ -257,6 +266,7 @@ cfdisk # More readable output than fdisk
 
 ## Xorg Programs
 
++ xbacklight: control screen brightness
 + xev: print content of X events
 + xrandr / arandr: set size, orientation or reflection of the outputs for a screen.
 + setxkbmap: set up your keyboard
