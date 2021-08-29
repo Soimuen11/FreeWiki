@@ -1,7 +1,6 @@
 ---
 layout: default
 title: My Scripts
-permalink: /scripts/
 ---
 [My Scripts](#my-scripts)
 	+ [Game launcher](#game-launcher)
