@@ -1,6 +1,6 @@
-## Issues
+# Issues
 
-### SSH: could not open a connection to your authentication agent
+## SSH: could not open a connection to your authentication agent
 
 Option 1:
 
@@ -35,7 +35,7 @@ ssh-add
 ssh-add -l
 ```
 
-### df:/run/user/1000 permission denied
+## df:/run/user/1000 permission denied
 
 Df is a very handy command which reports file system disk space usage (see man
 df for more info). You should at least know the -h flag, which prints a
@@ -54,7 +54,7 @@ systemctl --user disable xdg-document-portal.service
 If you want to know more about systemd, click on [this
 link](https://wiki.archlinux.org/title/Systemd)
 
-### Trackpad stops working
+## Trackpad stops working
 
 Since it frequently happened after sleep mode with Arch Linux and it has been
 happening again with Ubuntu (strangely it never happened with Gentoo), here is
@@ -73,7 +73,7 @@ Other solution:
   This way you never have to worry about that anymore. To set up said cron job,
   do not hesitate to use the [Cron Guru web app](https://www.creativebloq.com/features/10-best-static-site-generators).
 
-### Removing SSH passphrase
+## Removing SSH passphrase
 
 + [Stackoverflow Response](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke#112409)
 + [Set up passwordless login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
