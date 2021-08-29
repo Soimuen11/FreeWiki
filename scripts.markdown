@@ -2,7 +2,8 @@
 layout: default
 title: My Scripts
 ---
-## My Scripts
+
+# My Scripts
 
 You may find all my scripts in my Dotfiles github repository. Just go into
 **.local/scripts**. You will only find the *finished* ones here.
@@ -13,7 +14,7 @@ You may find all my scripts in my Dotfiles github repository. Just go into
 + [Moc Controller](#moc-controller)
 + [Quote Generator](#quote-generator)
 
-### Game Launcher
+## Game Launcher
 
 If you wish to quickly launch your emulator games, this is the script for you.
 Do install the dependencies before running it:
@@ -42,7 +43,7 @@ case $LIBRARY in
 esac
 ```
 
-### Mystery Number Quest
+## Mystery Number Quest
 ```bash
 #!/bin/bash
 #  __  __                 _
@@ -102,7 +103,7 @@ echo "you needed $counter shots"
 exit 0
 ```
 
-### Battery Info
+## Battery Info
 
 ```bash
 #!/bin/bash
@@ -122,7 +123,7 @@ else
 fi
 ```
 
-### Moc Controller
+## Moc Controller
 
 ```bash
 #!/bin/bash
@@ -171,7 +172,7 @@ case "$OPTION" in
 esac
 ```
 
-### Quote Generator
+## Quote Generator
 
 For this script to work properly, you need 2 files:
 1. The first is for the actual script (generator.sh)
