@@ -5,6 +5,15 @@ title: resources
 
 ## RESOURCES
 
++ [Quickly Access Documentation Offline](#quickly-access-documentation-offline)
++ [Raspberry Pi Docs](#raspberry-pi-docs)
++ [Microsoft Windows](#microsoft-windows)
++ [Customizing Bash](#customizing-bash)
++ [Learning Awk](#learning-awk)
++ [Virtual Private Servers](#virtual-private-servers)
++ [Buying A Domain Name](#buying-domain-name)
++ [Other](#other)
+
 ### Quickly Access Documentation Offline
 
 + [Zeal](https://github.com/zealdocs/zeal)
