@@ -1,5 +1,26 @@
 ## TIPS, TRICKS AND HELPFUL PROGRAMS
 
++ [Mounting Android Phones](#mounting-android-phones-in-linux)
++ [Installing Android in Virtualbox](#installing-android-in-vbox)
++ [Video & Audio Editing Software]()
++ [Converting Markdown To PDF](#converting-markdown-to-pdf)
++ [Displaying Key Strokes During Screencast](#displaying-keystrokes-during-screencast)
++ [Easily Styling Termite Terminal](#easily-styling-termite-terminal)
++ [Downloading Videos From YouTube](#downloading-videos-from-youtube)
++ [Concatenating PDFs](#concatenating-pdfs)
++ [Regular Expressions Basics](#regular-expressions-basics)
++ [A Chaotic List Of Useful Programs](#a-chaotic-list-of-useful-programs)
++ [Networking](#networking)
++ [Create Your Own Wiki](#create-your-own-wiki)
++ [Monitor Your System](#monitor-your-system)
++ [Partition Your Disk](#partition-disk)
++ [Edit Subtitles](#edit-subtitles)
++ [Pentesting Programs & Websites](#pentesting-programs-and-websites)
++ [Xorg Programs](#xorg-programs)
++ [Formatting A Flashdrive](#formatting-a-flashdrive)
++ [Great LS Commands](#great-ls-commands)
++ [VIFM matrix color schemes](#vifm-matrix-colorschemes)
+
 ### Mounting Android Phones In Linux
 
 1. Install simple-mtpfs (from the AUR if you are running Arch Linux)
