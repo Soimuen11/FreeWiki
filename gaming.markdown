@@ -1,5 +1,8 @@
 ## GAMING ON LINUX
 
++ [False Stereotypes](#false-stereotypes)
++ [Emulating Console Games](#emulating-console-games)
+
 ### False Stereotypes
 
 Nothing is less true than "you cannot play on Linux". Try out these one of
