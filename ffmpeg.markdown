@@ -1,5 +1,13 @@
 ## FFMPEG
 
++ [Webcamming](#webcamming)
++ [Determining available screen resolutions](#determining-available-resolutions)
++ [Find Size & Offset Of Window](#find-size-and-offset-of-particular-window-to-capture)
++ [Find Pulseaudio Source](#find-out-which-pulseaudio-sound-sources-exist)
++ [Entire FFMPEG Command](#the-entire-ffmpeg-command)
++ [Extract Audio From Video](#extract-audio-from-video)
++ [Capture Only Video No Audio](#capture-only-video-no-audio)
+
 ### Webcamming
 
 ```bash
@@ -49,7 +57,7 @@ directory ffmpeg was launched from.
 ffmpeg -i sample.avi -q:a 0 -map a sample.mp3
 ```
 
-### Capture only video, no audio
+### Capture Only Video No Audio
 
 ```bash
 ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 output.mkv -vsync 1
