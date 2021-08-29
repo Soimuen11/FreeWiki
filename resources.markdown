@@ -3,7 +3,7 @@ layout: default
 title: resources
 ---
 
-## RESOURCES
+# RESOURCES
 
 + [Quickly Access Documentation Offline](#quickly-access-documentation-offline)
 + [Raspberry Pi Docs](#raspberry-pi-docs)
@@ -14,7 +14,7 @@ title: resources
 + [Buying A Domain Name](#buying-domain-name)
 + [Other](#other)
 
-### Quickly Access Documentation Offline
+## Quickly Access Documentation Offline
 
 + [Zeal](https://github.com/zealdocs/zeal)
 + Man Pages
@@ -24,7 +24,7 @@ man [$PROGRAM_NAME]
 + Info Pages
 + The --help flag shipping with (almost) every program
 
-### Raspberry Pi Docs
+## Raspberry Pi Docs
 
 + [Installing Nextcloud](https://raspberrytips.com/install-nextcloud-raspberry-pi)
 + [Configuring Apache Web Server](https://vitux.com/how-to-install-and-configure-apache-web-server-on-ubuntu)
@@ -36,22 +36,22 @@ man [$PROGRAM_NAME]
 + [Running Your Own Git Server](https://www.linux.com/training-tutorials/how-run-your-own-git-server)
 + [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress)
 
-### Microsoft Windows
+## Microsoft Windows
 
 + [List of CMD Commands](https://www.lifewire.com/list-of-command-prompt-commands-4092302)
 + [Top 20 Windows Tools To Know As Sysadmin](https://www.poweradmin.com/blog/top-20-windows-tools-every-sysadmin-should-know/)
 + [Administration Commands](https://geekflare.com/windows-administration-commands/)
 + [VLAN definition & advantages](https://www.guru99.com/vlan-definition-types-advantages.html)
 
-### Customizing Bash
+## Customizing Bash
 
 + [Archwiki link](https://wiki.archlinux.org/index.php/Bash/Prompt_customization)
 
-### Learning AWK
+## Learning AWK
 
 + [Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
 
-### Virtual Private Servers
+## Virtual Private Servers
 
 Here is a list of the most popular Virtual Private Servers (VPS):
 
@@ -61,15 +61,15 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 + [Digital Ocean](https://www.digitalocean.com/)
 + [Vultr](vultr.com)
 
-### Buying Domain Name
+## Buying Domain Name
 
 + [Epik](epik.com)
 + [Wordpress.org](wordpress.org)
 + [Wordpress.com](wordpress.com)
 
-### Other
+## Other
 
-1. English:
+### English:
 	+ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
 	+ [W3schools](https://w3schools.com)
 	+ [Javascript.info](https://javascript.info/)
@@ -101,8 +101,8 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [JS For Cats](http://jsforcats.com/)
 	+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
 	+ [HTML Color groups](https://www.w3schools.com/colors/colors_groups.asp)
-2. French:
+### French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
-3. Italian:
+### Italian:
 	+ [Italian HTML guide](https://www.html.it/guide/guida-html/)
