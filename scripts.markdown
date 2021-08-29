@@ -2,19 +2,21 @@
 layout: default
 title: My Scripts
 ---
-[My Scripts](#my-scripts)
-	+ [Game launcher](#game-launcher)
-	+ [Mystery Number Quest](#mystery.sh)
-	+ [Battery Info](#batteryinfo)
-
 ## My Scripts
 
-You may find my scripts in my Dotfiles github repository. Just go into
-.local/scripts
+You may find all my scripts in my Dotfiles github repository. Just go into
+**.local/scripts**. You will only find the *finished* ones here.
 
-### game launcher
++ [Game launcher](#game-launcher)
++ [Mystery Number Quest](#mystery-number-quest)
++ [Battery Info](#battery-info)
++ [Moc Controller](#moc-controller)
 
-If you wish to quickly launch your emulator games, this is the script for you. Do install the dependencies before running it:
+### Game Launcher
+
+If you wish to quickly launch your emulator games, this is the script for you.
+Do install the dependencies before running it:
+
 + dmenu
 + desmume (nds emulator)
 + ppsspp (psp emulator)
@@ -39,7 +41,7 @@ case $LIBRARY in
 esac
 ```
 
-### mystery.sh
+### Mystery Number Quest
 ```bash
 #!/bin/bash
 #  __  __                 _
@@ -99,7 +101,7 @@ echo "you needed $counter shots"
 exit 0
 ```
 
-### batteryinfo
+### Battery Info
 
 ```bash
 #!/bin/bash
@@ -118,4 +120,53 @@ then
 else
 	:
 fi
+```
+
+### Moc Controller
+
+```bash
+#!/bin/bash
+
+# 1. A dmenu script to control moc [done]
+# 2. Add a keybinding to current WM [done]
+# 3. A polybar module to control moc
+# 4. An awesomeWM bar module
+
+# Declaring array of actions on moc
+OPTIONS=(
+	"Toggle Pause"
+	"Previous"
+	"Next"
+	"Start"
+	"Stop"
+	"Info"
+)
+
+# Looping through array of actions
+# & saving value of chosen option into $OPTION
+OPTION=$(for i in "${OPTIONS[@]}"
+do
+	echo $i
+done | dmenu -p "Moc Controller")
+
+case "$OPTION" in
+	Toggle\ Pause)
+		mocp --toggle-pause
+		;;
+	Previous)
+		mocp --previous
+		;;
+	Next)
+		mocp --next
+		;;
+	Start)
+		mocp --play
+		;;
+	Stop)
+		mocp --stop
+		;;
+	Info)
+		notify-send "Current Title" "$(mocp -i | grep File)"
+		;;
+esac
 ```
