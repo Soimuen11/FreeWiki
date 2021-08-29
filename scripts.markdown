@@ -188,3 +188,68 @@ RANDOM_NB=$(( $RANDOM % $NB_LINES ))
 # Pick one line in file containing quotes
 cat ~/.local/scripts/quote_generator/quotes | head -$RANDOM_NB | tail -1
 ```
+
+Here is a list of quotes you can put in a file named **quotes**:
+```
+
+“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.” ― Albert Einstein
+“Be the change that you wish to see in the world.” ― Mahatma Gandhi
+“Without music, life would be a mistake.” ― Friedrich Nietzsche, Twilight of the Idols
+“Go to heaven for the climate and hell for the company.” ― Benjamin Franklin Wade
+“A day without laughter is a day wasted.” ― Nicolas Chamfort
+“Have you ever noticed how ‘What the hell’ is always the right decision to make?” ― Terry Johnson, Insignificance
+“You talk when you cease to be at peace with your thoughts.” ― Kahlil Gibran, The Prophet
+“May you live every day of your life.” ― Jonathan Swift
+“Man is the only creature who refuses to be what he is.” ― Albert Camus
+“We have to dare to be ourselves, however frightening or strange that self may prove to be.” ― May Sarton
+“If a cluttered desk is a sign of a cluttered mind, of what, then, is an empty desk a sign?” ― Laurence J. Peter
+“There is nothing either good or bad, but thinking makes it so.” ― William Shakespear, Hamlet
+“Never let your sense of morals prevent you from doing what is right.” ― Isaac Asimov, Foundation
+“Wise men speak because they have something to say; fools because they have to say something.” ― Plato
+“You do not write your life with words...You write it with actions. What you think is not important. It is only important what you do.” ― Patrick Ness, A Monster Calls
+“Trust yourself. You know more than you think you do.” ― Benjamin Spock
+“Without deviation from the norm, progress is not possible.” ― Frank Zappa
+“Think left and think right and think low and think high. Oh, the things you can think up if only you try!” ― Dr. Seuss
+“Do not fear to be eccentric in opinion, for every opinion now accepted was once eccentric.” ― Bertrand Russell
+“A woman has to live her life, or live to repent not having lived it.” ― D.H. Lawrence, Lady Chatterley's Lover
+“Be yourself; everyone else is already taken.” ― Oscar Wilde
+“No one can make you feel inferior without your consent.” ― Eleanor Roosevelt, This is My Story
+“Live as if you were to die tomorrow. Learn as if you were to live forever.” ― Mahatma Gandhi
+“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.” ― Marilyn Monroe
+“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.” ― Albert Einstein
+“We accept the love we think we deserve.” ― Stephen Chbosky, The Perks of Being a Wallflower
+“Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.” ― Neil Gaiman, Coraline
+“Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.” ― Bill Keane
+“It is never too late to be what you might have been.” ― George Eliot
+“There is no greater agony than bearing an untold story inside you.” ― Maya Angelou, I Know Why the Caged Bird Sings
+“Everything you can imagine is real.” ― Pablo Picasso
+“You can never get a cup of tea large enough or a book long enough to suit me.” ― C.S. Lewis
+“To the well-organized mind, death is but the next great adventure.” ― J.K. Rowling, Harry Potter and the Sorcerer's Stone
+“Life isn't about finding yourself. Life is about creating yourself.” ― George Bernard Shaw
+“Do what you can, with what you have, where you are.” ― Theodore Roosevelt
+“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.” ― Helen Keller
+“Success is not final, failure is not fatal: it is the courage to continue that counts.” ― Winston S. Churchill
+“So, this is my life. And I want you to know that I am both happy and sad and I'm still trying to figure out how that could be.” ― Stephen Chbosky, The Perks of Being a Wallflower
+“You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.” ― John Lennon
+“I can't give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time.” ― Herbert Bayard Swope
+“If at first you don't succeed, try, try again. Then quit. No use being a damn fool about it.” ― W.C. Fields
+“Try not to become a man of success. Rather become a man of value.” ― Albert Einstein
+“It is better to fail in originality than to succeed in imitation.” ― Herman Melville
+“Success is getting what you want, happiness is wanting what you get” ― W. P. Kinsella
+“Letting go means to come to the realization that some people are a part of your history, but not a part of your destiny.” ― Steve Maraboli
+“Failure is the condiment that gives success its flavor.” ― Truman Capote
+“Have no fear of perfection - you'll never reach it.” ― Salvador Dali
+“The worst part of success is trying to find someone who is happy for you.” ― Bette Midler
+“Success is stumbling from failure to failure with no loss of enthusiasm.” ― Winston S. Churchill
+“Success is not how high you have climbed, but how you make a positive difference to the world.” ― Roy T. Bennett, The Light in the Heart
+“Don't spend time beating on a wall, hoping to transform it into a door. ” ― Coco Chanel
+“Cry. Forgive. Learn. Move on. Let your tears water the seeds of your future happiness.” ― Steve Maraboli
+“I'm a success today because I had a friend who believed in me and I didn't have the heart to let him down.” ― Abraham Lincoln
+“Let the improvement of yourself keep you so busy that you have no time to criticize others.” ― Roy T. Bennett, The Light in the Heart
+“The way to get started is to quit talking and begin doing.” ― Walt Disney
+“Sometimes it takes a good fall to really know where you stand” ― Hayley Williams
+“Our greatest glory is not in never falling, but in rising every time we fall.” ― Dr. Goldsmith
+“All you need in this life is ignorance and confidence; then success is sure. ” ― Mark Twain
+“Sometimes life knocks you on your ass... get up, get up, get up!!! Happiness is not the absence of problems, it's the ability to deal with them.” ― Steve Maraboli
+“It had long since come to my attention that people of accomplishment rarely sat back and let things happen to them. They went out and happened to things.” ― Leonardo da Vinci
+```
