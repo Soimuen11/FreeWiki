@@ -9,7 +9,7 @@ layout: default
 2. [Tips, Tricks & Helpful programs](#tips-tricks-and-helpful-programs)
 	+ [Mounting Android Phones](#mounting-android-phones-in-linux)
 	+ [Installing Android in Virtualbox](#installing-android-in-vbox)
-	+ [Video & Audio Editing Software]
+	+ [Video & Audio Editing Software]()
 	+ [Converting Markdown To PDF](#converting-markdown-to-pdf)
 	+ [Displaying Key Strokes During Screencast](#displaying-keystrokes-during-screencast)
 	+ [Easily Styling Termite Terminal](#easily-styling-termite-terminal)
