@@ -11,6 +11,7 @@ You may find all my scripts in my Dotfiles github repository. Just go into
 + [Mystery Number Quest](#mystery-number-quest)
 + [Battery Info](#battery-info)
 + [Moc Controller](#moc-controller)
++ [Quote Generator](#quote-generator)
 
 ### Game Launcher
 
@@ -105,8 +106,7 @@ exit 0
 
 ```bash
 #!/bin/bash
-# Add it as a cron job:
-#*/1 * * * * export DISPLAY=:0.0 && bash /home/philwayne/Dotfiles/.local/scripts/batteryinfo/bat-alert.sh
+# Add it as a cron job
 ac_adapter=$(acpi -a | cut -d' ' -f3 | cut -d- -f1)
 for battery in /sys/class/power_supply/BAT?
 do
@@ -169,4 +169,22 @@ case "$OPTION" in
 		notify-send "Current Title" "$(mocp -i | grep File)"
 		;;
 esac
+```
+
+### Quote Generator
+
+For this script to work properly, you need 2 files:
+1. The first is for the actual script (generator.sh)
+2. The second contains all the quotes (quotes)
+You may then create a symlink for it or simply source it from your
+.bashrc or .zshrc (if you wish to see a quote every time you open
+terminal)
+
+```bash
+#!/bin/bash
+# Get nb of lines in file containing quotes
+NB_LINES=$(cat /home/$USER/.local/scripts/quote_generator/quotes | wc -l)
+RANDOM_NB=$(( $RANDOM % $NB_LINES ))
+# Pick one line in file containing quotes
+cat ~/.local/scripts/quote_generator/quotes | head -$RANDOM_NB | tail -1
 ```
