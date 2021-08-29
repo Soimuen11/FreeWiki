@@ -1,4 +1,4 @@
-## TIPS, TRICKS AND HELPFUL PROGRAMS
+# TIPS, TRICKS AND HELPFUL PROGRAMS
 
 + [Mounting Android Phones](#mounting-android-phones-in-linux)
 + [Installing Android in Virtualbox](#installing-android-in-vbox)
@@ -21,7 +21,7 @@
 + [Great LS Commands](#great-ls-commands)
 + [VIFM matrix color schemes](#vifm-matrix-colorschemes)
 
-### Mounting Android Phones In Linux
+## Mounting Android Phones In Linux
 
 1. Install simple-mtpfs (from the AUR if you are running Arch Linux)
 2. Create Android/ directory in your home/
@@ -35,14 +35,14 @@ Other solutions to transfer files:
 + For file transfer, you may also install **Termux**, an android terminal app which
   you may find in the **Play Store**. From there you can set up ssh on your phone.
 
-### Installing Android in Vbox
+## Installing Android in Vbox
 
 + [Download the ISO](https://www.android-x86.org)
 + Change motherboard to PS/2 Mouse in System tab
 + Change Processors to 2+
 + Change Display to 3d and VboxSVGA
 
-### CURL TRICKS
+## CURL TRICKS
 
 Get Your IP Address
 
@@ -64,7 +64,7 @@ Weather
 + curl wttr.in
 ```
 
-### Video / Audio Editing Software
+## Video / Audio Editing Software
 
 + [Kdenlive](kdenlive.org)
 + [Olive](https://www.olivevideoeditor.org/)
@@ -73,14 +73,14 @@ Weather
 + [Audacity](https://www.audacityteam.org/)
 + [Sox](http://sox.sourceforge.net/)
 
-### Converting markdown to pdf
+## Converting markdown to pdf
 
 ```bash
 npm install -g markdown-pdf
 markdown-pdf <markdown-file-path>
 ```
 
-### Displaying keystrokes during screencast
+## Displaying keystrokes during screencast
 
 Install this program (with sudo privileges):
 
@@ -94,7 +94,7 @@ sudo pacman -S screenkey OR yay -S screenkey
 sudo apt install screenkey
 ```
 
-### Easily Styling Termite Terminal
+## Easily Styling Termite Terminal
 
 [Termite](https://github.com/thestinger/termite/) is a terminal emulator which
 I would most definitely recommend. To configure colors and fonts quickly and
@@ -107,7 +107,7 @@ I wrote this section). When I last edited this section (on Aug 13, 2021), I
 read that termite is now obsolete. Hence it might be wiser to make the switch
 to **alacritty**, as the maintainer of the git repo indicated.
 
-### Downloading Videos From YouTube
+## Downloading Videos From YouTube
 
 One program to rule them all:
 + [youtube-dl](https://github.com/ytdl-org/youtube-dl)
@@ -115,13 +115,13 @@ One program to rule them all:
 I have never fully experienced it but some people have recommended it to me:
 + [mps-youtube](https://github.com/mps-youtube/mps-youtube)
 
-### Concatenating Pdfs
+## Concatenating Pdfs
 
 ```bash
 yay -S pdf-append #for Arch users
 ```
 
-### Regular Expressions Basics
+## Regular Expressions Basics
 
 + . - any one character
 + \* - Match any number of previous (includin 0)
@@ -142,7 +142,7 @@ yay -S pdf-append #for Arch users
 	- grep "something" file
 	- grep "^s" file -> any line starting with lowercase "s" in given file
 
-### A Chaotic List Of Useful Programs
+## A Chaotic List Of Useful Programs
 
 + [Neofetch](https://github.com/dylanaraps/neofetch)
 + [Sxiv](https://github.com/ont/sxiv): A suckless image viewer for X vith vim keybindings
@@ -157,7 +157,7 @@ yay -S pdf-append #for Arch users
 + Cli-visualizer : visualize music
 + Ntfs-3g
 
-### Networking
+## Networking
 
 ```bash
 nmtui # Configure & connect to a network with ncurses interface
@@ -173,7 +173,7 @@ ip a
 net-setup #to set up connection from the Gentoo livecd.
 ```
 
-### Create Your Own Wiki
+## Create Your Own Wiki
 
 + [Mediawiki](https://www.mediawiki.org/wiki/MediaWiki)
 + Wordpress
@@ -182,7 +182,7 @@ net-setup #to set up connection from the Gentoo livecd.
   README.md, go to github pages, pick a theme and publish it.
 + [Other amazing tools to build a website from markdown](https://www.creativebloq.com/features/10-best-static-site-generators)
 
-### Monitor Your System
+## Monitor Your System
 
 + **cron** &/or **anacron**: Automate repetitive tasks. To edit your cron file,
   open a terminal emulator and run:
@@ -200,7 +200,7 @@ crontab -e
   arch-based or debian-based distributions), you can acces the logs with
   journalctl. Otherwise, you can still have a look in /var/logs.
 
-### Partition Disk
+## Partition Disk
 
 ```bash
 fdisk
@@ -208,14 +208,14 @@ sfdisk # From a bash script (to automate disk partitioning)
 cfdisk # More readable output than fdisk
 ```
 
-### Edit Subtitles
+## Edit Subtitles
 
 + [Aegisub](https://aegisub.it.uptodown.com/): Allows you to edit existing ones
   but also to create your own subtitles
 
-### Pentesting programs & websites
+## Pentesting programs & websites
 
-#### Analyzing 
+### Analyzing 
 
 + [Sherlock](https://github.com/sherlock-project/sherlock)
 + [Whois](https://www.whois.com/whois)
@@ -230,12 +230,12 @@ cfdisk # More readable output than fdisk
 + TheHarvester
 + Hping3
 
-#### Password Attacks
+### Password Attacks
 
 + Medusa
 + John
 
-#### Sniffing
+### Sniffing
 
 + Wireshark
 + Tcpdump / Windump (for Windows)
@@ -245,7 +245,7 @@ cfdisk # More readable output than fdisk
 + Observer Network Analyzer
 + Sniff-O-Matic
 
-#### Other
+### Other
 
 + Xtightvncviewer
 + Dig
@@ -255,19 +255,19 @@ cfdisk # More readable output than fdisk
 + Rlogin
 + Burpsuite
 
-### Xorg Programs
+## Xorg Programs
 
 + xev: print content of X events
 + xrandr / arandr: set size, orientation or reflection of the outputs for a screen.
 + setxkbmap: set up your keyboard
 
-### Write On Screen
+## Write On Screen
 
 + banner
 + figlet
 + xournalpp
 
-### Formatting A Flashdrive
+## Formatting A Flashdrive
 
 + Check filesystem
 ```bash
@@ -289,11 +289,11 @@ sudo mkfs.ntfs /dev/sdc1
 sudo mkfs.ext4 /dev/sdc1
 ```
 
-### Removing Sensitive Data From Git Repo
+## Removing Sensitive Data From Git Repo
 
 + [Removing Data From GitHub](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository)
 
-### Great LS commands
+## Great LS commands
 
 ```bash
 lsusb #list usb devices
@@ -302,27 +302,27 @@ lspci #list all pci devices
 lsblk #list block devices
 ```
 
-### Copying text from vim to an external program
+## Copying text from vim to an external program
 
 ```vim
 "+y
 ```
 
-### Vim r!
+## Vim r!
 
 Write the result of the **ls** command in a file directly from vim
 ```vim
 :r! ls 
 ```
 
-### Vim powerline
+## Vim powerline
 
 + [Archwiki Page For *powerline*](https://wiki.archlinux.org/title/Powerline)
 + [GitHub Repo For Powerline](https://github.com/powerline/powerline)
 + [A Tecmint Tutorial](https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/)
 + [Powerline As A Widget](https://powerline.readthedocs.io/en/master/usage/wm-widgets.html)
 
-### VIFM Matrix Color Scheme
+## VIFM Matrix Color Scheme
 
 .config/vifm/colors/Default.vifm
 
@@ -356,13 +356,13 @@ highlight Fifo            cterm=none ctermfg=yellow ctermbg=default
 highlight Executable      cterm=none ctermfg=green ctermbg=default
 ```
 
-### Fuzzy Finders
+## Fuzzy Finders
 
 + **Find** can be a slow command
 + Use **broot** instead
 + **Fzf** also is very popular and can be used together with **bfs**.
 
-### Modifying images
+## Modifying images
 
 + **ImageMagick** (cli tool). [imagemagick.org](imagemagick.org) is its
   official site. They also have a github page.
@@ -372,7 +372,7 @@ highlight Executable      cterm=none ctermfg=green ctermbg=default
   complex.
 + Inkscape
 
-### Patching (Suckless Software)
+## Patching (Suckless Software)
 
 1. clone the repository of the program you want to patch (eg: dmenu)
 in .local/repos/
@@ -383,7 +383,7 @@ in .local/repos/
 
 **NB : YOU NEED TO RECOMPILE (SUDO MAKE INSTALL) EVERY TIME YOU MAKE AN EDIT !**
 
-### Configuring Neomutt
+## Configuring Neomutt
 
 + Clone [luke smith's mutt-wizard GitHub repository](https://muttwizard.com/) 
 + OR download it from the AUR with:
@@ -391,13 +391,13 @@ in .local/repos/
 yay -S mutt-wizard
 ```
 
-### Hdparm
+## Hdparm
 
 **hdparm** is a command line utility to set and view hardware parameters of hard
 disk drives. It can also be used as a simple benchmarking tool:
 + [Click here for more info](https://wiki.archlinux.org/index.php/Hdparm#Putting_a_drive_to_sleep_directly_after_boot)
 
-### Streaming With CVLC Command Line Mode
+## Streaming With CVLC Command Line Mode
 
 Open your terminal & run:
 ```bash
@@ -409,14 +409,14 @@ Then start the video with :
 ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 1 output.mkv -async 1 -vsync 1
 ```
 
-### Audio Management
+## Audio Management
 
 + PulseAudio / Pavucontrol / Pulsemixer: For sound control of your system.
 + Alsa / Alsamixer: For sound control of your system.
 + Audacity: To record audio (and so much more).
 + Sox (for terminal): Same as audacity but is terminal-based.
 
-### Distros One Should Be Curious About?
+## Distros One Should Be Curious About?
 
 NB: source-based = you need to compile your programs when installing them = you
 do not directly install binaries
@@ -428,7 +428,7 @@ do not directly install binaries
 + Slackware / OpenSuse
 + Void Linux
 
-### Mother distros
+## Mother distros
 
 1. Slackware
 2. Debian (comes with binaries)
@@ -438,7 +438,7 @@ do not directly install binaries
 6. Gentoo / Enoch
 7. Redhat (Fedora, CentOS, others)
 
-### Iptables Firewall Rules
+## Iptables Firewall Rules
 
 A firewall is essentially a way to filter traffic.  What traffic do you want to
 allow / block ?
@@ -474,17 +474,17 @@ If you wish to quickly and easily set up your firewall, you may use Chris
 Titus' configuration, which you can find clicking on the link below:
 + [Click here & clone this repository](https://github.com/ChrisTitusTech/firewallsetup.git)
 
-### Ranger (File Manager Program)
+## Ranger (File Manager Program)
 
 Rename several files in one go : select the files you wish to rename with the
 space bar. Then type :bulkrename. That will open your fave text-editor and then
 you can rename them as you wish.
 
-### dmesg
+## dmesg
 
 Program to control or examine the kernel ring buffer.
 
-### systemd-analyze
+## systemd-analyze
 
 Analyze how much time it takes for each service to load (how long to completely boot your pc)
 
@@ -494,13 +494,13 @@ systemd-analyze critical-chain graphical.target
 systemd-analyze blame
 ```
 
-### Managing logs
+## Managing logs
 
 ```bash
 last #shows a listing of last logged in users
 ```
 
-### Pacman
+## Pacman
 
 ```bash
 + pacman -S: install a program
@@ -514,13 +514,13 @@ last #shows a listing of last logged in users
 + pacman -Rc $program: This removes all the packages which depend on a program
 ```
 
-### Software To Make You Own Music
+## Software To Make You Own Music
 
 + [Rosegarden](https://rosegardenmusic.com/)
 + [Audacity](https://www.audacityteam.org/)
 + LMMS : Linux Multimedia Studio
 
-### Nice Ncurses Programs
+## Nice Ncurses Programs
 
 + glances : written in Python
 + ncdu : ncurses disk usage
@@ -531,16 +531,16 @@ last #shows a listing of last logged in users
 + vifm (vim-like file manager)
 + mc (midnight commander) : file-system manager
 
-### Recovering deleted files
+## Recovering deleted files
 
 + testdisk
 
-### Spreadsheet Program With Vim Bindings
+## Spreadsheet Program With Vim Bindings
 
 + [SC-IM](https://github.com/andmarti1424/sc-im)
 + Install it with the AUR on Arch Linux: yay -Ss sc-im
 
-### Display Manager Setup
+## Display Manager Setup
 
 1. **Permanently** change DM:
 ```bash
@@ -557,7 +557,7 @@ last #shows a listing of last logged in users
 sudo systemctl restart [$DISLAY-MANAGER-NAME]
 ```
 
-### Set Keyboard With Setxkbmap
+## Set Keyboard With Setxkbmap
 
 Forever Option 1:
 
@@ -575,23 +575,23 @@ may also add this line to your .xprofile:
 setxkbmap -option ctrl:nocaps
 ```
 
-### Bc
+## Bc
 
 Bc is a built-in POSIX CLI calculator (for bash).
 
-### Autojump
+## Autojump
 
 + A shell program to cd faster, a bit like broot or fzf (though not a fuzzy finder).
 + Install it on Ubuntu: sudo apt install autojump
 
-### Browser Recommendations
+## Browser Recommendations
 
 1. [Iridium is the best one regarding privacy](https://iridiumbrowser.de/)
 2. [Brave & vimium plugin: for its relative security builtin js/ad-blocker & its speed](brave.com)
 3. [Qutebrowser: if you love vim, you will love it](https://qutebrowser.org/)
 4. [Firefox with the pentadactyl plugin](https://www.mozilla.org/it/firefox/new/?redirect_source=firefox-com)
 
-### Getting RSS Links
+## Getting RSS Links
 
 FROM WEBSITES:
 + Add /feed/ at the end of the url address
@@ -605,7 +605,7 @@ FROM YOUTUBE CHANNEL:
 + sudo apt install newsboat (debian-based distros)
 + sudo pacman -S newsboat (arch-based distros)
 
-### GAMING ON LINUX
+## GAMING ON LINUX
 
 False Stereotypes:
 
