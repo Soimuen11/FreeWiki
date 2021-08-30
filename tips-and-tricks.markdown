@@ -19,7 +19,16 @@
 + [Xorg Programs](#xorg-programs)
 + [Formatting A Flashdrive](#formatting-a-flashdrive)
 + [Great LS Commands](#great-ls-commands)
-+ [VIFM matrix color schemes](#vifm-matrix-colorschemes)
++ [Some Vim Tricks](#some-vim-tricks)
++ [Fuzzy finders](#fuzzy-finders)
++ [Modifying Images](#modifying-images)
++ [Patching Suckless Software](#patching-suckless-software)
++ [Configuring Neomutt](#configuring-neomutt)
++ [Hdparm](#hdparm)
++ [Streaming With CVLC](#streaming-with-cvlc-command-line-mode)
++ [Audio Management](#audio-management)
++ [Linux Distros](#linux-distros)
++ [Iptables](#iptables-firewall-rules)
 
 ## Mounting Android Phones In Linux
 
@@ -311,28 +320,29 @@ lscpu #display information about cpu architecture
 lspci #list all pci devices
 lsblk #list block devices
 ```
+## Some vim tricks
 
-## Copying text from vim to an external program
+### Copying text from vim to an external program
 
 ```vim
 "+y
 ```
 
-## Vim r!
+### Vim r!
 
 Write the result of the **ls** command in a file directly from vim
 ```vim
 :r! ls 
 ```
 
-## Vim powerline
+### Vim powerline
 
 + [Archwiki Page For *powerline*](https://wiki.archlinux.org/title/Powerline)
 + [GitHub Repo For Powerline](https://github.com/powerline/powerline)
 + [A Tecmint Tutorial](https://www.tecmint.com/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/)
 + [Powerline As A Widget](https://powerline.readthedocs.io/en/master/usage/wm-widgets.html)
 
-## VIFM Matrix Color Scheme
+### VIFM Matrix Color Scheme
 
 .config/vifm/colors/Default.vifm
 
@@ -382,7 +392,7 @@ highlight Executable      cterm=none ctermfg=green ctermbg=default
   complex.
 + Inkscape
 
-## Patching (Suckless Software)
+## Patching Suckless Software
 
 1. clone the repository of the program you want to patch (eg: dmenu)
 in .local/repos/
@@ -400,6 +410,17 @@ in .local/repos/
 ```bash
 yay -S mutt-wizard
 ```
+
+If you wish to go through the whole process, here is what I recommend:
+1. Install offlineimap msmtp and neomutt
+2. Begin configuring offlineimap (first get one account to work, then several
+   if necessary)
+3. When done with offlineimap, configure msmtp for one account. If all goes
+   well, do it for several.
+4. Link your offlineimap config to neomutt. If you do not know how, the arch
+   wiki explains it really well on its page regarding offlineimap.
+5. Do the same for your msmtp config.
+6. Congrats, you may now consult and send your emails from neomutt.
 
 ## Hdparm
 
@@ -426,7 +447,9 @@ ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 1
 + Audacity: To record audio (and so much more).
 + Sox (for terminal): Same as audacity but is terminal-based.
 
-## Distros One Should Be Curious About?
+## Linux Distros 
+
+### Ones You Should Be Curious About
 
 NB: source-based = you need to compile your programs when installing them = you
 do not directly install binaries
@@ -438,7 +461,7 @@ do not directly install binaries
 + Slackware / OpenSuse
 + Void Linux
 
-## Mother distros
+### Mother distros
 
 1. Slackware
 2. Debian (comes with binaries)
@@ -524,7 +547,7 @@ last #shows a listing of last logged in users
 + pacman -Rc $program: This removes all the packages which depend on a program
 ```
 
-## Software To Make You Own Music
+## Software To Make Your Own Music
 
 + [Rosegarden](https://rosegardenmusic.com/)
 + [Audacity](https://www.audacityteam.org/)
@@ -647,4 +670,3 @@ Downloading the roms:
 
 + [emulatorgames.net](https://emulatorgames.net)
 + [Romsmania](https://consolegames.down10.software/roms/)
-
