@@ -3,8 +3,6 @@ layout: default
 title: My Scripts
 ---
 
-# My Scripts
-
 You may find all my scripts in my Dotfiles github repository. Just go into
 **.local/scripts**. You will only find the *finished* ones here.
 
