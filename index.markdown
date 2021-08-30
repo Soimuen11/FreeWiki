@@ -5,9 +5,6 @@ layout: default
 
 # Home
 
-## Table Of Contents
-{:toc}
-
 ## About Me
 
 Starting June 4th 2020, this wiki will be a collection of all the issues I,
