@@ -67,7 +67,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 
 ## Other
 
-### English:
+1. English:
 	+ [Learn X in Y Minutes (perl tutorial)](https://learnxinyminutes.com/docs/perl/)
 	+ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
 	+ [W3schools](https://w3schools.com)
@@ -100,8 +100,8 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [JS For Cats](http://jsforcats.com/)
 	+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
 	+ [HTML Color groups](https://www.w3schools.com/colors/colors_groups.asp)
-### French:
+2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
-### Italian:
+3. Italian:
 	+ [Italian HTML guide](https://www.html.it/guide/guida-html/)
