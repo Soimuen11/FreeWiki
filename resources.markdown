@@ -3,8 +3,6 @@ layout: default
 title: resources
 ---
 
-# RESOURCES
-
 + [Quickly Access Documentation Offline](#quickly-access-documentation-offline)
 + [Raspberry Pi Docs](#raspberry-pi-docs)
 + [Microsoft Windows](#microsoft-windows)

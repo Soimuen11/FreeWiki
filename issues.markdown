@@ -1,5 +1,3 @@
-# Issues
-
 ## SSH: could not open connection to authentication agent
 
 Option 1:
