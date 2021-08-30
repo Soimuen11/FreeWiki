@@ -1,5 +1,6 @@
 # TIPS, TRICKS AND HELPFUL PROGRAMS
 
+<!-- future table of contents
 + [Mounting Android Phones](#mounting-android-phones-in-linux)
 + [Installing Android in Virtualbox](#installing-android-in-vbox)
 + [Video & Audio Editing Software]()
@@ -29,6 +30,7 @@
 + [Audio Management](#audio-management)
 + [Linux Distros](#linux-distros)
 + [Iptables](#iptables-firewall-rules)
+-->
 
 ## Mounting Android Phones In Linux
 
