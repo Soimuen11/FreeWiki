@@ -1,6 +1,6 @@
 # Issues
 
-## SSH: could not open a connection to your authentication agent
+## SSH: could not open connection to authentication agent
 
 Option 1:
 
@@ -13,7 +13,10 @@ Then you only need retype ssh-add:
 ssh-add
 ```
 NB: This fix will only work for the current session. If you close your
-terminal, you will have to re-enter your passphrase.
+terminal, you will have to re-enter your passphrase. I recommend you couple
+this method with tmux, this way you can keep working with the same session.
+If this is not enough for you and would prefer not entering your passphrase
+ever again, you may also use gnome-keyring.
 
 Option 2:
 Run
@@ -24,7 +27,7 @@ SSH_AUTH_SOCK=/tmp/ssh-hZQhwQlxahPX/agent.1833; export SSH_AUTH_SOCK;
 SSH_AGENT_PID=1834; export SSH_AGENT_PID; 
 echo Agent pid 496; 
 
-# Copy and past the first 2 lines of output
+# Copy and paste the first 2 lines of output
 SSH_AUTH_SOCK=/tmp/ssh-hZQhwQlxahPX/agent.1833; export SSH_AUTH_SOCK; 
 SSH_AGENT_PID=1834; export SSH_AGENT_PID; 
 
@@ -34,6 +37,11 @@ ssh-add
 # List your keys with
 ssh-add -l
 ```
+
+## Removing SSH passphrase
+
++ [Stackoverflow Response](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke#112409)
++ [Set up passwordless login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
 
 ## df:/run/user/1000 permission denied
 
@@ -72,8 +80,3 @@ Other solution:
   privileges) to call it every now and then (perhaps once every 5 minutes).
   This way you never have to worry about that anymore. To set up said cron job,
   do not hesitate to use the [Cron Guru web app](https://www.creativebloq.com/features/10-best-static-site-generators).
-
-## Removing SSH passphrase
-
-+ [Stackoverflow Response](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke#112409)
-+ [Set up passwordless login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
