@@ -1,5 +1,3 @@
-# TIPS, TRICKS AND HELPFUL PROGRAMS
-
 <!-- future table of contents
 + [Mounting Android Phones](#mounting-android-phones-in-linux)
 + [Installing Android in Virtualbox](#installing-android-in-vbox)
