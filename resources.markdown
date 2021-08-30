@@ -70,6 +70,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 ## Other
 
 ### English:
+	+ [Learn X in Y Minutes (perl tutorial)](https://learnxinyminutes.com/docs/perl/)
 	+ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
 	+ [W3schools](https://w3schools.com)
 	+ [Javascript.info](https://javascript.info/)
