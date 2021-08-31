@@ -1,7 +1,5 @@
 ## Table Of Contents
 
-<!-- vim-markdown-toc GFM -->
-
 * [Mounting Android Phones In Linux](#mounting-android-phones-in-linux)
 * [Installing Android in Vbox](#installing-android-in-vbox)
 * [Curl](#curl)
@@ -34,6 +32,7 @@
 * [Some vim tricks](#some-vim-tricks)
 	* [Copying text from vim to an external program](#copying-text-from-vim-to-an-external-program)
 	* [Vim r!](#vim-r)
+	* [Create TOCs For Markdown Files](#create-tocs-for-markdown-files)
 	* [Vim powerline](#vim-powerline)
 	* [VIFM Matrix Color Scheme](#vifm-matrix-color-scheme)
 * [Fuzzy Finders](#fuzzy-finders)
@@ -368,6 +367,33 @@ Write the result of the **ls** command in a file directly from vim
 ```vim
 :r! ls 
 ```
+
+### Create TOCs For Markdown Files
+
+Use this vim plugin to automatically generate a table of contents for your
+markdown file:
+
++ [Github Vim Markdown TOC](https://github.com/mzlogin/vim-markdown-toc)
+
+Main commands:
+
+1. :GenTocGFM
+Generate table of contents in GFM link style.
+This command is suitable for Markdown files in GitHub repositories, like
+README.md, and Markdown files for GitBook.
+
+2. :GenTocRedcarpet
+Generate table of contents in Redcarpet link style.
+This command is suitable for Jekyll or anywhere else use Redcarpet as its
+Markdown parser.
+
+3. :GenTocGitLab
+Generate table of contents in GitLab link style.
+This command is suitable for GitLab repository and wiki.
+
+4. :GenTocMarked
+Generate table of contents for iamcco/markdown-preview.vim which use Marked
+markdown parser.
 
 ### Vim powerline
 
