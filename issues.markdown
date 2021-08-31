@@ -1,3 +1,10 @@
+## Table Of Contents
+
+* [SSH: could not open connection to authentication agent](#ssh-could-not-open-connection-to-authentication-agent)
+* [Removing SSH passphrase](#removing-ssh-passphrase)
+* [df:/run/user/1000 permission denied](#dfrunuser1000-permission-denied)
+* [Trackpad stops working](#trackpad-stops-working)
+
 ## SSH: could not open connection to authentication agent
 
 Option 1:
