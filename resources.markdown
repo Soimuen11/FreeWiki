@@ -100,6 +100,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [JS For Cats](http://jsforcats.com/)
 	+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
 	+ [HTML Color groups](https://www.w3schools.com/colors/colors_groups.asp)
+	+ [Pass Documentation](https://www.passwordstore.org/)
 2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
