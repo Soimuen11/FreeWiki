@@ -268,6 +268,7 @@ cfdisk # More readable output than fdisk
 
 ### Analyzing 
 
++ [PhoneInfoGa](https://github.com/sundowndev/PhoneInfoga)
 + [Sherlock](https://github.com/sherlock-project/sherlock)
 + [Whois](https://www.whois.com/whois)
 + [Whatweb](https://tools.kali.org/web-applications/whatweb)
