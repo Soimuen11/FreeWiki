@@ -1,16 +1,17 @@
 # The Free Wiki Project
 
-## Access github pages from here
+## ACCESS GITHUB PAGES FROM HERE
 
 [click on this link](https://soimuen11.github.io/FreeWiki/)
 
-## to-dos
+## TO-DOS
 
 1. write mini tuto how to get jekyll + gh-pages up and running
 2. separate content into pages instead of sections
 3. document how set up emails with offline imap and msmtp
+4. explain how migrate from wordpress to jekyll
 
-## tuto
+## TUTO JEKYLL
 
 + on github:
 	1. create a new repo without a readme
@@ -33,3 +34,10 @@
 + For the midnight theme, which is the one this wiki uses:
 	- [repo link](https://github.com/pages-themes/midnight)
 	- [ruby gems link](https://rubygems.org/gems/jekyll-theme-midnight)
+
+## tuto neomutt
+
+1. install neomutt with package manager
+2. install offlineimap + msmtp
+3. set them up
+4. configure a cron job to sync email regularly
