@@ -6,11 +6,11 @@ title: My Scripts
 You may find all my scripts in my Dotfiles github repository. Just go into
 **.local/scripts**. You will only find the *finished* ones here.
 
-+ [Game launcher](#game-launcher)
-+ [Mystery Number Quest](#mystery-number-quest)
-+ [Battery Info](#battery-info)
-+ [Moc Controller](#moc-controller)
-+ [Quote Generator](#quote-generator)
+* [Game Launcher](#game-launcher)
+* [Mystery Number Quest](#mystery-number-quest)
+* [Battery Info](#battery-info)
+* [Moc Controller](#moc-controller)
+* [Quote Generator](#quote-generator)
 
 ## Game Launcher
 
