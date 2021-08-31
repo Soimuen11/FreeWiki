@@ -1,12 +1,18 @@
-## FFMPEG
+## Table Of Contents
 
-+ [Webcamming](#webcamming)
-+ [Determining available screen resolutions](#determining-available-resolutions)
-+ [Find Size & Offset Of Window](#find-size-and-offset-of-particular-window-to-capture)
-+ [Find Pulseaudio Source](#find-out-which-pulseaudio-sound-sources-exist)
-+ [Entire FFMPEG Command](#the-entire-ffmpeg-command)
-+ [Extract Audio From Video](#extract-audio-from-video)
-+ [Capture Only Video No Audio](#capture-only-video-no-audio)
+* [Webcamming](#webcamming)
+* [Determining Available Resolutions](#determining-available-resolutions)
+* [Find Size And Offset Of Particular Window To Capture](#find-size-and-offset-of-particular-window-to-capture)
+* [Find Out Which Pulseaudio Sound Sources Exist](#find-out-which-pulseaudio-sound-sources-exist)
+* [The entire ffmpeg command.](#the-entire-ffmpeg-command)
+* [Extract Audio From Video](#extract-audio-from-video)
+* [Capture Only Video No Audio](#capture-only-video-no-audio)
+* [Converting files](#converting-files)
+* [Add background music](#add-background-music)
+* [Add a new audio track to an existing file](#add-a-new-audio-track-to-an-existing-file)
+* [Concatenating Files](#concatenating-files)
+* [Cutting Videos](#cutting-videos)
+* [Burning Subs To Video](#burning-subs-to-video)
 
 ### Webcamming
 
