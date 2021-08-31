@@ -25,6 +25,8 @@ remote_theme: pages-themes/midnight@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-remote-theme # add this line to the plugins list if you already have one
+markdown: kramdown
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
