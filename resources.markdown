@@ -2,12 +2,14 @@
 layout: default
 title: resources
 ---
+
 ## Table Of Contents
 
 * [Quickly Access Documentation Offline](#quickly-access-documentation-offline)
 * [Raspberry Pi Docs](#raspberry-pi-docs)
 * [Microsoft Windows](#microsoft-windows)
 * [Customizing Bash](#customizing-bash)
+* [Customizing Vim](#customizing-vim)
 * [Learning AWK](#learning-awk)
 * [Virtual Private Servers](#virtual-private-servers)
 * [Buying Domain Name](#buying-domain-name)
@@ -45,6 +47,10 @@ man [$PROGRAM_NAME]
 ## Customizing Bash
 
 + [Archwiki link](https://wiki.archlinux.org/index.php/Bash/Prompt_customization)
+
+## Customizing Vim
+
++ [Space Vim](https://spacevim.org)
 
 ## Learning AWK
 
