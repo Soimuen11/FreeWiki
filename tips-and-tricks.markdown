@@ -61,7 +61,8 @@
 * [Autojump](#autojump)
 * [Browser Recommendations](#browser-recommendations)
 * [Getting RSS Links](#getting-rss-links)
-* [GAMING ON LINUX](#gaming-on-linux)
+* [Gaming On Linux](#gaming-on-linux)
+* [TUTO JEKYLL](#tuto-jekyll)
 
 ## Mounting Android Phones In Linux
 
@@ -473,7 +474,7 @@ yay -S mutt-wizard
 ```
 
 If you wish to go through the whole process, here is what I recommend:
-1. Install offlineimap msmtp and neomutt
+1. Install offlineimap msmtp, notmuch & neomutt
 2. Begin configuring offlineimap (first get one account to work, then several
    if necessary)
 3. When done with offlineimap, configure msmtp for one account. If all goes
@@ -481,7 +482,11 @@ If you wish to go through the whole process, here is what I recommend:
 4. Link your offlineimap config to neomutt. If you do not know how, the arch
    wiki explains it really well on its page regarding offlineimap.
 5. Do the same for your msmtp config.
-6. Congrats, you may now consult and send your emails from neomutt.
+6. Run "notmuch", a script will run through the config with you.
+7. Congrats, you may now consult and send your emails from neomutt.
+8. Set up a cron job to regularly sync your email (offlineimap + notmuch new)
+9. [Useful programs to combine with neomutt](https://neomutt.org/contrib/useful-programs)
+10. [A great article explaining how set up everything](https://stevelosh.com/blog/2012/10/the-homely-mutt)
 
 ## Hdparm
 
@@ -699,7 +704,7 @@ FROM YOUTUBE CHANNEL:
 + sudo apt install newsboat (debian-based distros)
 + sudo pacman -S newsboat (arch-based distros)
 
-## GAMING ON LINUX
+## Gaming On Linux
 
 False Stereotypes:
 
@@ -731,3 +736,31 @@ Downloading the roms:
 
 + [emulatorgames.net](https://emulatorgames.net)
 + [Romsmania](https://consolegames.down10.software/roms/)
+
+## TUTO JEKYLL
+[to be completed]
+
++ On github:
+	1. create a new repo without a readme
+
++ On your local machine:
+	1. Install ruby
+	2. Gem install bundler jekyll
+	3. Jekyll new $project-name OR cd into the repo you cloned from github
+	4. Run "bundler init"
+	5. Go to https://rubygems.org
+		+ search for a theme
+		+ look for LINKS section and click on HOMEPAGE
+		+ this will redirect you to the github repo
+		+ copy the content of the _layouts folder from that repo
+		+ modify your pages layout accordingly
+	7. Add name of your theme to \_config.yml & Gemfile
+	8. Run: "bundler install"
+	9. Run: "bundler exec jekyll serve" to check if your site works locally
+
++ For the midnight theme, which is the one this wiki uses:
+	- [Repo link](https://github.com/pages-themes/midnight)
+	- [Ruby gems link](https://rubygems.org/gems/jekyll-theme-midnight)
+
++ Explain how migrate from wordpress to jekyll
+
