@@ -48,6 +48,13 @@ ssh-add -l
 + [Stackoverflow Response](https://stackoverflow.com/questions/112396/how-do-i-remove-the-passphrase-for-the-ssh-key-without-having-to-create-a-new-ke#112409)
 + [Set up passwordless login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
 
+Install keychain and combine it with ssh-agent to save passphrase for all
+shell sessions.
+
++ [Stop Entering Passphrase All The Time](https://keyboardinterrupt.org/stop-entering-your-ssh-passphrase-all-the-time)
++ [Stachexchange Response To Stop Entering passphrase](https://stackoverflow.com/questions/10032461/git-keeps-asking-me-for-my-ssh-key-passphrase)
++ [Keychain Funtoo Docs](https://www.funtoo.org/Keychain)
+
 ## df:/run/user/1000 permission denied
 
 Df is a very handy command which reports file system disk space usage (see man
