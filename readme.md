@@ -6,38 +6,16 @@
 
 ## TO-DOS
 
-1. write mini tuto how to get jekyll + gh-pages up and running
-2. separate content into pages instead of sections
-3. document how set up emails with offline imap and msmtp
-4. explain how migrate from wordpress to jekyll
++ Write clear explanations on installing Jekyll and configuring Neomutt.
 
-## TUTO JEKYLL
+## WHAT TO EXPECT
 
-+ on github:
-	1. create a new repo without a readme
-
-+ on your local machine:
-	1. Install ruby
-	2. Gem install bundler jekyll
-	3. jekyll new $project-name OR cd into the repo you cloned from github
-	4. run "bundler init"
-	5. go to https://rubygems.org/ 
-		+ search for a theme
-		+ look for LINKS section and click on HOMEPAGE
-		+ this will redirect you to the github repo
-		+ copy the content of the _layouts folder from that repo
-		+ modify your pages layout accordingly
-	7. add name of your theme to \_config.yml & Gemfile
-	8. run: "bundler install"
-	9. run: "bundler exec jekyll serve" to check if your site works locally
-
-+ For the midnight theme, which is the one this wiki uses:
-	- [repo link](https://github.com/pages-themes/midnight)
-	- [ruby gems link](https://rubygems.org/gems/jekyll-theme-midnight)
-
-## tuto neomutt
-
-1. install neomutt with package manager
-2. install offlineimap + msmtp
-3. set them up
-4. configure a cron job to sync email regularly
+This wiki aims at providing a quick answer or links to resources. It is
+organized in pages:
++ Home: A brief presentation of the wiki, its author and where to contact him.
++ Issues: A short list (for now) of issues / errors I have had as a linux user.
++ Tips & Tricks: Find various commands and links to helpful software
++ Ffmpeg: Commands one can use for screencasting
++ Resources: Links to online resources (blogs, courses, videos, official docs)
++ Scripts: As the title barely indicates, scripts I have written to make my
+  life easier on my Linux machine.
