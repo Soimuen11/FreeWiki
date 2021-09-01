@@ -601,16 +601,18 @@ last #shows a listing of last logged in users
 
 ## Pacman
 
+Pacman is the main package manager for arch-based systems.
+
 ```bash
-+ pacman -S: install a program
-+ pacman -Ss: search for a program
-+ pacman -Syu: update + upgrade the system
-+ pacman -Syyuu 
-+ pacman -Q
-+ pacman -Qte
-+ pacman -R OR pacman -Rns: This removes a program and all its dependencies / config files
-+ pacman -Rdd $ program: This removes only the program without its dependencies
-+ pacman -Rc $program: This removes all the packages which depend on a program
+pacman -S # Install a program
+pacman -Ss # Search for a program
+pacman -Syu # Update + upgrade the system
+pacman -Syyuu 
+pacman -Q
+pacman -Qte
+pacman -R OR pacman -Rns # This removes a program and all its dependencies / config files
+pacman -Rdd $ program # This removes only the program without its dependencies
+pacman -Rc $program # This removes all the packages which depend on a program
 ```
 
 ## Software To Make Your Own Music
