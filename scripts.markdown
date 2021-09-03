@@ -103,6 +103,10 @@ exit 0
 
 ## Battery Info
 
+Dependencies:
+	+ acpi
+	+ aplay / espeak (if you uncomment the lines where they are mentioned)
+
 ```bash
 #!/bin/bash
 # Add it as a cron job
@@ -122,6 +126,10 @@ fi
 ```
 
 ## Moc Controller
+
+Dependencies:
+	+ Moc
+	+ Dmenu
 
 ```bash
 #!/bin/bash
@@ -190,7 +198,6 @@ cat ~/.local/scripts/quote_generator/quotes | head -$RANDOM_NB | tail -1
 
 Here is a list of quotes you can put in a file named **quotes**:
 ```
-
 “Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.” ― Albert Einstein
 “Be the change that you wish to see in the world.” ― Mahatma Gandhi
 “Without music, life would be a mistake.” ― Friedrich Nietzsche, Twilight of the Idols
