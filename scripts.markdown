@@ -11,6 +11,7 @@ You may find all my scripts in my Dotfiles github repository. Just go into
 * [Battery Info](#battery-info)
 * [Moc Controller](#moc-controller)
 * [Quote Generator](#quote-generator)
+* [Mouse](#mouse)
 
 ## Game Launcher
 
@@ -258,4 +259,15 @@ Here is a list of quotes you can put in a file named **quotes**:
 “All you need in this life is ignorance and confidence; then success is sure. ” ― Mark Twain
 “Sometimes life knocks you on your ass... get up, get up, get up!!! Happiness is not the absence of problems, it's the ability to deal with them.” ― Steve Maraboli
 “It had long since come to my attention that people of accomplishment rarely sat back and let things happen to them. They went out and happened to things.” ― Leonardo da Vinci
+```
+
+## Mouse
+
+```bash
+#!/bin/bash
+sudo modprobe -r psmouse
+sudo modprobe psmouse
+
+# Doesn't work on Gentoo
+# Works perfectly on Arch Linux && Ubuntu
 ```
