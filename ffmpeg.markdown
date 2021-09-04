@@ -16,11 +16,18 @@
 
 ### Webcamming
 
+Add your face to your screencasts with the command below. Beware, video0 works
+for me but it might be a different source on your machine (video1, video2,
+etc.)
+
 ```bash
 ffmpeg -y -i /dev/video0 out.mkv
 ```
 
 ### Determining Available Resolutions
+
+Before you run the entire ffmpeg command to record your screen, it is important
+to determine which resolutions are available.
 
 ```bash
 xrandr
@@ -35,7 +42,7 @@ xwininfo
 ### Find Out Which Pulseaudio Sound Sources Exist 
 
 ```bash
-pactl list sources #to record, find the input source (not output)
+pactl list sources # To record, find the input source (not output)
 ```
 
 ### The entire ffmpeg command.
@@ -59,30 +66,36 @@ directory ffmpeg was launched from.
 
 ### Extract Audio From Video
 
+If you are like me and enjoy listening to the movies you have seen over and
+over again, the following command may come in handy.
+
 ```bash
 ffmpeg -i sample.avi -q:a 0 -map a sample.mp3
 ```
 
 ### Capture Only Video No Audio
 
+This is particularly useful when you wish to first record your screen and then
+record your voice.
+
 ```bash
 ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 output.mkv -vsync 1
 ```
 
-### Converting files
+### Converting Files
 
 ```bash
 ffmpeg -i output.mkv output.mp4
+# General formula : ffmpeg -i output.oldformat output.wantedformat
 ```
-general formula : ffmpeg -i output.oldformat output.wantedformat
 
-### Add background music
+### Add Background Music To Video
 
 ```bash
 ffmpeg -i arch-install.mp4  -i archinstall-soundtrack.mp4 -c copy -map 0:v:0 -map 1:a:0 output2.mp4
 ```
 
-### Add a new audio track to an existing file
+### Add New Audio Track To Existing File
 
 + [Superuser.com has the answer](https://superuser.com/questions/1140452/ffmpeg-add-a-new-audio-track-to-existing-file)
 
@@ -98,7 +111,7 @@ example: filename
 ffmpeg -f concat -safe 0 -i /home/soimuen/Downloads/FILENAME -c copy output.webm
 ```
 
-### Cutting Videos
+### Trimming Videos
 ```bash
 ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 ```
