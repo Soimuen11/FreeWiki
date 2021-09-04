@@ -75,9 +75,10 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 
 ## Linux Wikis
 
-+ [The Arch Wiki](https://archlinux.org)
++ [Arch Wiki](https://archlinux.org)
 + [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
-+ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
++ [Ubuntu Wiki](https://wiki.ubuntu.com/)
++ [Artix Wiki](https://wiki.artixlinux.org/)
 + [DistroWatch](https://distrowatch.com/)
 
 ## Other
