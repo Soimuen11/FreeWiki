@@ -3,7 +3,8 @@
 * [SSH: could not open connection to authentication agent](#ssh-could-not-open-connection-to-authentication-agent)
 * [Removing SSH passphrase](#removing-ssh-passphrase)
 * [df:/run/user/1000 permission denied](#dfrunuser1000-permission-denied)
-* [Trackpad stops working](#trackpad-stops-working)
+* [Trackpad Stops Working](#trackpad-stops-working)
+* [Fix Brave Black Screen](#fix-brave-black-screen)
 
 ## SSH: could not open connection to authentication agent
 
@@ -92,3 +93,10 @@ Other solution:
   privileges) to call it every now and then (perhaps once every 5 minutes).
   This way you never have to worry about that anymore. To set up said cron job,
   do not hesitate to use the [Cron Guru web app](https://www.creativebloq.com/features/10-best-static-site-generators).
+
+## Fix Brave black screen
+
+You need to start the brave browser with this flag:
+```bash
+brave --disable-gpu
+```
