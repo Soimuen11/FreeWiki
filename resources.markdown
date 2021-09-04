@@ -13,6 +13,7 @@ title: resources
 * [Learning AWK](#learning-awk)
 * [Virtual Private Servers](#virtual-private-servers)
 * [Buying Domain Name](#buying-domain-name)
+* [Linux Wikis](#linux-wikis)
 * [Other](#other)
 
 ## Quickly Access Documentation Offline
@@ -72,6 +73,13 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 + [Wordpress.org](wordpress.org)
 + [Wordpress.com](wordpress.com)
 
+## Linux Wikis
+
++ [The Arch Wiki](https://archlinux.org)
++ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
++ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
++ [DistroWatch](https://distrowatch.com/)
+
 ## Other
 
 1. English:
@@ -84,10 +92,6 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [Free VS OpenSource Software](https://www.gnu.org/philosophy/open-source-misses-the-point.en.html)
 	+ [Udemy](https://www.udemy.com/)
 	+ [Geeks For Geeks](https://www.geeksforgeeks.org/difference-between-router-and-switch/)
-	+ [The Arch Wiki](https://archlinux.org)
-	+ [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page)
-	+ [The Ubuntu Wiki](https://wiki.ubuntu.com/)
-	+ [DistroWatch](https://distrowatch.com/)
 	+ [Cron Guru](https://crontab.guru/)
 	+ [Managing Linux User Permissions](https://docs.rackspace.com/support/how-to/basic-linux-directory-permissions-and-how-to-check-them)
 	+ [Iptables cheatsheet](https://www.andreafortuna.org/2019/05/08/iptables-a-simple-cheatsheet/)
