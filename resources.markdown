@@ -11,6 +11,7 @@ title: resources
 * [Customizing Bash](#customizing-bash)
 * [Customizing Vim](#customizing-vim)
 * [Learning AWK](#learning-awk)
+* [Learning Perl](#learning-perl)
 * [Virtual Private Servers](#virtual-private-servers)
 * [Buying Domain Name](#buying-domain-name)
 * [Linux Wikis](#linux-wikis)
@@ -56,6 +57,15 @@ man [$PROGRAM_NAME]
 ## Learning AWK
 
 + [Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
+## Learning Perl
+
++ [Web scraping tutorial](https://teusje.wordpress.com/2010/05/02/web-scraping-with-perl/)
++ [Scrappy](https://metacpan.org/dist/Scrappy)
++ [HTML::TreeBuilder](https://metacpan.org/pod/HTML::TreeBuilder)
++ [HTML::DOM](https://metacpan.org/pod/HTML::DOM)
++ [WWW::Scripter](https://metacpan.org/pod/WWW::Scripter)
++ [WWW::Scripter::Plugin::JavaScript](https://metacpan.org/pod/WWW::Scripter::Plugin::JavaScript)
++ [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize)
 
 ## Virtual Private Servers
 
