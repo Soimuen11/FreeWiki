@@ -12,6 +12,7 @@ You may find all my scripts in my Dotfiles github repository. Just go into
 * [Moc Controller](#moc-controller)
 * [Quote Generator](#quote-generator)
 * [Mouse](#mouse)
+* [Mailsync](#mailsync)
 
 ## Game Launcher
 
@@ -270,4 +271,39 @@ sudo modprobe psmouse
 
 # Doesn't work on Gentoo
 # Works perfectly on Arch Linux && Ubuntu
+```
+
+## Mailsync
+
+```bash
+#!/usr/bin/bash
+## Watch for new mail in inboxes declared in ACCOUNTS array
+## Replace the $ACCOUNT_NAME variables with the names of your accounts (in
+## .Mail directory) 
+
+ACCOUNTS=(
+		/home/$USER/.Mail/$ACCOUNT_NAME/Inbox/new
+		/home/$USER/.Mail/$GMAIL_ACCOUNT_NAME/INBOX/new
+		/home/$USER/.Mail/$ACCOUNT_NAME/Inbox/new
+)
+
+## Sync mailboxes with server
+## And filter them with notmuch
+/usr/bin/offlineimap -u quiet && notmuch new
+
+## Check for NEW email
+TOTAL=0
+for i in "${ACCOUNTS[@]}"
+do
+	NEW_MAILS=$(ls $i | wc -l)
+	(( "$TOTAL"="$TOTAL"+"$NEW_MAILS" ))
+done
+
+## Notify user if there's new mail, else do nothing
+if [[ $NEW_MAILS -gt 0 ]]
+then
+	/usr/bin/notify-send "Email Synched:" "You have $NEW_MAILS new email(s)"
+else
+	:
+fi
 ```
