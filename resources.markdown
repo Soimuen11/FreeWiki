@@ -57,6 +57,7 @@ man [$PROGRAM_NAME]
 ## Learning AWK
 
 + [Tutorialspoint has a great tutorial](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
+
 ## Learning Perl
 
 + [Web scraping tutorial](https://teusje.wordpress.com/2010/05/02/web-scraping-with-perl/)
@@ -122,6 +123,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [JS For Cats](http://jsforcats.com/)
 	+ [Learning To Code For Free](https://www.hostinger.com/tutorials/learn-coding-online-for-free/)
 	+ [HTML Color groups](https://www.w3schools.com/colors/colors_groups.asp)
+	+ [HTML Have Links In New Tab](https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/)
 	+ [Pass Documentation](https://www.passwordstore.org/)
 2. French:
 	+ [Développez.com](https://developpez.com)
