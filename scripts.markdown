@@ -274,6 +274,15 @@ sudo modprobe psmouse
 ```
 
 ## Mailsync
+Once you have set up offlineimap, notmuch (& optionally msmtp and neomutt ) I
+advise you to create a CRON job to regularly run this script, every 15 minutes
+for instance.
+
++ Example CRON Job:
+```bash
+*/15 * * * * /bin/bash /home/$USER/$SCRIPT_LOCATION/mailsync.sh
+```
++ The script:
 
 ```bash
 #!/usr/bin/bash
