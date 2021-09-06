@@ -13,6 +13,7 @@ You may find all my scripts in my Dotfiles github repository. Just go into
 * [Quote Generator](#quote-generator)
 * [Mouse](#mouse)
 * [Mailsync](#mailsync)
+* [Perl Mailsync](#perl-mailsync)
 
 ## Game Launcher
 
@@ -274,9 +275,14 @@ sudo modprobe psmouse
 ```
 
 ## Mailsync
+
 Once you have set up offlineimap, notmuch (& optionally msmtp and neomutt ) I
 advise you to create a CRON job to regularly run this script, every 15 minutes
 for instance.
+
+**Disclaimer** : The script works but it is not flawless. I am still trying to fix the error which it throws back when executed from a terminal:
+"Attempted assignment to a non-variable". If you know how to fix this, do
+feel free to contact me with the solution so that I can make it public.
 
 + Example CRON Job:
 ```bash
@@ -309,10 +315,46 @@ do
 done
 
 ## Notify user if there's new mail, else do nothing
-if [[ $NEW_MAILS -gt 0 ]]
+if [[ $TOTAL -gt 0 ]]
 then
-	/usr/bin/notify-send "Email Synched:" "You have $NEW_MAILS new email(s)"
+	/usr/bin/notify-send "Email Synched:" "You have $TOTAL new email(s)"
 else
 	:
 fi
+```
+
+## Perl Mailsync
+
+Since doing arithmetic operations in Bash is not the most convenient way, I
+decided to change strategy and rewrite my script in Perl.
+
+```perl
+#!/usr/bin/perl
+use warnings;
+use strict;
+
+## Watch for new mail in these inboxes
+my @accounts = (
+	"/home/philwayne/.Mail/madlibrarian/Inbox/new",
+	"/home/philwayne/.Mail/phili.iant/Inbox/new",
+	"/home/philwayne/.Mail/gmail/INBOX/new",
+);
+
+# Synchronize emails && filter them
+system("/usr/bin/offlineimap -u quiet && notmuch new");
+
+# Initialize mail count
+my $total_mails = 0;
+my $new_mails = 0;
+
+# For each account, add new mails to total
+foreach my $account (@accounts){
+	$new_mails = `ls $account | wc -l`;
+	$total_mails += $new_mails;
+}
+
+# If total new mail is superior than 0, notify me
+if ($total_mails > 0){
+	system("/usr/bin/notify-send 'Email Synched' 'You have $total_mails new emails'");
+}
 ```
