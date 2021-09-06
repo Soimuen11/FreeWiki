@@ -301,11 +301,11 @@ ACCOUNTS=(
 /usr/bin/offlineimap -u quiet && notmuch new
 
 ## Check for NEW email
-TOTAL=0
+declare -i TOTAL=0
 for i in "${ACCOUNTS[@]}"
 do
-	NEW_MAILS=$(ls $i | wc -l)
-	(( "$TOTAL"="$TOTAL"+"$NEW_MAILS" ))
+	declare -i NEW_MAILS=$(ls $i | wc -l)
+	$(( "$TOTAL"="$TOTAL"+"$NEW_MAILS" ))
 done
 
 ## Notify user if there's new mail, else do nothing
