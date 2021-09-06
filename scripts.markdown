@@ -3,8 +3,9 @@ layout: default
 title: My Scripts
 ---
 
-You may find all my scripts in my Dotfiles github repository. Just go into
-**.local/scripts**. You will only find the *finished* ones here.
+You may find all my scripts in my
+[Dotfiles](https://github.com/Soimuen11/Dotfiles) github repository. Just go
+into **.local/scripts**. You will only find the *finished* ones here.
 
 * [Game Launcher](#game-launcher)
 * [Mystery Number Quest](#mystery-number-quest)
@@ -285,6 +286,7 @@ for instance.
 feel free to contact me with the solution so that I can make it public.
 
 + Example CRON Job:
+
 ```bash
 */15 * * * * /bin/bash /home/$USER/$SCRIPT_LOCATION/mailsync.sh
 ```
@@ -353,7 +355,7 @@ foreach my $account (@accounts){
 	$total_mails += $new_mails;
 }
 
-# If total new mail is superior than 0, notify me
+# If total new mail is strictly superior than 0, notify me
 if ($total_mails > 0){
 	system("/usr/bin/notify-send 'Email Synched' 'You have $total_mails new emails'");
 }
