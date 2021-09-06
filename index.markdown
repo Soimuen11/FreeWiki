@@ -16,4 +16,5 @@ contact me or make your own fork.
 + [Blog](https://madlibrarian.xyz)
 + [YouTube Channel](https://www.youtube.com/channel/UCsem4aDdFN9x719N9EPZkww)
 + [Odyssee](https://odysee.com/@PhilWayne:c)
-+ [Portfolio](https://soimuen11.github.io/philippe-iannetta/)
++ [Portfolio](https://soimuen11.github.io/Portfolio/)
++ [Dotfiles](https://github.com/Soimuen11/Dotfiles)
