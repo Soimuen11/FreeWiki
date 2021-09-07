@@ -64,6 +64,7 @@
 * [Gaming On Linux](#gaming-on-linux)
 * [Tuto Jekyll](#tuto-jekyll)
 * [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
+* [Quick Pass Tutorial](#quick-pass-tutorial)
 
 ## Mounting Android Phones In Linux
 
@@ -489,6 +490,8 @@ If you wish to go through the whole process, here is what I recommend:
 9. [Useful programs to combine with neomutt](https://neomutt.org/contrib/useful-programs)
 10. [A great article explaining how set up everything](https://stevelosh.com/blog/2012/10/the-homely-mutt)
 
+Optional step: Install **pass** to make your password management more secure.
+
 ## Hdparm
 
 **hdparm** is a command line utility to set and view hardware parameters of hard
@@ -780,3 +783,66 @@ Disclaimer: This is not a complete answer, only a draft.
 7. Enter IRB environment with the *irb* command
 8. Run: ruby -rubygems -e 'require "jekyll-import"; JekyllImport::Importers::WordpressDotCom.run({ "source" => "YOUR_XML_FILE.xml"} )
 9. Enjoy!
+
+## Quick Pass Tutorial
+
+1. Install **pass**:
+
+```bash
+sudo apt install pass # Debian-based distributions
+sudo pacman -S pass # Arch-based distributions
+```
+
+2. Create a GPG key (RSA):
+
+```bash
+sudo apt install gpg # Debian-based distributions
+sudo pacman -S gpg # Arch-based distributions
+gpg --gen-key
+```
+
+3. Initialize pass:
+
+```bash
+pass init $gpg-id
+```
+
+4. Add passwords to the password-store
+
+```bash
+pass add $email/my-email-address # pass add = pass insert
+pass insert $this-is-a-secure-password
+pass generate $name-of-password $number-of-characters-I-want
+```
+
+5. Copy, rename, remove  a password
+
+```bash
+pass cp $old-password-name $new-password-name
+pass mv $old-password-name $new-password-name
+pass rm $an-old-password
+```
+
+6. Displaying password store
+
+```bash
+pass ls 
+pass # both commands are equivalent
+pass $password-name
+```
+
+7. Show a password
+
+```bash
+pass show $name-of-password
+```
+
+8. Copy a password to clipboard
+
+You may also install **passmenu**, which is a dmenu script to quickly access
+all your passwords. If you combine it with the power of a tiling window
+manager, accessing a password becomes a matter of seconds.
+
+```bash
+pass -c $name-of-password
+```
