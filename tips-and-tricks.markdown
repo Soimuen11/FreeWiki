@@ -62,7 +62,8 @@
 * [Browser Recommendations](#browser-recommendations)
 * [Getting RSS Links](#getting-rss-links)
 * [Gaming On Linux](#gaming-on-linux)
-* [TUTO JEKYLL](#tuto-jekyll)
+* [Tuto Jekyll](#tuto-jekyll)
+* [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
 
 ## Mounting Android Phones In Linux
 
@@ -766,3 +767,16 @@ Downloading the roms:
 
 + Explain how migrate from wordpress to jekyll
 
+## Convert WordPress Blog To Jekyll
+
+Disclaimer: This is not a complete answer, only a draft.
+
+1. Install ruby
+2. gem install bundler jekyll
+3. jekyll new [blog_name]
+4. go to wordpress > tools > export > you will obtain an xml file
+5. copy this xml file in project folder
+6. Install proper dependencies: jekyll-import, github-pages, open_uri_redirections, hpricot
+7. Enter IRB environment with the *irb* command
+8. Run: ruby -rubygems -e 'require "jekyll-import"; JekyllImport::Importers::WordpressDotCom.run({ "source" => "YOUR_XML_FILE.xml"} )
+9. Enjoy!
