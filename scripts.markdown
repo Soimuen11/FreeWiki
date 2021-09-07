@@ -337,9 +337,10 @@ use strict;
 
 ## Watch for new mail in these inboxes
 my @accounts = (
-	"/home/philwayne/.Mail/madlibrarian/Inbox/new",
-	"/home/philwayne/.Mail/phili.iant/Inbox/new",
-	"/home/philwayne/.Mail/gmail/INBOX/new",
+	## replace ACCOUNT_NAME with the name of your accounts in Maildir
+	"/home/philwayne/.Mail/ACCOUNT_NAME1/Inbox/new",
+	"/home/philwayne/.Mail/ACCOUNT_NAME2/Inbox/new",
+	"/home/philwayne/.Mail/ACCOUNT_NAME3/INBOX/new",
 );
 
 # Synchronize emails && filter them
