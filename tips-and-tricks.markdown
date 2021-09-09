@@ -743,32 +743,63 @@ Downloading the roms:
 + [emulatorgames.net](https://emulatorgames.net)
 + [Romsmania](https://consolegames.down10.software/roms/)
 
-## TUTO JEKYLL
-[to be completed]
+## Jekyll Tutorial
 
-+ On github:
-	1. create a new repo without a readme
+### One-Page Static Website On Github
+	
+	1. Create a new repo with a readme.
+	2. Add content to the readme.
+	3. Go to Settings > Pages.
+	4. Choose the **main** branch & a **theme**.
+	5. Save. You only need wait a few seconds/minutes and your website should
+	   be published.
 
-+ On your local machine:
-	1. Install ruby
-	2. Gem install bundler jekyll
-	3. Jekyll new $project-name OR cd into the repo you cloned from github
-	4. Run "bundler init"
-	5. Go to https://rubygems.org
-		+ search for a theme
-		+ look for LINKS section and click on HOMEPAGE
-		+ this will redirect you to the github repo
-		+ copy the content of the _layouts folder from that repo
-		+ modify your pages layout accordingly
+### A More Customized Site
+
+	1. Install dependencies:
+		+ Ruby (version 2.5 or higher)
+		+ Rubygems
+		+ Gcc and make
+	
+	```bash
+	sudo apt install ruby-full build-essential zlib1g-dev
+	```
+
+	2. Install bundler & jekyll:
+	
+	```bash
+	gem install bundler jekyll
+	```
+	
+	3. Create a new Jekyll project:
+	
+	```bash
+	jekyll new $PROJECT-NAME
+	```
+	
+	4. Initialize a Gemfile:
+	
+	```bash
+	bundler init
+	```
+	
+	5. Go to the [rubygems website](https://rubygems.org):
+		+ Search for a theme
+		+ Look for LINKS section and click on HOMEPAGE
+		+ This will redirect you to the github repo of your chosen theme.
+		+ Copy the content of the _layouts folder from that repo
+		+ Modify your pages layout accordingly
+
 	7. Add name of your theme to \_config.yml & Gemfile
 	8. Run: "bundler install"
 	9. Run: "bundler exec jekyll serve" to check if your site works locally
+	10. If you want your website to work with gh-pages, you should add the name
+		of your repo to the variable "base-url" in your _config.yml
 
-+ For the midnight theme, which is the one this wiki uses:
-	- [Repo link](https://github.com/pages-themes/midnight)
-	- [Ruby gems link](https://rubygems.org/gems/jekyll-theme-midnight)
-
-+ Explain how migrate from wordpress to jekyll
+### For the midnight theme, which is the one this wiki uses:
+	
+	+ [Repo link](https://github.com/pages-themes/midnight)
+	+ [Ruby gems link](https://rubygems.org/gems/jekyll-theme-midnight)
 
 ## Convert WordPress Blog To Jekyll
 
