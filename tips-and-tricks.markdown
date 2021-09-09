@@ -756,45 +756,45 @@ Downloading the roms:
 
 ### A More Customized Site
 
-	1. Install dependencies:
-		+ Ruby (version 2.5 or higher)
-		+ Rubygems
-		+ Gcc and make
+1. Install dependencies:
+	+ Ruby (version 2.5 or higher)
+	+ Rubygems
+	+ Gcc and make
 	
-	```bash
-	sudo apt install ruby-full build-essential zlib1g-dev
-	```
+```bash
+sudo apt install ruby-full build-essential zlib1g-dev
+```
 
-	2. Install bundler & jekyll:
-	
-	```bash
-	gem install bundler jekyll
-	```
-	
-	3. Create a new Jekyll project:
-	
-	```bash
-	jekyll new $PROJECT-NAME
-	```
-	
-	4. Initialize a Gemfile:
-	
-	```bash
-	bundler init
-	```
-	
-	5. Go to the [rubygems website](https://rubygems.org):
-		+ Search for a theme
-		+ Look for LINKS section and click on HOMEPAGE
-		+ This will redirect you to the github repo of your chosen theme.
-		+ Copy the content of the _layouts folder from that repo
-		+ Modify your pages layout accordingly
+2. Install bundler & jekyll:
 
-	7. Add name of your theme to \_config.yml & Gemfile
-	8. Run: "bundler install"
-	9. Run: "bundler exec jekyll serve" to check if your site works locally
-	10. If you want your website to work with gh-pages, you should add the name
-		of your repo to the variable "base-url" in your _config.yml
+```bash
+gem install bundler jekyll
+```
+
+3. Create a new Jekyll project:
+
+```bash
+jekyll new $PROJECT-NAME
+```
+	
+4. Initialize a Gemfile:
+
+```bash
+bundler init
+```
+	
+5. Go to the [rubygems website](https://rubygems.org):
+	+ Search for a theme
+	+ Look for LINKS section and click on HOMEPAGE
+	+ This will redirect you to the github repo of your chosen theme.
+	+ Copy the content of the _layouts folder from that repo
+	+ Modify your pages layout accordingly
+
+7. Add name of your theme to \_config.yml & Gemfile
+8. Run: "bundler install"
+9. Run: "bundler exec jekyll serve" to check if your site works locally
+10. If you want your website to work with gh-pages, you should add the name
+	of your repo to the variable "base-url" in your _config.yml
 
 ### For the midnight theme, which is the one this wiki uses:
 	
