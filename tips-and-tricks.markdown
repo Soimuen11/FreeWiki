@@ -62,7 +62,7 @@
 * [Browser Recommendations](#browser-recommendations)
 * [Getting RSS Links](#getting-rss-links)
 * [Gaming On Linux](#gaming-on-linux)
-* [Tutorial Jekyll](#jekyll-tutorial)
+* [Jekyll Tutorial](#jekyll-tutorial)
 * [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
 * [Quick Pass Tutorial](#quick-pass-tutorial)
 
@@ -738,7 +738,7 @@ Many emulators exist. Here are the ones I use and consider as "the best":
 6. Wii + Gamecube: **Dolphin**
 7. Nintendo 64: **Mupen64plus**
 
-Downloading the roms: 
+Downloading roms: 
 
 + [emulatorgames.net](https://emulatorgames.net)
 + [Romsmania](https://consolegames.down10.software/roms/)
@@ -747,16 +747,16 @@ Downloading the roms:
 
 ### One-Page Static Website On Github
 	
-	1. Create a new repo with a readme.
-	2. Add content to the readme.
-	3. Go to Settings > Pages.
-	4. Choose the **main** branch & a **theme**.
-	5. Save. You only need wait a few seconds/minutes and your website should
-	   be published.
+1. Create a new repo with a readme.
+2. Add content to the readme.
+3. Go to Settings > Pages.
+4. Choose the **main** branch & a **theme**.
+5. Save. You only need wait a few seconds/minutes and your website should be
+   published.
 
 ### A More Customized Site
 
-1. Install dependencies:
+Install dependencies:
 	+ Ruby (version 2.5 or higher)
 	+ Rubygems
 	+ Gcc and make
@@ -765,35 +765,35 @@ Downloading the roms:
 sudo apt install ruby-full build-essential zlib1g-dev
 ```
 
-2. Install bundler & jekyll:
+Install bundler & jekyll:
 
 ```bash
 gem install bundler jekyll
 ```
 
-3. Create a new Jekyll project:
+Create a new Jekyll project:
 
 ```bash
 jekyll new $PROJECT-NAME
 ```
 	
-4. Initialize a Gemfile:
+Initialize a Gemfile:
 
 ```bash
 bundler init
 ```
 	
-5. Go to the [rubygems website](https://rubygems.org):
-	+ Search for a theme
-	+ Look for LINKS section and click on HOMEPAGE
-	+ This will redirect you to the github repo of your chosen theme.
-	+ Copy the content of the _layouts folder from that repo
-	+ Modify your pages layout accordingly
+Go to the [rubygems website](https://rubygems.org):
+ + Search for a theme
+ + Look for LINKS section and click on HOMEPAGE
+ + This will redirect you to the github repo of your chosen theme.
+ + Copy the content of the _layouts folder from that repo
+ + Modify your pages layout accordingly
 
-7. Add name of your theme to \_config.yml & Gemfile
-8. Run: "bundler install"
-9. Run: "bundler exec jekyll serve" to check if your site works locally
-10. If you want your website to work with gh-pages, you should add the name
+Add name of your theme to \_config.yml & Gemfile
+Run: "bundler install"
+Run: "bundler exec jekyll serve" to check if your site works locally
+ If you want your website to work with gh-pages, you should add the name
 	of your repo to the variable "base-url" in your _config.yml
 
 ### For the midnight theme, which is the one this wiki uses:
