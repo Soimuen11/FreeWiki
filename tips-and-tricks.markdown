@@ -62,7 +62,7 @@
 * [Browser Recommendations](#browser-recommendations)
 * [Getting RSS Links](#getting-rss-links)
 * [Gaming On Linux](#gaming-on-linux)
-* [Tuto Jekyll](#tuto-jekyll)
+* [Tutorial Jekyll](#jekyll-tutorial)
 * [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
 * [Quick Pass Tutorial](#quick-pass-tutorial)
 
