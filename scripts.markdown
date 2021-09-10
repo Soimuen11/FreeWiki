@@ -328,7 +328,20 @@ fi
 ## Perl Mailsync
 
 Since doing arithmetic operations in Bash is not the most convenient way, I
-decided to change strategy and rewrite my script in Perl.
+decided to change strategy and rewrite my script in Perl. I also decided to
+have this script run at boot (because I like to know if I have got new mail as
+soon as I turn my pc. As a final piece of advice, I would recommend you to make
+a symbolic link for this script, this way you can directly call it with one
+command whenever and wherever you are in your file system.
+
+To make a symbolic link:
+
+```bash
+# I would recommend to put the bin file in ~/.local/bin
+# And have the actual script in ~/.local/repos
+# Create these directories if they do not exist
+ln -s ~/$SCRIPT_LOCATION/mailsync.pl ~/.local/bin/mailsync
+```
 
 ```perl
 #!/usr/bin/perl
