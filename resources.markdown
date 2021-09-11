@@ -62,6 +62,9 @@ man [$PROGRAM_NAME]
 
 + [Web scraping tutorial](https://teusje.wordpress.com/2010/05/02/web-scraping-with-perl/)
 + [Scrappy](https://metacpan.org/dist/Scrappy)
++ [Colored output](https://stackoverflow.com/questions/2445605/how-can-i-get-colored-output-with-printf-and-perls-termansicolor)
++ [System ENV variables](https://alvinalexander.com/perl/edu/articles/pl020002/)
++ [Check if string is empty](https://stackoverflow.com/questions/2045644/what-is-the-proper-way-to-check-if-a-string-is-empty-in-perl)
 + [HTML::TreeBuilder](https://metacpan.org/pod/HTML::TreeBuilder)
 + [HTML::DOM](https://metacpan.org/pod/HTML::DOM)
 + [WWW::Scripter](https://metacpan.org/pod/WWW::Scripter)
