@@ -65,6 +65,7 @@ man [$PROGRAM_NAME]
 + [Colored output](https://stackoverflow.com/questions/2445605/how-can-i-get-colored-output-with-printf-and-perls-termansicolor)
 + [System ENV variables](https://alvinalexander.com/perl/edu/articles/pl020002/)
 + [Check if string is empty](https://stackoverflow.com/questions/2045644/what-is-the-proper-way-to-check-if-a-string-is-empty-in-perl)
++ [Manipulating Arrays](https://perlmaven.com/manipulating-perl-arrays)
 + [HTML::TreeBuilder](https://metacpan.org/pod/HTML::TreeBuilder)
 + [HTML::DOM](https://metacpan.org/pod/HTML::DOM)
 + [WWW::Scripter](https://metacpan.org/pod/WWW::Scripter)
