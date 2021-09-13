@@ -136,12 +136,11 @@ Dependencies:
 ```bash
 #!/bin/bash
 
-# 1. A dmenu script to control moc [done]
-# 2. Add a keybinding to current WM [done]
-# 3. A polybar module to control moc
-# 4. An awesomeWM bar module
+# Potential Future Features:
+# 1. Polybar module to control moc
+# 2. AwesomeWM bar module
 
-# Declaring array of actions on moc
+# Available moc actions
 OPTIONS=(
 	"Toggle Pause"
 	"Previous"
@@ -151,32 +150,20 @@ OPTIONS=(
 	"Info"
 )
 
-# Looping through array of actions
-# & saving value of chosen option into $OPTION
+# Looping through array of moc actions
+# && saving value of chosen option into $OPTION
 OPTION=$(for i in "${OPTIONS[@]}"
 do
 	echo $i
 done | dmenu -p "Moc Controller")
 
 case "$OPTION" in
-	Toggle\ Pause)
-		mocp --toggle-pause
-		;;
-	Previous)
-		mocp --previous
-		;;
-	Next)
-		mocp --next
-		;;
-	Start)
-		mocp --play
-		;;
-	Stop)
-		mocp --stop
-		;;
-	Info)
-		notify-send "Current Title" "$(mocp -i | grep File)"
-		;;
+	Toggle\ Pause) mocp --toggle-pause;;
+	Previous) mocp --previous;;
+	Next) mocp --next;;
+	Start) mocp --play;;
+	Stop) mocp --stop;;
+	Info) notify-send "Current Title" "$(mocp -i | grep File)";;
 esac
 ```
 
