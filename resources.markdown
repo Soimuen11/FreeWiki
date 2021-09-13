@@ -60,6 +60,7 @@ man [$PROGRAM_NAME]
 
 ## Learning Perl
 
++ [10 Myths About Perl](https://www.perl.com/pub/2000/01/10PerlMyths.html/)
 + [Web scraping tutorial](https://teusje.wordpress.com/2010/05/02/web-scraping-with-perl/)
 + [Scrappy](https://metacpan.org/dist/Scrappy)
 + [Colored output](https://stackoverflow.com/questions/2445605/how-can-i-get-colored-output-with-printf-and-perls-termansicolor)
@@ -71,6 +72,9 @@ man [$PROGRAM_NAME]
 + [WWW::Scripter](https://metacpan.org/pod/WWW::Scripter)
 + [WWW::Scripter::Plugin::JavaScript](https://metacpan.org/pod/WWW::Scripter::Plugin::JavaScript)
 + [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize)
++ [GnuPG Module](https://metacpan.org/pod/GnuPG)
++ [Perl Monks](https://www.perlmonks.org/?node_id=152489)
++ [Perl jobs](https://jobs.perl.org/search?q=&location=&offsite=yes)
 
 ## Virtual Private Servers
 
