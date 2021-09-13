@@ -136,5 +136,6 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
+	+ [Écrire du beau code en Perl](https://www.developpez.net/forums/d345155/autres-langages/perl/langage/debutants-experimentes-ecrire-code-perl/)
 3. Italian:
 	+ [Italian HTML guide](https://www.html.it/guide/guida-html/)
