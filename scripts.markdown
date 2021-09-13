@@ -48,46 +48,44 @@ esac
 ## Mystery Number Quest
 ```bash
 #!/bin/bash
-#  __  __                 _
-# |  \/  |  _   _   ___  | |_    ___   _ __   _   _
+#  __  __                 _                         
+# |  \/  |  _   _   ___  | |_    ___   _ __   _   _ 
 # | |\/| | | | | | / __| | __|  / _ \ | '__| | | | |
 # | |  | | | |_| | \__ \ | |_  |  __/ | |    | |_| |
 # |_|  |_|  \__, | |___/  \__|  \___| |_|     \__, |
-#           |___/                             |___/
-#  _   _                       _
-# | \ | |  _   _   _ __ ___   | |__     ___   _ __
+#           |___/                             |___/ 
+#  _   _                       _                   
+# | \ | |  _   _   _ __ ___   | |__     ___   _ __ 
 # |  \| | | | | | | '_ ` _ \  | '_ \   / _ \ | '__|
-# | |\  | | |_| | | | | | | | | |_) | |  __/ | |
-# |_| \_|  \__,_| |_| |_| |_| |_.__/   \___| |_|
-#
-#   ___                         _
-#  / _ \   _   _    ___   ___  | |_
+# | |\  | | |_| | | | | | | | | |_) | |  __/ | |   
+# |_| \_|  \__,_| |_| |_| |_| |_.__/   \___| |_|   
+#                                                  
+#   ___                         _   
+#  / _ \   _   _    ___   ___  | |_ 
 # | | | | | | | |  / _ \ / __| | __|
-# | |_| | | |_| | |  __/ \__ \ | |_
+# | |_| | | |_| | |  __/ \__ \ | |_ 
 #  \__\_\  \__,_|  \___| |___/  \__|
 #
 # You can choose the level of difficulty as a parameter
-# When starting the game. Like so :
-#  ./mystery --easy
+# When starting the game. Like so:
+#
+#  ./mystery --easy 
+#
 # You may also choose normal, hard, extreme, hardcore and insane.
 # Default range
-range=100
-if [[ $1 = "--easy" ]]
-	then range=10
-elif [[ $1 = "--normal" ]]
-	then range=100
-elif [[ $1 = "--hard" ]]
-	then range=1000
-elif [[ $1 = "--extreme" ]]
-	then range=10000
-elif [[ $1 = "--hardcore" ]]
-	then range=100000
-elif [[ $1 = "--insane" ]]
-	then range=1000000
-fi
-echo "the number you are looking for is b/w 1 & $range"
+RANGE=100
+case $1 in
+	--easy) RANGE=10;;
+	--normal) RANGE=100;;
+	--hard) RANGE=1000;;
+	--extreme) RANGE=10000;;
+	--hardcore) RANGE=100000;;
+	--insane) RANGE=1000000;;
+esac
 
-mystery=$((1 + RANDOM % $range))
+echo "the number you are looking for is b/w 1 & $RANGE"
+
+mystery=$((1 + RANDOM % $RANGE))
 counter=1
 
 while [[ $number -ne $mystery ]]
@@ -101,7 +99,7 @@ fi
 counter=$(($counter + 1))
 done
 echo "well done, you found me"
-echo "you needed $counter shots"
+echo "you needed $(( $counter - 1)) shots"
 exit 0
 ```
 
