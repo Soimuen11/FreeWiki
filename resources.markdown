@@ -72,9 +72,12 @@ man [$PROGRAM_NAME]
 + [WWW::Scripter](https://metacpan.org/pod/WWW::Scripter)
 + [WWW::Scripter::Plugin::JavaScript](https://metacpan.org/pod/WWW::Scripter::Plugin::JavaScript)
 + [WWW::Mechanize](https://metacpan.org/pod/WWW::Mechanize)
++ [Clipboard Module](https://zoomadmin.com/HowToInstall/UbuntuPackage/libclipboard-perl#zaCollapse2)
 + [GnuPG Module](https://metacpan.org/pod/GnuPG)
 + [Perl Monks](https://www.perlmonks.org/?node_id=152489)
 + [Perl jobs](https://jobs.perl.org/search?q=&location=&offsite=yes)
++ [Subroutine Arguments](https://stackoverflow.com/questions/19234209/perl-subroutine-arguments)
++ [Remove files](https://perlmaven.com/how-to-remove-copy-or-rename-a-file-with-perl)
 
 ## Virtual Private Servers
 
@@ -82,9 +85,10 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 
 + [Linode](linode.com): Open-Source & cheapest option
 + [AWS](amazon.aws.com): Most popular option
-+ [Google](cloud.google.com)
-+ [Digital Ocean](https://www.digitalocean.com/)
-+ [Vultr](vultr.com)
++ [Google Cloud](cloud.google.com)
++ [Digital Ocean](https://www.digitalocean.com)
++ [Vultr](https://www.vultr.com)
++ [Microsoft Azure]
 
 ## Buying Domain Name
 
@@ -103,7 +107,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 ## Other
 
 1. English:
-	+ [Learn X in Y Minutes (perl tutorial)](https://learnxinyminutes.com/docs/perl/)
+	+ [Learn X in Y Minutes](https://learnxinyminutes.com/docs/perl/)
 	+ [Tutorials Point](https://www.tutorialspoint.com/index.htm)
 	+ [W3schools](https://w3schools.com)
 	+ [Javascript.info](https://javascript.info/)
@@ -133,9 +137,13 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [HTML Color groups](https://www.w3schools.com/colors/colors_groups.asp)
 	+ [HTML Have Links In New Tab](https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/)
 	+ [Pass Documentation](https://www.passwordstore.org/)
+	+ [Learn Typescript](https://www.typescriptlang.org/)
+	+ [Cpanel](https://www.cpanel.net/products/trial/)
 2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
 	+ [Écrire du beau code en Perl](https://www.developpez.net/forums/d345155/autres-langages/perl/langage/debutants-experimentes-ecrire-code-perl/)
+	+ [Différence Routeur/Switch/Modem](https://www.echosdunet.net/dossiers/switch-ou-routeur)
 3. Italian:
 	+ [Italian HTML guide](https://www.html.it/guide/guida-html/)
+	+ [AWS Getting Started](https://aws.amazon.com/it/getting-started)
