@@ -13,7 +13,7 @@ into **.local/scripts**. You will only find the *finished* ones here.
 * [Moc Controller](#moc-controller)
 * [Quote Generator](#quote-generator)
 * [Mouse](#mouse)
-* [Mailsync](#mailsync)
+* [Bash Mailsync](#mailsync)
 * [Perl Mailsync](#perl-mailsync)
 
 ## Game Launcher
