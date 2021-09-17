@@ -95,6 +95,11 @@ Other solutions to transfer files:
 curl ifconfig.co
 curl ifconfig.co/city
 curl ifconfig.co/country
+
+# You may also do these commands:
+ip a
+ifconfig
+hostname -I
 ```
 
 ### News
@@ -230,7 +235,10 @@ net-setup #to set up connection from the Gentoo livecd.
 + Code from scratch with HTML, CSS & JS and then self-host it.
 + With GitHub: create a new repository, initialize it with a file named
   README.md, go to github pages, pick a theme and publish it.
-+ [Other amazing tools to build a website from markdown](https://www.creativebloq.com/features/10-best-static-site-generators)
++ With Jekyll + Github pages: To obtain a more customized result than the
+  precedent one.
++ [Other amazing tools to build a website from
+  markdown](https://www.creativebloq.com/features/10-best-static-site-generators)
 
 ## Monitor Your System
 
