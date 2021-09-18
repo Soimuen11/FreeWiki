@@ -62,6 +62,7 @@ man [$PROGRAM_NAME]
 
 + [10 Myths About Perl](https://www.perl.com/pub/2000/01/10PerlMyths.html/)
 + [Web scraping tutorial](https://teusje.wordpress.com/2010/05/02/web-scraping-with-perl/)
++ [Switch statements -> Given/When](https://www.perltutorial.org/perl-given/)
 + [Scrappy](https://metacpan.org/dist/Scrappy)
 + [Colored output](https://stackoverflow.com/questions/2445605/how-can-i-get-colored-output-with-printf-and-perls-termansicolor)
 + [System ENV variables](https://alvinalexander.com/perl/edu/articles/pl020002/)
@@ -78,6 +79,7 @@ man [$PROGRAM_NAME]
 + [Perl jobs](https://jobs.perl.org/search?q=&location=&offsite=yes)
 + [Subroutine Arguments](https://stackoverflow.com/questions/19234209/perl-subroutine-arguments)
 + [Remove files](https://perlmaven.com/how-to-remove-copy-or-rename-a-file-with-perl)
++ [PerlWM](http://perlwm.sourceforge.net)
 
 ## Virtual Private Servers
 
@@ -139,6 +141,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [Pass Documentation](https://www.passwordstore.org/)
 	+ [Learn Typescript](https://www.typescriptlang.org/)
 	+ [Cpanel](https://www.cpanel.net/products/trial/)
+	+ [Make Better Readmes](https://medium.com/swlh/how-to-make-the-perfect-readme-md-on-github-92ed5771c061)
 2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
