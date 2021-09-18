@@ -333,13 +333,9 @@ ln -s ~/$SCRIPT_LOCATION/mailsync.pl ~/.local/bin/mailsync
 use warnings;
 use strict;
 
-## Watch for new mail in these inboxes
-my @accounts = (
-	## replace ACCOUNT_NAME with the name of your accounts in Maildir
-	"/home/philwayne/.Mail/ACCOUNT_NAME1/Inbox/new",
-	"/home/philwayne/.Mail/ACCOUNT_NAME2/Inbox/new",
-	"/home/philwayne/.Mail/ACCOUNT_NAME3/INBOX/new",
-);
+# Set up $USER environment variable and mailboxes to check
+my $USER = $ENV {'USER'};
+my @accounts = ( "yahoo_account1", "yahoo_account2", "gmail_account", );
 
 # Synchronize emails && filter them
 system("/usr/bin/offlineimap -u quiet && notmuch new");
@@ -350,11 +346,19 @@ my $new_mails = 0;
 
 # For each account, add new mails to total
 foreach my $account (@accounts){
-	$new_mails = `ls $account | wc -l`;
+	if ($account eq "gmail") {
+		$new_mails = `ls /home/$USER/.Mail/$account/INBOX/new | wc -l`;
+	} else {
+		$new_mails = `ls /home/$USER/.Mail/$account/Inbox/new | wc -l`;
+	}
 	$total_mails += $new_mails;
+	# Tell me in which mailbox I have mail and how many
+	if ($new_mails > 0){
+		system("/usr/bin/notify-send '$account' 'You have $new_mails new emails'");
+	}
 }
 
-# If total new mail is strictly superior than 0, notify me
+# If total new mail is superior than 0, notify me
 if ($total_mails > 0){
 	system("/usr/bin/notify-send 'Email Synched' 'You have $total_mails new emails'");
 }
