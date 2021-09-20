@@ -5,6 +5,7 @@
 * [df:/run/user/1000 permission denied](#dfrunuser1000-permission-denied)
 * [Trackpad Stops Working](#trackpad-stops-working)
 * [Fix Brave Black Screen](#fix-brave-black-screen)
+* [Xbacklight: No Outputs Have Backlight Property](#xbacklight-no-outputs-have-backlight-property)
 
 ## SSH: could not open connection to authentication agent
 
@@ -99,4 +100,40 @@ Other solution:
 You need to start the brave browser with this flag:
 ```bash
 brave --disable-gpu
+```
+## Xbacklight No Outputs Have Backlight Property
+
+This means no directory is set for xbacklight. To find the directory for your
+xbacklight settings, run the following commands:
+
+```bash
+sudo find /sys/ -type f -iname '*brightness*'
+```
+
+You should obtain a similar result:
+```bash
+/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight/brightness
+```
+
+Now, you only need to creare a symlink:
+```bash
+ln -s /sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight/ /sys/class/backlight
+```
+
+**In case the above solution did not work:**
+
+1. Create the file xorg.conf:
+
+```bash
+sudo vim /etc/X11/xorg.conf
+```
+
+2. Add the following lines:
+
+```bash
+Section "Device"
+Identifier  "Card0"
+Driver      "intel"
+Option      "Backlight"  "intel_backlight"
+EndSection
 ```
