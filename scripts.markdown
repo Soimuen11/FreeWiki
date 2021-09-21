@@ -368,7 +368,7 @@ if ($total_mails > 0){
 ## Follow Calendar
 
 + This script is quite simple but it has several dependencies which require
-  some setting up, such as **msmtp** or **imap**. Imap is not mandatory, since
+  some setting up, such as **msmtp** or **offlineimap**. Imap is not mandatory, since
   you really only need to be able to **send** emails from the command line.
   Then, a regular email client could be enough. If you wish to do this 100%
   like me, you will also have to set up **neomutt**.
@@ -380,7 +380,7 @@ if ($total_mails > 0){
 + Dependencies:
 	1. Calcurse
 	2. Msmtp
-	3. Imaps
+	3. Offlineimap
 	4. Notify-send
 	5. Cron
 
