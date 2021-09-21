@@ -15,6 +15,7 @@ into **.local/scripts**. You will only find the *finished* ones here.
 * [Mouse](#mouse)
 * [Bash Mailsync](#mailsync)
 * [Perl Mailsync](#perl-mailsync)
+* [Follow Calendar](#follow-calendar)
 
 ## Game Launcher
 
@@ -362,4 +363,60 @@ foreach my $account (@accounts){
 if ($total_mails > 0){
 	system("/usr/bin/notify-send 'Email Synched' 'You have $total_mails new emails'");
 }
+```
+
+## Follow Calendar
+
++ This script is quite simple but it has several dependencies which require
+  some setting up, such as **msmtp** or **imap**. Imap is not mandatory, since
+  you really only need to be able to **send** emails from the command line.
+  Then, a regular email client could be enough. If you wish to do this 100%
+  like me, you will also have to set up **neomutt**.
+  
++ Disclaimer: If this script is fully functional, I am still testing and
+  optimizing it. I consider that it does not entirely satisfy my needs so you
+  can expect it to change (sooner or later).
+
++ Dependencies:
+	1. Calcurse
+	2. Msmtp
+	3. Imaps
+	4. Notify-send
+	5. Cron
+
++ The script below should run at least once a day, preferably in the morning
+  (so that you can anticipate the various tasks and appointments listed in your
+  calendar)
+
+```bash
+#!/bin/bash
+
+## Set sender and recipient
+## They can both be the same
+FROM="YOUR_EMAIL"
+TO="RECIPIENT_EMAIL"
+
+## Tell me about todos && appointments from today 
+## && for the next 7 days
+EVENTS=$(calcurse --query --from yesterday --days 7)
+
+## Set up a mail file called events.mail
+echo "To: $TO" >> events.mail 
+echo "From: $FROM" >> events.mail 
+echo "Subject: Hello $USER: Events Of The Day" >> events.mail
+echo "$EVENTS" >> events.mail
+
+## Send the email
+cat events.mail | msmtp -a default $TO
+
+## Delete the mail file you used 
+## for the content of the email
+rm events.mail
+```
+
++ In case this would not be enough, I also recommend to have a CRON job to run
+  once every one hour to tell you which event comes next:
+  
+```bash
+@hourly /usr/bin/notify-send "Next Appointment:" "$(/usr/bin/calcurse --next)"
 ```
