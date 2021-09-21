@@ -53,6 +53,7 @@ man [$PROGRAM_NAME]
 ## Customizing Vim
 
 + [Space Vim](https://spacevim.org)
++ [Learn Vim The Hard Way](https://learnvimscriptthehardway.stevelosh.com)
 
 ## Learning AWK
 
@@ -80,6 +81,7 @@ man [$PROGRAM_NAME]
 + [Subroutine Arguments](https://stackoverflow.com/questions/19234209/perl-subroutine-arguments)
 + [Remove files](https://perlmaven.com/how-to-remove-copy-or-rename-a-file-with-perl)
 + [PerlWM](http://perlwm.sourceforge.net)
++ [Linter](http://perlcritic.com)
 
 ## Virtual Private Servers
 
@@ -142,6 +144,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [Learn Typescript](https://www.typescriptlang.org/)
 	+ [Cpanel](https://www.cpanel.net/products/trial/)
 	+ [Make Better Readmes](https://medium.com/swlh/how-to-make-the-perfect-readme-md-on-github-92ed5771c061)
+	+ [Tecmint](tecmint.com)
 2. French:
 	+ [Développez.com](https://developpez.com)
 	+ [FranceIOI](http://www.france-ioi.org/)
