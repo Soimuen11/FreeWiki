@@ -14,6 +14,7 @@ title: resources
 * [Learning Perl](#learning-perl)
 * [Virtual Private Servers](#virtual-private-servers)
 * [Buying Domain Name](#buying-domain-name)
+* [Docker](#docker)
 * [Linux Wikis](#linux-wikis)
 * [Other](#other)
 
@@ -38,6 +39,7 @@ man [$PROGRAM_NAME]
 + [Project ideas for raspberry pi](https://itsfoss.com/raspberry-pi-projects/)
 + [Running Your Own Git Server](https://www.linux.com/training-tutorials/how-run-your-own-git-server)
 + [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress)
++ [Installing Kodi](https://pimylifeup.com/raspberry-pi-kodi)
 
 ## Microsoft Windows
 
@@ -99,6 +101,13 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 + [Epik](epik.com)
 + [Wordpress.org](wordpress.org)
 + [Wordpress.com](wordpress.com)
+
+## Docker
+
++ [Useful Commands](https://geekflare.com/docker-commands/)
++ [Add Users](https://unix.stackexchange.com/questions/182180/why-is-the-home-directory-not-created-when-i-create-a-new-user)
++ [Post Installation](https://docs.docker.com/engine/install/linux-postinstall/)
+
 
 ## Linux Wikis
 
