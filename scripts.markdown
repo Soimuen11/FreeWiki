@@ -16,6 +16,7 @@ into **.local/scripts**. You will only find the *finished* ones here.
 * [Bash Mailsync](#mailsync)
 * [Perl Mailsync](#perl-mailsync)
 * [Follow Calendar](#follow-calendar)
+* [Wallpaper Randomizer](#wallpaper-randomizer)
 
 ## Game Launcher
 
@@ -419,4 +420,25 @@ rm events.mail
   
 ```bash
 @hourly /usr/bin/notify-send "Next Appointment:" "$(/usr/bin/calcurse --next)"
+```
+
+## Wallpaper Randomizer
+
+```bash
+#!/bin/bash
+
+# Set directories in which script will look for wallpapers
+declare -a WALLPAPER_DIRS=(
+	"custom-wallpapers"
+	"Desktop-Wallpaper"
+	"Fate-Stay-Night-Wallpapers"
+	"Hollow-Knight-Wallpapers"
+)
+
+# Set random number so that script won't always look in the same directory
+# Divide $RANDOM by size of WALLPAPER_DIRS array
+RANDOM_NUM="$(( $RANDOM % ${#WALLPAPER_DIRS[@]} ))"
+
+# Set wallpaper with feh
+feh --bg-scale --randomize $HOME/Immagini/${WALLPAPER_DIRS[$RANDOM_NUM]}/*
 ```
