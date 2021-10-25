@@ -720,7 +720,7 @@ FROM YOUTUBE CHANNEL:
 
 ## Gaming On Linux
 
-False Stereotypes:
+### False Stereotypes:
 
 Nothing is less true than "you cannot play on Linux". Try out these one of
 these 3 programs and you will not be disappointed. I highly recommend Steam. It
@@ -734,7 +734,7 @@ All these programs are well documented in the Arch Wiki. Be careful and install
 the proper fonts/dependencies for Steam! All three programs are directly
 available with pacman or in the AUR.
 
-Emulating console games:
+### Emulating console games:
 
 Many emulators exist. Here are the ones I use and consider as "the best":
 
@@ -746,10 +746,17 @@ Many emulators exist. Here are the ones I use and consider as "the best":
 6. Wii + Gamecube: **Dolphin**
 7. Nintendo 64: **Mupen64plus**
 
-Downloading roms: 
+### Downloading roms: 
 
 + [emulatorgames.net](https://emulatorgames.net)
 + [Romsmania](https://consolegames.down10.software/roms/)
+
+### Free & OpenSource Games
+
++ 0ad: https://play0ad.com/
++ Xonotic: https://xonotic.org/
++ Unvanquished: https://wiki.unvanquished.net/wiki/Compiling_the_source#Debian.2FUbuntu
+
 
 ## Jekyll Tutorial
 
