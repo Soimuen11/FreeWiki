@@ -65,6 +65,7 @@
 * [Jekyll Tutorial](#jekyll-tutorial)
 * [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
 * [Quick Pass Tutorial](#quick-pass-tutorial)
+* [Virtualization Software](#virtualization-software)
 
 ## Mounting Android Phones In Linux
 
@@ -892,3 +893,11 @@ manager, accessing a password becomes a matter of seconds.
 ```bash
 pass -c $name-of-password
 ```
+## Virtualization Software
+
+Also known as **hypervisors**.
+
++ VirtualBox
++ VMWare
++ Red-hat KVM (stands for kernel-based virtual machine)
++ Microsoft Hyper-V
