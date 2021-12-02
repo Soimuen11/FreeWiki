@@ -134,6 +134,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 	+ [Iptables cheatsheet](https://www.andreafortuna.org/2019/05/08/iptables-a-simple-cheatsheet/)
 	+ [Learn Iptables With Digital Ocean](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands)
 	+ [Installing PHP/Apache/MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04)
+	+ [Installing PhpMyAdmin](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-20-04)
 	+ [Learn AWS with tutorialspoint](https://www.tutorialspoint.com/amazon_web_services/amazon_web_services_cloud_computing.htm)
 	+ [Screencasting on Linux](https://www.howtogeek.com/446706/how-to-create-a-screencast-on-linux/)
 	+ [Ffmpeg.org](ffmpeg.org)

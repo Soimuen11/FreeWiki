@@ -6,6 +6,7 @@
 * [Trackpad Stops Working](#trackpad-stops-working)
 * [Fix Brave Black Screen](#fix-brave-black-screen)
 * [Xbacklight: No Outputs Have Backlight Property](#xbacklight-no-outputs-have-backlight-property)
+* [Copying Content On A Website With Disabled Text Selection](#copying-content-on-a-website-with-disabled-text-selection)
 
 ## SSH: could not open connection to authentication agent
 
@@ -137,3 +138,9 @@ Driver      "intel"
 Option      "Backlight"  "intel_backlight"
 EndSection
 ```
+
+## Copying Content On A Website With Disabled Text Selection
+
++ Disable JS from the browser
++ Copy desired content directly into the source code (just open dev tools, inspect and paste)
++ Disable CSS user-select property
