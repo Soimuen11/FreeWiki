@@ -66,6 +66,7 @@
 * [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
 * [Quick Pass Tutorial](#quick-pass-tutorial)
 * [Virtualization Software](#virtualization-software)
+* [Screenshots](#screenshots)
 
 ## Mounting Android Phones In Linux
 
@@ -901,3 +902,9 @@ Also known as **hypervisors**.
 + VMWare
 + Red-hat KVM (stands for kernel-based virtual machine)
 + Microsoft Hyper-V
++ Virt-Manager
+
+## Screenshots
+
++ Scrot
++ Flameshot
