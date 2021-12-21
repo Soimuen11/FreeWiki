@@ -66,6 +66,8 @@
 * [Convert WordPress Blog To Jekyll](#convert-wordpress-blog-to-jekyll)
 * [Quick Pass Tutorial](#quick-pass-tutorial)
 * [Virtualization Software](#virtualization-software)
+* [Cloud Software](#cloud-software)
+* [OSI Model And Networking Protocols](#osi-model-and-networking-protocols)
 * [Screenshots](#screenshots)
 
 ## Mounting Android Phones In Linux
@@ -898,13 +900,49 @@ pass -c $name-of-password
 
 Also known as **hypervisors**.
 
-+ VirtualBox
-+ VMWare
-+ Red-hat KVM (stands for kernel-based virtual machine)
-+ Microsoft Hyper-V
-+ Virt-Manager
++ [VirtualBox](https://www.virtualbox.org)
++ [VMWare](https://www.vmware.com)
++ [Red-hat KVM: kernel-based virtual machine](https://phoenixnap.com/kb/ubuntu-install-kvm)
++ [Microsoft Hyper-V](https://docs.microsoft.com/it-it/virtualization/hyper-v-on-windows/about)
++ [Virt-Manager](https://virt-manager.org/)
++ Proxmox
 
 ## Screenshots
 
 + Scrot
 + Flameshot
+
+## Cloud Software
+
++ [Openstack](https://www.openstack.org)
++ Ovirt
+
+## OSI Model And Networking Protocols
+
+You should be aware of the different layers of the OSI (open systems
+interconnections) model. There are 7 layers:
+
+1. Physical Layer
+2. Data Link Layer
+3. Network Layer
+4. Transport Layer
+5. Session Layer
+6. Presentation Layer
+7. Application Layer
+
+Here is a non-exhaustive list of protocols you should be aware of:
+
++ DHCP: Dynamic Host Configuration Protocol
++ IP: Internet Protocol (IPv4; IPv6)
++ SIP: Session Initiation Protocol
++ SMTP: Simple Mail Transfer Protocol
++ IMAP: Internet Message Access Protocol
++ POP3: Post Office Protocol
++ DNS: Domain Name System
++ SSH: Secure Shell
++ Telnet
++ FTP: File Transfer Protocol
++ HTTP: Hyper Text Transfer Protocol
++ TLS/SSL: Transport Layer Security / Secure Socket Layer
++ OSPF: Open Shortest Path First
++ LACP: Link Aggregation Control Protocol
