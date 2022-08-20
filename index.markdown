@@ -13,7 +13,7 @@ contact me or make your own fork.
 
 ## Find Me Here Too:
 
-+ [Blog](https://madlibrarian.xyz)
++ [Blog](https://soimuen11.github.io/Blog/)
 + [Odyssee](https://odysee.com/@PhilWayne:c)
 + [Portfolio](https://soimuen11.github.io/Portfolio/)
 + [Dotfiles](https://github.com/Soimuen11/Dotfiles)
