@@ -144,3 +144,12 @@ EndSection
 + Disable JS from the browser
 + Copy desired content directly into the source code (just open dev tools, inspect and paste)
 + Disable CSS user-select property
+
+## WSL2
+
+- How set default user for manually install wsl distro
+Create a /etc/wsl.conf
+```bash
+[user]
+default=username
+```
