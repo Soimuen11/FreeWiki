@@ -3,44 +3,182 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" href="./link-icon3.png">
-{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ '/link.png' | relative_url }}">
+    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     {% include head-custom.html %}
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <ul>
-            <li class="fork"><a style="margin-right:5px;" href="./index.html">Home</a></li>
-            <li class="fork"><a style="margin-right:5px;" href="./issues.html">Issues</a></li>
-            <li class="fork"><a style="margin-right:5px;" href="./tips-and-tricks.html">Tips & Tricks</a></li>
-            <li class="fork"><a style="margin-right:5px;" href="./ffmpeg.html">Ffmpeg</a></li>
-            <li class="fork"><a style="margin-right:5px;" href="./resources.html">Resources</a></li>
-            <li class="fork"><a style="margin-right:5px;" href="./scripts.html">Scripts</a></li>
-            <li class="fork"><a style="margin-right:5px;" href="{{ site.github.repository_url }}">View On GitHub</a></li>
-          </ul>
-        </nav>
-      </div><!-- end header -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="{{ '/index.html' | relative_url }}" class="nav-brand">
+          <img src="{{ '/link.png' | relative_url }}" alt="Logo" onerror="this.style.display='none'">
+          <span>{{ site.title | default: site.github.repository_name }}</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <svg class="icon-hamburger" viewBox="0 0 24 24">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" style="display:none;">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/issues.html' | relative_url }}">Issues</a></li>
+          <li><a href="{{ '/tips-and-tricks.html' | relative_url }}">Tips & Tricks</a></li>
+          <li><a href="{{ '/ffmpeg.html' | relative_url }}">Ffmpeg</a></li>
+          <li><a href="{{ '/resources.html' | relative_url }}">Resources</a></li>
+          <li><a href="{{ '/scripts.html' | relative_url }}">Scripts</a></li>
+          <li class="github-link">
+            <a href="{{ site.github.repository_url | default: 'https://github.com/soimuen11/FreeWiki' }}" target="_blank" rel="noopener">
+              <svg class="github-svg" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <div class="wrapper">
-      <section>
+      <main class="main-card">
         <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <div class="credits-container">
+            <span class="credits">Maintained by <a href="{{ site.github.owner_url | default: 'https://github.com/soimuen11' }}">{{ site.github.owner_name | default: 'soimuen11' }}</a></span>
+            <span class="credits">Design by <a href="https://github.com/Semplicementeio" target="_blank" rel="noopener">Semplicementeio</a></span>
+          </div>
         </div>
-        {{ content }}
-      </section>
+
+        <div class="content-body">
+          {{ content }}
+        </div>
+      </main>
     </div>
+
+    <footer class="site-footer">
+      <p>2020&ndash;{{ 'now' | date: "%Y" }} {{ site.title | default: site.github.repository_name }}. Made with ❤️ by <a href="{{ site.github.owner_url | default: 'https://github.com/soimuen11' }}">{{ site.github.owner_name | default: 'soimuen11' }}</a></p>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      </svg>
+    </button>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (navToggle && navMenu) {
+          const iconHamburger = navToggle.querySelector('.icon-hamburger');
+          const iconClose = navToggle.querySelector('.icon-close');
+
+          navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            if (iconHamburger && iconClose) {
+              iconHamburger.style.display = isOpen ? 'none' : 'block';
+              iconClose.style.display = isOpen ? 'block' : 'none';
+            }
+          });
+
+          // Close mobile menu on link click
+          navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              navMenu.classList.remove('open');
+              if (iconHamburger && iconClose) {
+                iconHamburger.style.display = 'block';
+                iconClose.style.display = 'none';
+              }
+            });
+          });
+        }
+
+        // Active Link Highlighting
+        const currentFile = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('http')) {
+            const linkFile = href.split('/').pop().replace('.html', '').replace(/^\./, '') || 'index';
+            if (currentFile === linkFile) {
+              link.classList.add('active');
+            }
+          }
+        });
+
+        // Add Copy Button to Pre Blocks inside a fixed Wrapper Container
+        document.querySelectorAll('pre').forEach(pre => {
+          if (!pre.parentElement.classList.contains('code-block-wrapper')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'code-block-wrapper';
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(pre);
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.setAttribute('aria-label', 'Copy code to clipboard');
+            button.innerHTML = `
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+              </svg>
+              <span>Copy</span>
+            `;
+            wrapper.appendChild(button);
+
+            button.addEventListener('click', async () => {
+              const code = pre.querySelector('code');
+              const text = code ? code.innerText : pre.innerText;
+              const span = button.querySelector('span');
+              try {
+                await navigator.clipboard.writeText(text);
+                if (span) span.innerText = 'Copied!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                  if (span) span.innerText = 'Copy';
+                  button.classList.remove('copied');
+                }, 2000);
+              } catch (err) {
+                if (span) span.innerText = 'Error';
+              }
+            });
+          }
+        });
+
+        // Wrap Tables in Responsive Div
+        document.querySelectorAll('table').forEach(table => {
+          if (!table.parentElement.classList.contains('table-wrapper')) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'table-wrapper';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          }
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        if (backToTopBtn) {
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+              backToTopBtn.classList.add('visible');
+            } else {
+              backToTopBtn.classList.remove('visible');
+            }
+          });
+
+          backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
