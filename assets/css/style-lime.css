@@ -1,0 +1,865 @@
+/* ==========================================================================
+   FreeWiki Secondary Theme by Semplicemente.io
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties (Variables)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Dark Charcoal Warm Background Colors */
+  --bg-dark: #1c1c1c;
+  --bg-gradient: linear-gradient(180deg, #2a2a29 0%, #1c1c1c 100%);
+  --bg-header: #242423;
+  --bg-card: rgba(36, 36, 35, 0.92);
+  --bg-card-hover: #2c2c2b;
+  --bg-code: #181817;
+  --bg-inset: rgba(0, 0, 0, 0.3);
+
+  /* Modern Flat Borders & Shadows */
+  --border-color: rgba(255, 255, 255, 0.09);
+  --border-hover: rgba(147, 189, 32, 0.45);
+  --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  /* Lime Green Accent Gradient */
+  --accent-lime: #93bd20;
+  --accent-green: #659e10;
+  --accent-gradient: linear-gradient(135deg, #93bd20 0%, #659e10 100%);
+  --accent-light: #b4db3b;
+
+  /* Text & Typography (Local System Fonts) */
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, SF Mono, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Layout */
+  --container-max-width: 1120px;
+  --header-height: 64px;
+  --radius-lg: 14px;
+  --radius-md: 8px;
+  --radius-sm: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base Styles
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.65;
+  font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+  max-width: var(--container-max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.nav-brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.nav-brand span {
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scoped Navigation Menu Styles (Desktop) */
+.nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nav-menu li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.nav-menu li a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  box-shadow: none !important;
+}
+
+.nav-menu li a:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none !important;
+}
+
+/* Active State Button with Lime Gradient */
+.nav-menu li a.active {
+  background: var(--accent-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(101, 158, 16, 0.3) !important;
+}
+
+/* GitHub Link Button Styling */
+.github-svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-menu li.github-link a {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  border: none;
+}
+
+.nav-menu li.github-link a:hover {
+  opacity: 0.92;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.nav-menu li.github-link a:hover .github-svg {
+  transform: scale(1.1);
+}
+
+/* Mobile Nav Toggle Button */
+.nav-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.45rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.nav-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Layout & Content Wrapper
+   -------------------------------------------------------------------------- */
+.wrapper {
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+
+.main-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-main);
+  padding: 2.5rem;
+  transition: border-color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Page Header / Title Section
+   -------------------------------------------------------------------------- */
+#title {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#title h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#title p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.credits-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.credits {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.credits:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-hover);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.credits a {
+  color: var(--accent-lime);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.3rem;
+}
+
+.credits a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Typography & Content Formatting (Scoped to .content-body)
+   -------------------------------------------------------------------------- */
+.content-body h1,
+.content-body h2,
+.content-body h3,
+.content-body h4,
+.content-body h5,
+.content-body h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+}
+
+.content-body h2 {
+  font-size: 1.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.content-body h2::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+.content-body h3 {
+  font-size: 1.3rem;
+  color: #e2e8f0;
+}
+
+.content-body h4 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.content-body p {
+  margin-bottom: 1.25rem;
+  color: #cbd5e1;
+}
+
+.content-body a {
+  color: var(--accent-lime);
+  text-decoration: none;
+  transition: color 0.15s ease, border-bottom-color 0.15s ease;
+  border-bottom: 1px solid transparent;
+  word-break: break-word;
+}
+
+.content-body a:hover {
+  color: var(--accent-light);
+  border-bottom-color: var(--accent-lime);
+}
+
+.content-body ul,
+.content-body ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+}
+
+.content-body li {
+  margin-bottom: 0.4rem;
+}
+
+.content-body li>ul,
+.content-body li>ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 2rem 0;
+}
+
+strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Table of Contents Formatting (only inside content body) */
+.content-body>ul:first-of-type {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Code Blocks & Inline Code
+   -------------------------------------------------------------------------- */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--accent-lime);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  word-break: break-word;
+}
+
+/* Outer Code Block Wrapper Container (Anchors fixed Copy Button) */
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+pre {
+  position: static;
+  background: var(--bg-code);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  padding-top: 2.8rem;
+  margin-bottom: 0;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: #e2e8f0;
+  font-size: 0.9em;
+  line-height: 1.6;
+  word-break: normal;
+  white-space: pre;
+}
+
+/* High-Contrast, Flat Lime Gradient Copy Button */
+.copy-btn {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  background: var(--accent-gradient) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-sans);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.copy-btn svg {
+  opacity: 0.95;
+}
+
+.copy-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+  background: #22c55e !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tables
+   -------------------------------------------------------------------------- */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background: #2a2a29;
+  color: var(--accent-lime);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+tr:hover {
+  background: rgba(147, 189, 32, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   Blockquotes & Callouts
+   -------------------------------------------------------------------------- */
+blockquote {
+  border-left: 4px solid var(--accent-lime);
+  background: rgba(147, 189, 32, 0.06);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--text-muted);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: var(--bg-header);
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--accent-lime);
+}
+
+/* --------------------------------------------------------------------------
+   Back to Top Button
+   -------------------------------------------------------------------------- */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  opacity: 0.92;
+  transform: translateY(-3px);
+}
+
+#back-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries (Mobile & Tablet)
+   -------------------------------------------------------------------------- */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 56px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #242423 !important;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  .nav-brand {
+    font-size: 1.05rem;
+  }
+
+  .nav-brand img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    padding: 0.35rem;
+  }
+
+  /* Compact Flat Mobile Navigation Drawer */
+  .nav-menu {
+    position: absolute;
+    top: calc(var(--header-height) - 1px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #242423 !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.5rem 0.85rem 0.75rem 0.85rem !important;
+    gap: 0.25rem !important;
+    display: none !important;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7) !important;
+    z-index: 1001;
+  }
+
+  .nav-menu.open {
+    display: flex !important;
+    animation: slideDown 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-menu li a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 6px;
+    color: var(--text-muted);
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.15s ease;
+  }
+
+  .nav-menu li a:hover {
+    color: var(--text-main);
+    background: #2a2a29;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu li a.active {
+    background: var(--accent-gradient) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    font-weight: 600 !important;
+  }
+
+  
+
+  .nav-menu li.github-link {
+    margin-top: 0.25rem !important;
+    padding-top: 0.4rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .nav-menu li.github-link a {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    background: var(--accent-gradient) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600 !important;
+    justify-content: center !important;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 6px !important;
+  }
+
+  .nav-menu li.github-link a:hover {
+    opacity: 0.92 !important;
+    color: #ffffff !important;
+  }
+
+  .wrapper {
+    margin: 0.85rem auto;
+    padding: 0 0.85rem;
+  }
+
+  .main-card {
+    padding: 1.35rem 1.1rem;
+    border-radius: var(--radius-md);
+  }
+
+  #title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.1rem;
+  }
+
+  #title h1 {
+    font-size: 1.65rem;
+  }
+
+  #title p {
+    font-size: 1rem;
+  }
+
+  .credits-container {
+    gap: 0.4rem;
+  }
+
+  .credits {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+  }
+
+  .content-body h2 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+
+  .content-body h3 {
+    font-size: 1.1rem;
+    margin-top: 1.25rem;
+  }
+
+  .content-body p,
+  .content-body li {
+    font-size: 0.96rem;
+  }
+
+  .content-body>ul:first-of-type {
+    padding: 0.85rem 0.85rem 0.85rem 1.85rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+  }
+
+  .code-block-wrapper {
+    margin-bottom: 1.25rem;
+  }
+
+  pre {
+    padding: 0.85rem;
+    padding-top: 2.6rem;
+    border-radius: var(--radius-sm);
+  }
+
+  pre code {
+    font-size: 0.85em;
+  }
+
+  .copy-btn {
+    top: 0.4rem;
+    right: 0.4rem;
+    padding: 0.25rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  th,
+  td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .site-footer {
+    padding: 1.25rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  #back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Small Smartphone Breakpoint */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 0.5rem;
+  }
+
+  .main-card {
+    padding: 1.1rem 0.85rem;
+  }
+
+  #title h1 {
+    font-size: 1.45rem;
+  }
+
+  #title p {
+    font-size: 0.95rem;
+  }
+
+  .content-body h2 {
+    font-size: 1.2rem;
+  }
+
+  .content-body h3 {
+    font-size: 1.05rem;
+  }
+
+  #back-to-top {
+    width: 38px;
+    height: 38px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

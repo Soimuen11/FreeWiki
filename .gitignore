@@ -1,6 +1,21 @@
-_site
-.sass-cache
-.jekyll-cache
+# Generated site directory
+_site/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jekyll & Ruby build artifacts
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
+vendor/
 Gemfile.lock
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
