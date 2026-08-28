@@ -946,3 +946,28 @@ Here is a non-exhaustive list of protocols you should be aware of:
 + TLS/SSL: Transport Layer Security / Secure Socket Layer
 + OSPF: Open Shortest Path First
 + LACP: Link Aggregation Control Protocol
++ LDAP: Lightweight Directory Access Protocol
++ Kerberos
++ Radius: Remote-Authentication Dial-In User Service
++ NTLM: New Technology LAN Manager (a proprietary Microsoft authentication protocol)
+
+Other:
+
++ CSP: Communication Service Provider
+	- ISP: Internet Service Provider
+	- TSP: Telecommunication Service Provider
+To understand better, here is a link to [geekforgeeks](https://www.geeksforgeeks.org/what-is-communication-service-provider-csp/?ref=rp)
+
+## Create script interfaces
+
+- Dialog
+- Whiptail
+- Zenity
+- Dmenu
+- Rofi
+
+## Access server from your browser
+
+- Screenviewer / tightviewer / tigerviewer
+- cockpit = dashboard for your server + a terminal
+- https://cockpit-project.org
