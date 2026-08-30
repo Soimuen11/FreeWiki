@@ -47,6 +47,13 @@ man [$PROGRAM_NAME]
 + [Top 20 Windows Tools To Know As Sysadmin](https://www.poweradmin.com/blog/top-20-windows-tools-every-sysadmin-should-know/)
 + [Administration Commands](https://geekflare.com/windows-administration-commands/)
 + [VLAN definition & advantages](https://www.guru99.com/vlan-definition-types-advantages.html)
++ Other:
+	- List of most used powershell commands
+	- Citrix / VNC / Remote Desktop / Quick Access
+	- ERP (Enterprise Resource Management) / CRM (Customer Relationship Management)
+	- SAP; Documentum D2; Incontact; Aladdin; Office Suite in cloud
+	- ServiceNow = Ticketing software hosted in cloud
+	- Powershell - Oh My Posh
 
 ## Customizing Bash
 
@@ -94,7 +101,7 @@ Here is a list of the most popular Virtual Private Servers (VPS):
 + [Google Cloud](cloud.google.com)
 + [Digital Ocean](https://www.digitalocean.com)
 + [Vultr](https://www.vultr.com)
-+ [Microsoft Azure]
++ [Microsoft Azure](https://azure.microsoft.com/en-us/)
 
 ## Buying Domain Name
 
