@@ -14,7 +14,7 @@ is why I believe everyone should make this wiki theirs. If you wish to see
 something in this wiki, you need only ask. If you have any suggestions, do not
 hesitate to contact me or send me a pull request.
 
-In August 2026, Luca from [https://semplicemente.io](SemplicementeIo) gave a
+In August 2026, Luca from [semplicemente.io](https://semplicemente.io) gave a
 more modern look to the FreeWiki. I would like to officially thank him here as
 I find this new design much better than the previous one.
 
