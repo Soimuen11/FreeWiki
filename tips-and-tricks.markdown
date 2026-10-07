@@ -1,3 +1,9 @@
+---
+layout: default
+title: Tips & Tricks
+description: "Practical Linux tips, command-line cheatsheets, terminal utilities, networking commands, and workflow productivity tricks."
+---
+
 ## Table Of Contents
 
 * [Mounting Android Phones In Linux](#mounting-android-phones-in-linux)

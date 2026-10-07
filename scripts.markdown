@@ -1,6 +1,7 @@
 ---
 layout: default
-title: My Scripts
+title: Automation Scripts
+description: "Handcrafted Bash and Perl automation scripts: emulator game launcher, battery status monitor, mailsync, and wallpaper utilities."
 ---
 
 You may find all my scripts in my

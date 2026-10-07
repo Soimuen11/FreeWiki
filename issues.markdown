@@ -1,3 +1,9 @@
+---
+layout: default
+title: Issues & Fixes
+description: "Step-by-step troubleshooting and solutions for common Linux errors: SSH authentication, permissions, trackpad, backlight, and browser fixes."
+---
+
 ## Table Of Contents
 
 * [SSH: could not open connection to authentication agent](#ssh-could-not-open-connection-to-authentication-agent)

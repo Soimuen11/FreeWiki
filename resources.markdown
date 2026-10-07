@@ -1,6 +1,7 @@
 ---
 layout: default
-title: resources
+title: Resources
+description: "Hand-picked online learning guides, books, and reference documentation for Linux, Bash, Vim, AWK, Perl, Docker, and system administration."
 ---
 
 ## Table Of Contents

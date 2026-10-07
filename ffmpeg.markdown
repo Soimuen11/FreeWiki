@@ -1,3 +1,9 @@
+---
+layout: default
+title: FFmpeg Cheatsheet
+description: "Practical FFmpeg commands: screen recording, webcam capture, video trimming, audio extraction, format conversion, and subtitle burning."
+---
+
 ## Table Of Contents
 
 * [Webcamming](#webcamming)
