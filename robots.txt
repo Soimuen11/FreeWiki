@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freewiki.phiannetta.xyz/sitemap.xml

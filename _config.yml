@@ -13,18 +13,43 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The Free Wiki
+tagline: "Linux Sysadmin, Terminal & FFmpeg Knowledge Base"
 email: soimuen11@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-    Hello World!
+description: >-
+  A curated, open-source knowledge base for Linux system administration, shell scripting, FFmpeg mastery, terminal diagnostics, and power-user workflows.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://myfreewiki.phiannetta.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  soimuen11
+url: "https://freewiki.phiannetta.xyz" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: soimuen11
+lang: en-US
+
+# Author metadata for SEO & JSON-LD
+author:
+  name: Philippe Iannetta
+  email: soimuen11@gmail.com
+  github: soimuen11
+
+# OpenGraph & Social Media SEO
+logo: /link.png
+image: /link.png
+twitter:
+  username: soimuen11
+  card: summary
+
+social:
+  name: The Free Wiki
+  links:
+    - https://github.com/soimuen11/FreeWiki
+    - https://portfolio.phiannetta.xyz
+    - https://blog.phiannetta.xyz
+    - https://www.linkedin.com/in/philippe-iannetta-2418232b3/
 
 # Build settings
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
 markdown: kramdown
 
 
