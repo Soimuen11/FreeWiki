@@ -6,7 +6,7 @@ layout: default
 ## About this wiki
 
 Starting June 4th 2020, this wiki will be a collection of all the issues I,
-Philippe Iannetta, have faced and will face on my Linux machine and in my experience as a sysadmin. 
+Philippe Iannetta, have faced and will face on my Linux machine and in my experience as a sysadmin.
 
 It remains incomplete, and I suspect it always will be. I have encountered SO
 many issues... It would be almost impossible to document everything, and this
@@ -16,7 +16,8 @@ hesitate to contact me or send me a pull request.
 
 In August 2026, Luca from [semplicemente.io](https://semplicemente.io) gave a
 more modern look to the FreeWiki. I would like to officially thank him here as
-I find this new design much better than the previous one.
+I find this new design much better than the previous one. Dont' hesitate to
+check out [his work](https://semplicemente.io)!
 
 ## Find me there too
 
