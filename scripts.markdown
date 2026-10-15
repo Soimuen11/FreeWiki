@@ -1,17 +1,14 @@
 ---
 layout: default
-title: Automation Scripts
-description: "Handcrafted Bash and Perl automation scripts: emulator game launcher, battery status monitor, mailsync, and wallpaper utilities."
+title: Scripts
+description: Handcrafted Bash and Perl automation scripts: emulator game launcher, battery status monitor, mailsync, and wallpaper utilities.
 ---
-
-You may find all my scripts in my
-[Dotfiles](https://github.com/Soimuen11/Dotfiles) github repository. Just go
-into **.local/scripts**. You will only find the *finished* ones here.
 
 * [Game Launcher](#game-launcher)
 * [Mystery Number Quest](#mystery-number-quest)
 * [Battery Info](#battery-info)
 * [Moc Controller](#moc-controller)
+* [Spotify Controller](#spotify-controller)
 * [Quote Generator](#quote-generator)
 * [Mouse](#mouse)
 * [Bash Mailsync](#mailsync)
@@ -22,7 +19,7 @@ into **.local/scripts**. You will only find the *finished* ones here.
 ## Game Launcher
 
 If you wish to quickly launch your emulator games, this is the script for you.
-Do install the dependencies before running it:
+Please install the dependencies listed below before running it.
 
 + dmenu
 + desmume (nds emulator)
@@ -121,9 +118,7 @@ Dependencies:
 ```bash
 #!/bin/bash
 
-# Potential Future Features:
-# 1. Polybar module to control moc
-# 2. AwesomeWM bar module
+TIMER_PID_FILE="${XDG_RUNTIME_DIR:-/tmp}/moc-timer.pid"
 
 # Available moc actions
 OPTIONS=(
@@ -132,23 +127,135 @@ OPTIONS=(
 	"Next"
 	"Start"
 	"Stop"
+	"Timer"
+	"Cancel Timer"
 	"Info"
 )
 
-# Looping through array of moc actions
-# && saving value of chosen option into $OPTION
-OPTION=$(for i in "${OPTIONS[@]}"
-do
-	echo $i
-done | dmenu -p "Moc Controller")
+TIMER_PID_FILE="${XDG_RUNTIME_DIR:-/tmp}/moc-timer.pid"
+
+start_timer() {
+	local time="$1"
+
+	# Un nombre seul = minutes
+	[[ "$time" =~ ^[0-9]+$ ]] && time="${time}m"
+
+	if ! [[ "$time" =~ ^[0-9]+[smhd]$ ]]; then
+		notify-send "Moc Timer" "Durée invalide : $time"
+		return 1
+	fi
+
+	cancel_timer
+
+	# Le sous-shell écrit son propre PID (= PID du groupe grâce à setsid)
+	setsid -f bash -c '
+		echo $$ > "$1"
+		sleep "$2"
+		mocp --stop
+		rm -f "$1"
+	' _ "$TIMER_PID_FILE" "$time" >/dev/null 2>&1
+
+	notify-send "Moc Timer" "Arrêt de la musique dans $time"
+}
+
+cancel_timer() {
+	[[ -f "$TIMER_PID_FILE" ]] || return 1
+	kill -- "-$(cat "$TIMER_PID_FILE")" 2>/dev/null
+	rm -f "$TIMER_PID_FILE"
+}
+
+OPTION=$(printf '%s\n' "${OPTIONS[@]}" | dmenu -p "Moc Controller")
 
 case "$OPTION" in
-	Toggle\ Pause) mocp --toggle-pause;;
-	Previous) mocp --previous;;
-	Next) mocp --next;;
-	Start) mocp --play;;
-	Stop) mocp --stop;;
-	Info) notify-send "Current Title" "$(mocp -i | grep File)";;
+	"Toggle Pause") mocp --toggle-pause;;
+	"Previous")     mocp --previous;;
+	"Next")         mocp --next;;
+	"Start")        mocp --play;;
+	"Stop")         mocp --stop;;
+	"Timer")
+		time=$(dmenu -p "Timer (ex: 45, 90s, 30m, 2h)" </dev/null)
+		[[ -n "$time" ]] && start_timer "$time"
+		;;
+	"Cancel Timer")
+		cancel_timer && notify-send "Moc Timer" "Timer annulé" \
+			|| notify-send "Moc Timer" "Aucun timer en cours"
+		;;
+	"Info") notify-send "Current Title" "$(mocp -i | grep File)";;
+esac
+```
+
+## Spotify Controller
+
+```bash
+#!/bin/bash
+SPOTIFY="$HOME/.venv/bin/spotifycli"
+
+TIMER_PID_FILE="${XDG_RUNTIME_DIR:-/tmp}/spotify-timer.pid"
+
+# Available spotify actions
+OPTIONS=(
+	"Toggle Pause"
+	"Previous"
+	"Next"
+	"Start"
+	"Stop"
+	"Timer"
+	"Cancel Timer"
+	"Info"
+)
+
+# Starts a background timer which pauses spotify after $1 time
+start_timer() {
+	local time="$1"
+
+	# Un nombre seul = minutes
+	[[ "$time" =~ ^[0-9]+$ ]] && time="${time}m"
+
+	if ! [[ "$time" =~ ^[0-9]+[smhd]$ ]]; then
+		notify-send "Spotify Timer" "Durée invalide : $time"
+		return 1
+	fi
+
+	cancel_timer
+
+	setsid -f bash -c '
+		echo $$ > "$1"
+		sleep "$2"
+		"$3" --pause
+		rm -f "$1"
+	' _ "$TIMER_PID_FILE" "$time" "$SPOTIFY" >/dev/null 2>&1
+
+	notify-send "Spotify Timer" "Pause de la musique dans $time"
+}
+
+cancel_timer() {
+	[[ -f "$TIMER_PID_FILE" ]] || return 1
+	kill -- "-$(cat "$TIMER_PID_FILE")" 2>/dev/null
+	rm -f "$TIMER_PID_FILE"
+}
+
+if [[ ! -x "$SPOTIFY" ]]; then
+	notify-send "Spotify Controller" "Binary can't be found : $SPOTIFY"
+	exit 1
+fi
+
+OPTION=$(printf '%s\n' "${OPTIONS[@]}" | dmenu -p "Spotify Controller")
+
+case "$OPTION" in
+	"Toggle Pause") "$SPOTIFY" --playpause;;
+	"Previous")     "$SPOTIFY" --prev;;
+	"Next")         "$SPOTIFY" --next;;
+	"Start")        "$SPOTIFY" --play;;
+	"Stop")         "$SPOTIFY" --pause;;
+	"Timer")
+		time=$(echo | dmenu -p "Timer (ex: 45, 90s, 30m, 2h)")
+		[[ -n "$time" ]] && start_timer "$time"
+		;;
+	"Cancel Timer")
+		cancel_timer && notify-send "Spotify Timer" "Timer canceled" \
+			|| notify-send "Spotify Timer" "No running timer"
+		;;
+	"Info") notify-send "Spotify" "$("$SPOTIFY" --statusposition)";;
 esac
 ```
 
@@ -164,7 +271,7 @@ terminal)
 ```bash
 #!/bin/bash
 # Get nb of lines in file containing quotes
-NB_LINES=$(cat /home/$USER/.local/scripts/quote_generator/quotes | wc -l)
+NB_LINES=$(cat $HOME/.local/scripts/quote_generator/quotes | wc -l)
 RANDOM_NB=$(( $RANDOM % $NB_LINES ))
 # Pick one line in file containing quotes
 cat ~/.local/scripts/quote_generator/quotes | head -$RANDOM_NB | tail -1
