@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Page Not Found
+description: "The requested page could not be found on The Free Wiki."
 permalink: /404.html
 ---
 

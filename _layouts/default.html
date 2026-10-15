@@ -13,7 +13,7 @@
     <header class="site-header">
       <div class="nav-container">
         <a href="{{ '/index.html' | relative_url }}" class="nav-brand">
-          <img src="{{ '/link.png' | relative_url }}" alt="Logo" onerror="this.style.display='none'">
+          <img src="{{ '/link.png' | relative_url }}" alt="The Free Wiki Logo" onerror="this.style.display='none'">
           <span>{{ site.title | default: site.github.repository_name }}</span>
         </a>
 
@@ -49,7 +49,7 @@
       <main class="main-card">
         <div id="title">
           <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
           <div class="credits-container">
             <span class="credits">Maintained by <a href="{{ site.github.owner_url | default: 'https://github.com/soimuen11' }}">{{ site.github.owner_name | default: 'soimuen11' }}</a></span>
             <span class="credits">Design by <a href="https://github.com/Semplicementeio" target="_blank" rel="noopener">Semplicementeio</a></span>
