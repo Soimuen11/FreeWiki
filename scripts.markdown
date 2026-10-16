@@ -118,8 +118,6 @@ Dependencies:
 ```bash
 #!/bin/bash
 
-TIMER_PID_FILE="${XDG_RUNTIME_DIR:-/tmp}/moc-timer.pid"
-
 # Available moc actions
 OPTIONS=(
 	"Toggle Pause"
