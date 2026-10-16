@@ -13,7 +13,7 @@ It remains incomplete, and I suspect it always will be. I have encountered SO
 many issues... It would be almost impossible to document everything, and this
 is why I believe everyone should make this wiki theirs. If you wish to see
 something in this wiki, you need only ask. If you have any suggestions, do not
-hesitate to contact me or send me a pull request.
+hesitate to contact me or send me a pull request directly on Github.
 
 In August 2026, Luca from [semplicemente.io](https://semplicemente.io) gave a
 more modern look to the FreeWiki. I would like to officially thank him here as
