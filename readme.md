@@ -38,6 +38,7 @@
 | 🎬 **[FFmpeg](https://soimuen11.github.io/FreeWiki/ffmpeg.html)** | Essential screencasting, video cutting, audio extract, and stream encoding commands. |
 | 📚 **[Resources](https://soimuen11.github.io/FreeWiki/resources.html)** | Hand-picked online learning resources, documentation links, and tech blogs. |
 | 📜 **[Scripts](https://soimuen11.github.io/FreeWiki/scripts.html)** | Custom Bash and shell scripts for system automation and workflow enhancement. |
+| 📌 **[Sysadmin](https://soimuen11.github.io/FreeWiki/sysadmin.html)** Cheatsheets containing Powershell & Bash commands and oneliners. |
 
 ---
 
