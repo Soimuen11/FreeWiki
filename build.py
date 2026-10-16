@@ -114,6 +114,7 @@ def build_site():
         page_html = page_html.replace("{{ '/ffmpeg.html' | relative_url }}", "./ffmpeg.html")
         page_html = page_html.replace("{{ '/resources.html' | relative_url }}", "./resources.html")
         page_html = page_html.replace("{{ '/scripts.html' | relative_url }}", "./scripts.html")
+        page_html = page_html.replace("{{ '/sysadmin.html' | relative_url }}", "./sysadmin.html")
         page_html = page_html.replace('{{ content }}', body_html)
         page_html = page_html.replace('{{ \'now\' | date: "%Y" }}', '2026')
 
