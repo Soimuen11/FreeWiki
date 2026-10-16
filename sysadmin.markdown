@@ -41,9 +41,11 @@ description: Cheatsheets containing Powershell & Bash commands and oneliners
 	* [User Accounts and Sessions](#user-accounts-and-sessions)
 	* [Windows Logs and Server Manager](#windows-logs-and-server-manager)
 	* [Quick Script to Connect to vCenters](#quick-script-to-connect-to-vcenters)
+
   		* [Example with Two vCenters](#example-with-two-vcenters)
   		* [Example with Several vCenters](#example-with-several-vcenters)
   		* [Connect to Several vCenters with a Loop](#connect-to-several-vcenters-with-a-loop)
+  
 	* [Connecting to ESX Hosts](#connecting-to-esx-hosts)
 	* [Host HBAs, Disks and SCSI Paths](#host-hbas-disks-and-scsi-paths)
 	* [PowerShell Oneliners](#powershell-oneliners)
