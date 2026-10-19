@@ -43,6 +43,15 @@ social:
     - https://blog.phiannetta.xyz
     - https://www.linkedin.com/in/philippe-iannetta-2418232b3/
 
+permalink: /news/:year/:month/:day/:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: default
+
 # Build settings
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:

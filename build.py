@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import re
 import shutil
 import http.server
 import socketserver
@@ -108,13 +109,14 @@ def build_site():
         page_html = page_html.replace("{{ site.github.owner_url | default: 'https://github.com/soimuen11' }}", "https://github.com/soimuen11")
         page_html = page_html.replace("{{ site.github.owner_name | default: 'soimuen11' }}", "soimuen11")
         page_html = page_html.replace("{{ site.github.repository_url | default: 'https://github.com/soimuen11/FreeWiki' }}", "https://github.com/soimuen11/FreeWiki")
-        page_html = page_html.replace("{{ '/index.html' | relative_url }}", "./index.html")
-        page_html = page_html.replace("{{ '/issues.html' | relative_url }}", "./issues.html")
-        page_html = page_html.replace("{{ '/tips-and-tricks.html' | relative_url }}", "./tips-and-tricks.html")
-        page_html = page_html.replace("{{ '/ffmpeg.html' | relative_url }}", "./ffmpeg.html")
-        page_html = page_html.replace("{{ '/resources.html' | relative_url }}", "./resources.html")
-        page_html = page_html.replace("{{ '/scripts.html' | relative_url }}", "./scripts.html")
-        page_html = page_html.replace("{{ '/sysadmin.html' | relative_url }}", "./sysadmin.html")
+        page_html = re.sub(r"\{\{\s*'(/[^']+)'\s*\|\s*relative_url\s*\}\}", r".\1", page_html)
+        # page_html = page_html.replace("{{ '/index.html' | relative_url }}", "./index.html")
+        # page_html = page_html.replace("{{ '/issues.html' | relative_url }}", "./issues.html")
+        # page_html = page_html.replace("{{ '/tips-and-tricks.html' | relative_url }}", "./tips-and-tricks.html")
+        # page_html = page_html.replace("{{ '/ffmpeg.html' | relative_url }}", "./ffmpeg.html")
+        # page_html = page_html.replace("{{ '/resources.html' | relative_url }}", "./resources.html")
+        # page_html = page_html.replace("{{ '/scripts.html' | relative_url }}", "./scripts.html")
+        # page_html = page_html.replace("{{ '/sysadmin.html' | relative_url }}", "./sysadmin.html")
         page_html = page_html.replace('{{ content }}', body_html)
         page_html = page_html.replace('{{ \'now\' | date: "%Y" }}', '2026')
 
