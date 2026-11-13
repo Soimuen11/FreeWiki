@@ -1,0 +1,192 @@
+/* ==========================================================================
+   Dropdown menus (Power User / Sysadmin)
+   ========================================================================== */
+
+/* Libellé du menu déroulant : même apparence que les liens du menu */
+.nav-menu .dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: inherit;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Petite flèche dessinée en CSS */
+.nav-menu .dropdown-toggle::after {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -0.2rem;
+  transition: transform 0.15s ease;
+}
+
+/* Le parent est mis en évidence quand une de ses pages est la page active */
+.nav-menu .has-dropdown:has(a.active) > .dropdown-toggle {
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 769px) {
+  .nav-menu .has-dropdown {
+    position: relative;
+  }
+
+  .nav-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    min-width: 13rem;
+    margin: 0;
+    padding: 0.4rem;
+    list-style: none;
+    background: var(--bg-header);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-main);
+    z-index: 1100;
+  }
+
+  /* Pont invisible : évite que le menu se ferme en traversant l'espace */
+  .nav-menu .dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.75rem;
+    height: 0.75rem;
+  }
+
+  .nav-menu .dropdown li {
+    display: block;
+  }
+
+  .nav-menu .dropdown a {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem 0.85rem;
+  }
+
+  /* Ouverture au survol */
+  .nav-menu .has-dropdown:hover > .dropdown {
+    display: block;
+    animation: slideDown 0.15s ease;
+  }
+
+  .nav-menu .has-dropdown:hover > .dropdown-toggle {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .nav-menu .has-dropdown:hover > .dropdown-toggle::after {
+    transform: rotate(-135deg);
+    margin-top: 0.2rem;
+  }
+}
+
+/* Ouverture au clavier (Tab), sans rester ouvert après un clic à la souris */
+@media (min-width: 769px) {
+  .nav-menu .has-dropdown:has(:focus-visible) > .dropdown {
+    display: block;
+  }
+}
+
+/* ---------- Mobile : accordéon dans le drawer ---------- */
+@media (max-width: 768px) {
+  /* Le drawer défile s'il est plus haut que l'écran */
+  .nav-menu {
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+  }
+
+  /* Le libellé ressemble aux autres liens du drawer et se clique */
+  .nav-menu .dropdown-label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* Flèche vers le haut quand la section est ouverte */
+  .nav-menu .has-dropdown.expanded > .dropdown-label {
+    color: var(--text-main);
+    border-color: var(--border-hover);
+  }
+
+  .nav-menu .has-dropdown.expanded > .dropdown-label::after {
+    transform: rotate(-135deg);
+    margin-top: 0.2rem;
+  }
+
+  /* Sous-menu replié par défaut */
+  .nav-menu .dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0.25rem 0 0 0.75rem;
+    list-style: none;
+  }
+
+  .nav-menu .has-dropdown.expanded > .dropdown {
+    display: flex;
+  }
+}
+
+/* @media (max-width: 768px) { */
+/*   /1* Le drawer défile s'il est plus haut que l'écran *1/ */
+/*   .nav-menu { */
+/*     max-height: calc(100vh - var(--header-height)); */
+/*     overflow-y: auto; */
+/*   } */
+
+/*   /1* Le libellé devient un simple intertitre *1/ */
+/*   .nav-menu .dropdown-toggle { */
+/*     width: 100%; */
+/*     padding: 0.4rem 0.85rem 0.1rem; */
+/*     font-size: 0.72rem; */
+/*     letter-spacing: 0.06em; */
+/*     text-transform: uppercase; */
+/*     color: var(--text-dim); */
+/*     cursor: default; */
+/*     pointer-events: none; */
+/*   } */
+
+/*   .nav-menu .dropdown-toggle::after { */
+/*     display: none; */
+/*   } */
+
+/*   .nav-menu .dropdown { */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     gap: 0.25rem; */
+/*     margin: 0; */
+/*     padding: 0 0 0 0.75rem; */
+/*     list-style: none; */
+/*   } */
+
+/*   .nav-menu .has-dropdown { */
+/*     margin-top: 0.25rem !important; */
+/*   } */
+/* } */

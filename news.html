@@ -1,0 +1,16 @@
+---
+layout: default
+title: News
+---
+
+<p>Announcements and updates about the FreeWiki.</p>
+
+{% if site.posts.size == 0 %}
+  <p>Nothing here yet.</p>
+{% endif %}
+
+{% for post in site.posts %}
+  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+  <p><em>{{ post.category }}</em> - {{ post.date | date_to_string }}</p>
+  <p>{{ post.content | markdownify | strip_html | truncatewords: 50 }}</p>
+{% endfor %}
